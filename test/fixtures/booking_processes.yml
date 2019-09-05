@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  step: 1
+  start_date: 2019-09-05 18:10:18
+  end_date: 2019-09-05 18:10:18
+  monthly_fee: 9.99
+
+two:
+  step: 1
+  start_date: 2019-09-05 18:10:18
+  end_date: 2019-09-05 18:10:18
+  monthly_fee: 9.99

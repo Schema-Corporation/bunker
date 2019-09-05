@@ -1,0 +1,2 @@
+class BookingProcess < ApplicationRecord
+end
