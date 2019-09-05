@@ -1,0 +1,2 @@
+class Lessee < ApplicationRecord
+end
