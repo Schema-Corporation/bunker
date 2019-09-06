@@ -7,6 +7,7 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.string :doc_number
       t.string :phone
       t.text :email
+      t.string :type
 
       t.timestamps
     end
