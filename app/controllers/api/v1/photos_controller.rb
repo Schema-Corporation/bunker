@@ -1,6 +1,6 @@
 module Api 
     module V1 
-        class PhotoController < ApplicationController
+        class PhotosController < ApplicationController
             
             def index 
                 @photos = Photo.all 

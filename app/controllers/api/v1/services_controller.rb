@@ -1,6 +1,6 @@
 module Api
     module V1
-        class ServiceController < ApplicationController
+        class ServicesController < ApplicationController
 
             def index 
                 @services = Service.all 

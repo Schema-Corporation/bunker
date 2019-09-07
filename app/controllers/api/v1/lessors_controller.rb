@@ -1,6 +1,6 @@
 module Api
     module V1
-        class LessorController < ApplicationController
+        class LessorsController < ApplicationController
         
             def index
                 @lessors = Lessor.all 

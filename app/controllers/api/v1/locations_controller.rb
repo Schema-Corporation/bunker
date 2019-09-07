@@ -1,6 +1,6 @@
 module Api 
     module V1
-        class LocationController < ApplicationController
+        class LocationsController < ApplicationController
 
             def index 
                 @locations = Location.all 

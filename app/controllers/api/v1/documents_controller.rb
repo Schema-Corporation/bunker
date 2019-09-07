@@ -2,7 +2,7 @@ module Api
     module V1
 
 
-        class DocumentController < ApplicationController
+        class DocumentsController < ApplicationController
 
             # GET /documents
             def index

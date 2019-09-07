@@ -1,6 +1,6 @@
 module Api 
     module V1
-        class LesseeController < ApplicationController
+        class LesseesController < ApplicationController
             #GET /lessees
             def index
                 @lessees = Lesse.all 

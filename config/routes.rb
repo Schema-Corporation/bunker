@@ -13,6 +13,12 @@ Rails.application.routes.draw do
       post 'devices' => 'devices#create'
       delete 'devices/:id' => 'devices#destroy'
       resources :devices
+
+      get 'services' => 'services#index'
+      get 'services/:id' => 'services#show'
+      post 'services' => 'services#create'
+      delete 'services/:id' => 'services#destroy'
+      resources :services
     end
   end
 end

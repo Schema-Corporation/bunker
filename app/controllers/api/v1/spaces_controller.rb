@@ -1,6 +1,6 @@
 module Api 
   module V1 
-    class SpaceController < ApplicationController
+    class SpacesController < ApplicationController
 
         # GET /spaces
       def index
