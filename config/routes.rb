@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get 'devices' => 'devices#index'
       get 'devices/:id' => 'devices#show'
       post 'devices' => 'devices#create'
+      patch 'devices/:id' => 'devices#update'
       delete 'devices/:id' => 'devices#destroy'
       resources :devices
 

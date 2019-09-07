@@ -6,60 +6,74 @@ module Api
             # GET /devices
             def index
                 @devices = Device.all
-                render json: {status: 'success', message:'Loaded devices', data:@devices},status: :ok
+                    render json: @devices,status: :ok
 
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
+           
             end
 
             # GET /devices/1
             def show
                 @device = Device.find(params[:id])
                 if @device != nil 
-                render json: {status: 'success', message:'Loaded device', data:@device,code: 200}
-                else 
-                render json: {status: 'FAILS', message:'Loaded device', data:nil,code: 404}
-            
-             end 
+                    render json: @device, status: :ok
+                end 
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
             end
 
             #POST /devices
             def create
-                @devices = Device.new(device_params)
-                if @devices.save
-                    render json: {code:200, status: 'success', message:'Saved device', data:@devices},status: :ok
-                else
-                    render json: {code:404, status: 'ERROR', message:'Device not saved'}
-
+                @device = Device.new(device_params)
+                if @device.save
+                    render json: @device, status: :created
                 end
+
+                rescue ActiveRecord::RecordInvalid
+                    render json: [],status: :unprocessable_entity
+
+                rescue ActionController::ParameterMissing
+                    render json: [],status: :bad_request
+
+                    
+
+
+
             end
 
             #PATCH/PUT /devices/1
             def update
-                if @devices.update(device_params)
-                    #render json: @device
-                    render json: {status: 'success', message:'Updated Advice', data:@devices},status: :ok
-                else
-                    #render json: @device.errors, status: :unprocessable_entity
-                    render json: {status: 'ERROR', message:'Article not updated'}
-
+                @device = Device.find(params[:id])
+                if @device.update(device_params)
+                    render json: @device, status: :ok
                 end
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
+
+                rescue ActionController::ParameterMissing
+                    render json: [],status: :bad_request
+
+                    
+
+
             end
 
             #DELETE /devices/1
             def destroy
                 @device = Device.find(params[:id])
                 if @device.destroy
-                    render json: {code:200,status: 'success', message:'Device deleted ', data:@devices}
-
+                    render json: @device, status: :ok
                 end
 
-                rescue ActiveRecord::RecordNotFound
-                    render json: {code:404  ,status: 'Not Found', message: "Device not found", data:nil}
+                rescue ActiveRecord::RecordInvalid
+                    render json: [],status: :not_found
             end
             
             private 
-            # Only allow a trusted parameter "white list" through.
             def device_params
-                # Reemplazamos :password_digest por :password y :password_confirmation
                 params.require(:device).permit(:device_token)
             end
 
