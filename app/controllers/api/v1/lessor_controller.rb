@@ -1,2 +1,0 @@
-class LessorController < ApplicationController
-end
