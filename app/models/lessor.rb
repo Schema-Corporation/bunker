@@ -1,2 +1,3 @@
-class Lessor < Person
+class Lessor < ApplicationRecord
+    belongs_to :user
 end

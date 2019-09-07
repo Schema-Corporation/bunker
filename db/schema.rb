@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_06_050220) do
+ActiveRecord::Schema.define(version: 2019_09_06_045111) do
 
   create_table "booking_processes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "lessor_id"
@@ -49,15 +49,32 @@ ActiveRecord::Schema.define(version: 2019_09_06_050220) do
   end
 
   create_table "lessees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "ruc"
     t.string "commercial_name"
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "doc_type"
+    t.string "doc_number"
+    t.string "phone"
+    t.text "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_lessees_on_user_id"
   end
 
   create_table "lessors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.integer "doc_type"
+    t.string "doc_number"
+    t.string "phone"
+    t.text "email"
+    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_lessors_on_user_id"
   end
 
   create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -68,18 +85,6 @@ ActiveRecord::Schema.define(version: 2019_09_06_050220) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["space_id"], name: "index_locations_on_space_id"
-  end
-
-  create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.integer "doc_type"
-    t.string "doc_number"
-    t.string "phone"
-    t.text "email"
-    t.string "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -132,6 +137,8 @@ ActiveRecord::Schema.define(version: 2019_09_06_050220) do
   add_foreign_key "booking_processes", "lessors"
   add_foreign_key "booking_processes", "spaces"
   add_foreign_key "documents", "document_types"
+  add_foreign_key "lessees", "users"
+  add_foreign_key "lessors", "users"
   add_foreign_key "locations", "spaces"
   add_foreign_key "photos", "spaces"
   add_foreign_key "space_service_details", "services"
