@@ -8,12 +8,18 @@ module Api
       #GET /document_types
       def index
           @document_types = DocumentType.all
-          render json: {status: 'SUCCESS', data:@document_types}, status: :ok
+          render json: @document_types, status: :ok
       end
         
       # GET /document_types/1
       def show
-        render json: @document_type
+        @document_type = Device.find(params[:id])
+        if @document_type != nil 
+            render json: @document_type, status: :ok
+        end 
+
+        rescue ActiveRecord::RecordNotFound
+          render json: [],status: :not_found
       end
 
       # POST /document_types
@@ -22,9 +28,13 @@ module Api
 
         if @document_type.save
           render json: @document_type, status: :created, location: @document_type
-        else
-          render json: @document_type.errors, status: :unprocessable_entity
         end
+
+        rescue ActiveRecord::RecordInvalid
+          render json: [],status: :unprocessable_entity
+
+        rescue ActionController::ParameterMissing
+          render json: [],status: :bad_request
       end
 
 
@@ -35,11 +45,23 @@ module Api
         else
           render json: @document_type.errors, status: :unprocessable_entity
         end
+
+        rescue ActiveRecord::RecordNotFound
+          render json: [],status: :not_found
+
+        rescue ActionController::ParameterMissing
+          render json: [],status: :bad_request
       end
 
       # DELETE /document_types/1
       def destroy
-        @document_type.destroy
+        @document_type = DocumentType.find(params[:id])
+        if @document_type.destroy
+            render json: @document_type, status: :ok
+        end
+
+        rescue ActiveRecord::RecordInvalid
+            render json: [],status: :not_found
       end
 
 

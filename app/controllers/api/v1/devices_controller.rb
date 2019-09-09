@@ -10,7 +10,6 @@ module Api
 
                 rescue ActiveRecord::RecordNotFound
                     render json: [],status: :not_found
-           
             end
 
             # GET /devices/1
@@ -36,11 +35,6 @@ module Api
 
                 rescue ActionController::ParameterMissing
                     render json: [],status: :bad_request
-
-                    
-
-
-
             end
 
             #PATCH/PUT /devices/1
@@ -51,14 +45,10 @@ module Api
                 end
 
                 rescue ActiveRecord::RecordNotFound
-                    render json: [],status: :not_found
+                    render json: [], status: :not_found
 
                 rescue ActionController::ParameterMissing
-                    render json: [],status: :bad_request
-
-                    
-
-
+                    render json: [], status: :bad_request
             end
 
             #DELETE /devices/1

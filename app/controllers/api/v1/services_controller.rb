@@ -3,37 +3,60 @@ module Api
         class ServicesController < ApplicationController
 
             def index 
-                @services = Service.all 
-                render json: @Services
+                @services = Service.all
+                    render json: @services,status: :ok
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
             end
 
             def show
-                render json: @service
+                @service = Service.find(params[:id])
+                if @service != nil 
+                    render json: @service, status: :ok
+                end 
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
             end
 
 
             def create
                 @service = Service.new(service_params)
-
                 if @service.save
-                    render json: @service, status: :created, location: @service
-                else
-                    render json: @service.errors, status: :unprocessable_entity
+                    render json: @service, status: :created
                 end
+
+                rescue ActiveRecord::RecordInvalid
+                    render json: [],status: :unprocessable_entity
+
+                rescue ActionController::ParameterMissing
+                    render json: [],status: :bad_request
             end
 
 
             def update
+                @service = Service.find(params[:id])
                 if @service.update(service_params)
-                    render json: @service
-                else 
-                    render json: @service.errors, status: unprocessable_entity
+                    render json: @service, status: :ok
                 end
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [], status: :not_found
+
+                rescue ActionController::ParameterMissing
+                    render json: [], status: :bad_request
             end
 
 
             def destroy
-                @service.destroy
+                @service = Service.find(params[:id])
+                if @service.destroy
+                    render json: @service, status: :ok
+                end
+
+                rescue ActiveRecord::RecordInvalid
+                    render json: [],status: :not_found
             end
         end
     end
