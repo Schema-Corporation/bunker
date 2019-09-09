@@ -13,7 +13,7 @@ module Api
         
       # GET /document_types/1
       def show
-        @document_type = Device.find(params[:id])
+        @document_type = DocumentType.find(params[:id])
         if @document_type != nil 
             render json: @document_type, status: :ok
         end 
@@ -27,7 +27,7 @@ module Api
         @document_type = DocumentType.new(document_type_params)
 
         if @document_type.save
-          render json: @document_type, status: :created, location: @document_type
+          render json: @document_type, status: :created
         end
 
         rescue ActiveRecord::RecordInvalid
@@ -64,6 +64,11 @@ module Api
             render json: [],status: :not_found
       end
 
+
+      private 
+      def document_type_params
+        params.require(:document_type).permit(:name, :description)
+      end
 
     end
     

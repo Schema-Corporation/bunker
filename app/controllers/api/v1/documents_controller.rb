@@ -24,7 +24,7 @@ module Api
 
             #POST /documents
             def create 
-                @document = Device.new(document_params)
+                @document = Document.new(document_params)
                 if @document.save
                     render json: @document, status: :created
                 end
@@ -61,6 +61,11 @@ module Api
                     render json: [],status: :not_found
             end
 
+
+            private 
+            def document_params
+              params.require(:document).permit(:document_type, :url_document)
+            end
             
         end
     end

@@ -59,6 +59,11 @@ module Api
                     render json: [],status: :not_found
             end
 
+            private 
+            def photo_params
+              params.require(:photo).permit(:space, :photo_url)
+            end
+
         end
     end
 end

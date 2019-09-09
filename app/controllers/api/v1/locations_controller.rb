@@ -60,7 +60,10 @@ module Api
                     render json: [],status: :not_found
             end
 
-            
+            private 
+            def location_params
+              params.require(:location).permit(:space, :address, :latitude, :longitude)
+            end            
 
         end
     end
