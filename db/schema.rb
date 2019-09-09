@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_06_045111) do
+ActiveRecord::Schema.define(version: 2019_09_09_151209) do
 
   create_table "booking_processes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "lessor_id"
@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(version: 2019_09_06_045111) do
     t.timestamp "end_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "service_price", precision: 10
     t.index ["service_id"], name: "index_space_service_details_on_service_id"
     t.index ["space_id"], name: "index_space_service_details_on_space_id"
   end
@@ -122,6 +123,7 @@ ActiveRecord::Schema.define(version: 2019_09_06_045111) do
     t.decimal "area", precision: 10
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "rent_price", precision: 10
     t.index ["lessee_id"], name: "index_spaces_on_lessee_id"
   end
 
