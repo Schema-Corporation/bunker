@@ -63,7 +63,7 @@ module Api
 
             private 
             def lessor_params
-              params.require(:lessor).permit(:user, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :type)
+              params.require(:lessor).permit(:first_name, :last_name, :doc_type, :doc_number, :phone, :email, :type)
             end
 
         end

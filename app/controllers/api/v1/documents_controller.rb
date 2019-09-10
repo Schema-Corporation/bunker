@@ -1,3 +1,5 @@
+require 'json'
+
 module Api 
     module V1
         class DocumentsController < ApplicationController
@@ -23,8 +25,9 @@ module Api
             end
 
             #POST /documents
-            def create 
+            def create
                 @document = Document.new(document_params)
+
                 if @document.save
                     render json: @document, status: :created
                 end
@@ -64,7 +67,7 @@ module Api
 
             private 
             def document_params
-              params.require(:document).permit(:document_type, :url_document)
+              params.require(:document).permit(:document_type_id, :url_document)
             end
             
         end

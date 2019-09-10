@@ -61,7 +61,7 @@ module Api
 
             private 
             def photo_params
-              params.require(:photo).permit(:space, :photo_url)
+              params.require(:photo).permit(:space_id, :photo_url)
             end
 
         end

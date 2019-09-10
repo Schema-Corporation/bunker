@@ -61,7 +61,7 @@ module Api
 
             private 
             def lessee_params
-              params.require(:lessee).permit(:user, :ruc,:commercial_name, :first_name, :last_name, :doc_type, :doc_number, :phone, :email)
+              params.require(:lessee).permit(:ruc,:commercial_name, :first_name, :last_name, :doc_type, :doc_number, :phone, :email)
             end
 
         end
