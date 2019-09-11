@@ -22,7 +22,7 @@ gem 'devise'
 
 gem 'devise-jwt', '~> 0.5.8'
 
-gem 'knock'
+#gem 'knock'
 
 gem 'active_model_serializers', '~> 0.10.0'
 
