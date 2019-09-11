@@ -1,5 +1,3 @@
-require 'json'
-
 module Api 
     module V1
         class DocumentsController < ApplicationController

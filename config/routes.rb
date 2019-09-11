@@ -1,10 +1,19 @@
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
+  devise_for :users,
+             path: '',
+             path_names: {
+               sign_in: 'login',
+               sign_out: 'logout',
+               registration: 'signup'
+             },
+             controllers: {
+               sessions: 'sessions',
+               registrations: 'registrations'
+             }
+
   namespace 'api' do
     namespace 'v1' do
-      post 'user_token' => 'user_token#create'
-      get 'users/current' => 'users#current'
-      resources :users
 
       get 'devices' => 'devices#index'
       get 'devices/:id' => 'devices#show'
@@ -76,6 +85,12 @@ Rails.application.routes.draw do
       delete 'spaces/:id' => 'spaces#destroy'
       resources :spaces
 
+      get 'users' => 'users#index'
+      get 'users/:id' => 'users#show'
+      post 'users' => 'users#create'
+      patch 'users/:id' => 'users#update'
+      delete 'users/:id' => 'users#destroy'
+      resources :users
       
     end
   end

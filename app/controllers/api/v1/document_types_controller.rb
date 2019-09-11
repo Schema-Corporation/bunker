@@ -3,7 +3,7 @@ module Api
 
     class DocumentTypesController < ApplicationController
 
-
+      before_action :authenticate_user!
 
       #GET /document_types
       def index

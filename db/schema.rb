@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_09_151209) do
+ActiveRecord::Schema.define(version: 2019_09_11_010636) do
 
   create_table "booking_processes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "lessor_id"
@@ -48,8 +48,15 @@ ActiveRecord::Schema.define(version: 2019_09_09_151209) do
     t.index ["document_type_id"], name: "index_documents_on_document_type_id"
   end
 
+  create_table "jwt_blacklists", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "jti"
+    t.datetime "exp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["jti"], name: "index_jwt_blacklists_on_jti"
+  end
+
   create_table "lessees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
     t.string "ruc"
     t.string "commercial_name"
     t.string "first_name"
@@ -60,11 +67,9 @@ ActiveRecord::Schema.define(version: 2019_09_09_151209) do
     t.text "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_lessees_on_user_id"
   end
 
   create_table "lessors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
     t.string "first_name"
     t.string "last_name"
     t.integer "doc_type"
@@ -74,7 +79,6 @@ ActiveRecord::Schema.define(version: 2019_09_09_151209) do
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_lessors_on_user_id"
   end
 
   create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -127,12 +131,19 @@ ActiveRecord::Schema.define(version: 2019_09_09_151209) do
     t.index ["lessee_id"], name: "index_spaces_on_lessee_id"
   end
 
-  add_foreign_key "booking_processes", "documents"
-  add_foreign_key "booking_processes", "lessors"
-  add_foreign_key "booking_processes", "spaces"
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
   add_foreign_key "documents", "document_types"
-  add_foreign_key "lessees", "users"
-  add_foreign_key "lessors", "users"
   add_foreign_key "locations", "spaces"
   add_foreign_key "photos", "spaces"
   add_foreign_key "space_service_details", "services"
