@@ -18,6 +18,10 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rack-cors'
 
+gem 'devise'
+
+gem 'devise-jwt', '~> 0.5.8'
+
 gem 'knock'
 
 gem 'active_model_serializers', '~> 0.10.0'

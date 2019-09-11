@@ -7,7 +7,8 @@ module Api
             # GET /documents
             def index
                 @documents = Document.all
-                    render json: @documents,status: :ok
+
+                render json: @documents,status: :ok
 
                 rescue ActiveRecord::RecordNotFound
                     render json: [],status: :not_found
@@ -26,10 +27,13 @@ module Api
 
             #POST /documents
             def create
-                @document = Document.new(document_params)
+
+                @documentType = DocumentType.find(params[:document_type][:id])
+
+                @document = Document.new(document_type_id: @documentType.id, url_document: params[:url_document])
 
                 if @document.save
-                    render json: @document, status: :created
+                    render json: @document, adapter: :attributes, status: :created
                 end
 
                 rescue ActiveRecord::RecordInvalid
@@ -37,6 +41,9 @@ module Api
 
                 rescue ActionController::ParameterMissing
                     render json: [],status: :bad_request
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
             end
             
             # PATCH/PUT /documents/1
@@ -67,7 +74,11 @@ module Api
 
             private 
             def document_params
-              params.require(:document).permit(:document_type_id, :url_document)
+              params.require(:document).permit(
+                  :url_document,
+                  :document_type_id,
+                  document_type: [ :id, :name, :description, :created_at, :updated_at ]
+                )
             end
             
         end
