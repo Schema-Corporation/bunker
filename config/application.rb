@@ -34,13 +34,15 @@ module Bunker
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://localhost'
-        resource '/*',
-          headers: %w(Authorization),
-          methods: :any,
-          expose: %w(Authorization),
-          max_age: 600
+        origins '*'
+        resource(
+          '*',
+          headers: :any,
+          expose: ["Authorization"],
+          methods: [:get, :patch, :put, :delete, :post, :options, :show]
+        )
       end
-    end
+   end
+
   end
 end

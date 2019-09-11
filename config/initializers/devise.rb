@@ -12,16 +12,7 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '89c087ad9624346825d247b9a9148e2ae5a8712810d3ebf6b94cc58857a595894c862f7a6498d9e4c69623d2a34b1925725953bf416d733ec814c7f92f2321b5'
 
-  config.jwt do |jwt|
-    jwt.secret = ENV['DEVISE_JWT_SECRET_KEY']
-    jwt.dispatch_requests = [
-      ['POST', %r{^/login$}]
-    ]
-    jwt.revocation_requests = [
-      ['DELETE', %r{^/logout$}]
-    ]
-    jwt.expiration_time = 30.minutes.to_i
-  end
+
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
@@ -302,7 +293,16 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
-
+  config.jwt do |jwt|
+    jwt.secret = "1bd993ac8e41dca0b91116b014f1eac231dfa8863e29e83e59ae997b0bfb8dae218cf07c0cb4be08abd411a677eefc3b60556a2207411aa73a050d98786e96f7"
+    jwt.dispatch_requests = [
+      ['POST', %r{^/login$}]
+    ]
+    jwt.revocation_requests = [
+      ['DELETE', %r{^/logout$}]
+    ]
+    jwt.expiration_time = 30.minutes.to_i
+  end
   # ==> Configuration for :registerable
 
   # When set to false, does not sign a user in automatically after their password is
