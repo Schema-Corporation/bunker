@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
   end
 
   create_table "lessees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "ruc"
     t.string "commercial_name"
     t.string "first_name"
@@ -67,9 +68,11 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
     t.text "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_lessees_on_user_id"
   end
 
   create_table "lessors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "first_name"
     t.string "last_name"
     t.integer "doc_type"
@@ -79,6 +82,7 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_lessors_on_user_id"
   end
 
   create_table "locations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -147,6 +151,8 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
   add_foreign_key "booking_processes", "lessors"
   add_foreign_key "booking_processes", "spaces"
   add_foreign_key "documents", "document_types"
+  add_foreign_key "lessees", "users"
+  add_foreign_key "lessors", "users"
   add_foreign_key "locations", "spaces"
   add_foreign_key "photos", "spaces"
   add_foreign_key "space_service_details", "services"

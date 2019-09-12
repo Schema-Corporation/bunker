@@ -26,6 +26,8 @@ module Api
 
       # POST /spaces
       def create
+        @lessee = Lessee.find(params[:user][:id])
+
         @space = Service.new(space_params)
         if @space.save
             render json: @space, status: :created

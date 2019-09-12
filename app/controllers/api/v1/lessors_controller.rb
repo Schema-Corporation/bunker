@@ -25,9 +25,11 @@ module Api
 
 
             def create
-                @lessor = Lessor.new(lessor_params)
+                @user = User.find(params[:user][:id])
+
+                @lessor = Lessor.new(user_id: @user.id, first_name: params[:first_name], last_name: params[:last_name], doc_type: params[:doc_type], doc_number: params[:doc_number], phone: params[:phone], email: params[:email], type: params[:type])
                 if @lessor.save
-                    render json: @lessor, status: :created
+                    render json: @lessor, adapter: :attributes, status: :created
                 end
 
                 rescue ActiveRecord::RecordInvalid
@@ -35,6 +37,8 @@ module Api
 
                 rescue ActionController::ParameterMissing
                     render json: [],status: :bad_request
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
             end
 
 
@@ -65,7 +69,16 @@ module Api
 
             private 
             def lessor_params
-              params.require(:lessor).permit(:first_name, :last_name, :doc_type, :doc_number, :phone, :email, :type)
+              params.require(:lessor).permit(
+                  :first_name, 
+                  :last_name, 
+                  :doc_type, 
+                  :doc_number, 
+                  :phone, 
+                  :email, 
+                  :type,
+                  user:  [:id, :email, :encrypted_password, :reset_password_token, :reset_password_sent_at, remember_created_at, created_at, updated_at]
+                )
             end
 
         end
