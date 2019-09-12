@@ -26,11 +26,11 @@ module Api
 
       # POST /spaces
       def create
-        @lessee = Lessee.find(params[:user][:id])
+        @lessee = Lessee.find(params[:lessee][:id])
 
-        @space = Service.new(space_params)
+        @space = Space.new(lessee_id: @lessee.id, status: params[:status], width: [:width], height: params[:height], area: params[:area])
         if @space.save
-            render json: @space, status: :created
+            render json: @space, adapter: :attributes, status: :created
         end
 
         rescue ActiveRecord::RecordInvalid
@@ -38,6 +38,9 @@ module Api
 
         rescue ActionController::ParameterMissing
             render json: [],status: :bad_request
+        
+          rescue ActiveRecord::RecordNotFound
+            render json: [],status: :not_found
       end
 
       # PATCH/PUT /spaces/1
@@ -65,6 +68,17 @@ module Api
             render json: [],status: :not_found
       end
 
+      private
+      def space_params
+        params.require(:lessee).permit(
+          :status,
+          :width,
+          :height,
+          :area,
+          :lessee_id,
+          lessee: [:id, :user_id, :ruc, :commercial_name, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at]
+        )
+      end
 
     end
   end

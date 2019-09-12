@@ -90,12 +90,10 @@ module Api
                     :start_date,
                     :end_date,
                     :monthly_fee,
-                    :lessor_id,
-                    :space_id,
-                    :document_id,
-                    lessor: [:id, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :type],
-                    space: [:id, :status, :width, :height, :area, lessee: [:id, :ruc, :commercial_name, :first_name, :last_name, :doc_type, :doc_number, :phone, :email]],
-                    document: [:id, :url_document, :document_type_id]
+                    
+                    lessor: [:id, :user_id, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :type, :created_at, :updated_at],
+                    space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price],
+                    document: [:id, :document_type_id, :url_document, :created_at, :updated_at]
                 )
             end
                 

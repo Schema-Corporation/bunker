@@ -4,6 +4,7 @@ module Api
 
             before_action :authenticate_user!
 
+            #GET /locations
             def index 
                 @locations = Location.all
                     render json: @locations,status: :ok
@@ -24,10 +25,12 @@ module Api
 
 
             def create
-                @location = Location.new(location_params)
+                @space = Space.find(params[:space][:id])
+                
+                @location = Location.new(space_id: @space.id, address: params[:address], latitude: params[:latitude], longitude: params[:longitude])
 
                 if @location.save
-                    render json: @location, status: :created
+                    render json: @location, adapter: :attributes, status: :created
                 end
 
                 rescue ActiveRecord::RecordInvalid
@@ -35,6 +38,8 @@ module Api
 
                 rescue ActionController::ParameterMissing
                     render json: [],status: :bad_request
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
             end
 
 
@@ -64,7 +69,13 @@ module Api
 
             private 
             def location_params
-              params.require(:location).permit(:space_id, :address, :latitude, :longitude)
+              params.require(:location).permit(
+                  :space_id, 
+                  :address, 
+                  :latitude, 
+                  :longitude, 
+                  space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, updated_at, rent_price]
+                )
             end            
 
         end

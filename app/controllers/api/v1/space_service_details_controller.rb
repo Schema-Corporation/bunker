@@ -27,9 +27,12 @@ module Api
 
             # POST /space_service_details
             def create
-                @space_service_detail = SpaceServiceDetail.new(space_service_detail_params)
+                @space = Space.find(params[:space][:id])
+                @service = Service.find(params[:service][:id])
+
+                @space_service_detail = SpaceServiceDetail.new(space_id: @space.id, service_id: @service.id, status: params[:status], start_date: params[:start_date], end_date: params[:end_date])
                 if @space_service_detail.save
-                    render json: @space_service_detail, status: :created
+                    render json: @space_service_detail, adapter: :attributes, status: :created
                 end
 
                 rescue ActiveRecord::RecordInvalid
@@ -37,6 +40,9 @@ module Api
 
                 rescue ActionController::ParameterMissing
                     render json: [],status: :bad_request
+                
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
             end
 
 
@@ -66,6 +72,17 @@ module Api
             end
 
 
+            private
+            def space_service_detail_params
+                params.require(:space_service_detail).permit(
+                    :status,
+                    :start_date,
+                    :end_date,
+                    
+                    space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, updated_at, rent_price],
+                    service: [:id, :name, :description, :created_at, updated_at]
+                )
+            end
 
         end
     end

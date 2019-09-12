@@ -24,9 +24,11 @@ module Api
 
 
             def create
-                @photo = Photo.new(photo_params)
+                @space = Space.find(params[:space][:id])
+
+                @photo = Photo.new(space_id: @space.id, photo_url: params[:photo_url])
                 if @photo.save
-                    render json: @photo, status: :created
+                    render json: @photo, adapter: :attributes, status: :created
                 end
 
                 rescue ActiveRecord::RecordInvalid
@@ -34,6 +36,8 @@ module Api
 
                 rescue ActionController::ParameterMissing
                     render json: [],status: :bad_request
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
             end
 
 
@@ -63,7 +67,11 @@ module Api
 
             private 
             def photo_params
-              params.require(:photo).permit(:space_id, :photo_url)
+              params.require(:photo).permit(
+                  :space_id, 
+                  :photo_url,
+                  space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, updated_at, rent_price]
+                )
             end
 
         end

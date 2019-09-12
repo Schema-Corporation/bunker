@@ -60,6 +60,14 @@ module Api
                 rescue ActiveRecord::RecordInvalid
                     render json: [],status: :not_found
             end
+
+            private
+            def service_params
+                params.require(:service).permit(
+                    :name, 
+                    :description
+                    )
+            end
         end
     end
 end
