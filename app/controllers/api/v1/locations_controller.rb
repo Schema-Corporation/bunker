@@ -2,6 +2,8 @@ module Api
     module V1
         class LocationsController < ApplicationController
 
+            before_action :authenticate_user!
+
             def index 
                 @locations = Location.all
                     render json: @locations,status: :ok

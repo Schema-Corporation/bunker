@@ -1,10 +1,14 @@
 module Api 
     module V1
         class LesseesController < ApplicationController
+
+            before_action :authenticate_user!
+
+
             #GET /lessees
             def index
                 @lessees = Lessee.all
-                    render json: @lessees,status: :ok
+                render json: @lessees,status: :ok
 
                 rescue ActiveRecord::RecordNotFound
                     render json: [],status: :not_found
@@ -22,7 +26,9 @@ module Api
             end
 
             def create
-                @lessee = Lessee.new(lessee_params)
+                @user = User.find(params[:user][:id])
+
+                @lessee = Lessee.new(user_id: @user.id, :ruc, :commercial_name, :first_name, :last_name, :doc_type, :doc_number, :phone, :email)
                 if @lessee.save
                     render json: @lessee, status: :created
                 end

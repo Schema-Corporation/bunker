@@ -2,6 +2,8 @@ module Api
   module V1 
     class SpacesController < ApplicationController
 
+      before_action :authenticate_user!
+
         # GET /spaces
       def index
         @spaces = Space.all

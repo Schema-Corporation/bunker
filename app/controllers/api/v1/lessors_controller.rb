@@ -1,6 +1,8 @@
 module Api
     module V1
         class LessorsController < ApplicationController
+
+            before_action :authenticate_user!
         
             def index
                 @lessors = Lessor.all

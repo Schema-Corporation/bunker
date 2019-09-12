@@ -1,6 +1,10 @@
 module Api 
     module V1 
         class SpaceServiceDetailsController < ApplicationController
+
+            before_action :authenticate_user!
+
+
             #GET /space_service_details
             def index
                 @space_service_details = SpaceServiceDetail.all

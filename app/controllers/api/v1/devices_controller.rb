@@ -2,6 +2,7 @@ module Api
     module V1 
         class DevicesController < ApplicationController
 
+            before_action :authenticate_user!
 
             # GET /devices
             def index

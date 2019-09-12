@@ -2,6 +2,9 @@ module Api
     module V1
         class DocumentsController < ApplicationController
 
+
+            before_action :authenticate_user!
+            
             # GET /documents
             def index
                 @documents = Document.all

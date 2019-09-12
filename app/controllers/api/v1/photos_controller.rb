@@ -1,6 +1,8 @@
 module Api 
     module V1 
         class PhotosController < ApplicationController
+
+            before_action :authenticate_user!
             
             def index
                 @photos = Photo.all

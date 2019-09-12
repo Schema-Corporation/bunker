@@ -15,6 +15,13 @@ Rails.application.routes.draw do
   namespace 'api' do
     namespace 'v1' do
 
+      get 'booking_processes' => 'booking_processes#index'
+      get 'booking_processes/:id' => 'booking_processes#show'
+      post 'booking_processes' => 'booking_processes#create'
+      patch 'booking_processes/:id' => 'booking_processes#update'
+      delete 'booking_processes/:id' => 'booking_processes#destroy'
+      resources :booking_processes
+
       get 'devices' => 'devices#index'
       get 'devices/:id' => 'devices#show'
       post 'devices' => 'devices#create'
