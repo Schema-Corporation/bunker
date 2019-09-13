@@ -49,8 +49,10 @@ module Api
             
             # PATCH/PUT /documents/1
             def update
+                @documentType = DocumentType.find(params[:document_type][:id])
+
                 @document = Document.find(params[:id])
-                if @document.update(document_params)
+                if @document.update(document_type_id: @documentType.id, url_document: params[:url_document])
                     render json: @document, status: :ok
                 end
 

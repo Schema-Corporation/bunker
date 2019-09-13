@@ -42,8 +42,10 @@ module Api
 
 
             def update
+                @space = Space.find(params[:space][:id])
+
                 @photo = Photo.find(params[:id])
-                if @photo.update(photo_params)
+                if @photo.update(space_id: @space.id, photo_url: params[:photo_url])
                     render json: @photo, status: :ok
                 end
 

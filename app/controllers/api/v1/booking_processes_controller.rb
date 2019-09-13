@@ -38,8 +38,8 @@ module Api
                     document_id: @document.id,
                     step: params[:step],
                     start_date: params[:start_date],
-                    end_date: [:end_date],
-                    monthly_fee: [:monthly_fee],
+                    end_date: params[:end_date],
+                    monthly_fee: params[:monthly_fee]
                     )
 
                 if @booking_process.save
@@ -58,8 +58,20 @@ module Api
 
             #PATCH/PUT /booking_process/1
             def update
+                @lessor = Lessor.find(params[:lessor][:id])
+                @space = Space.find(params[:space][:id])
+                @document = Document.find(params[:document][:id])
+
                 @booking_process=BookingProcess.find(params[:id])
-                if @booking_process.update(booking_process_params)
+                if @booking_process.update(
+                    lessor_id: @lessor.id,
+                    space_id: @space.id,
+                    document_id: @document.id,
+                    step: params[:step],
+                    start_date: params[:start_date],
+                    end_date: params[:end_date],
+                    monthly_fee: params[:monthly_fee]
+                )
                     render json: @booking_process, status: :ok
                 end
 

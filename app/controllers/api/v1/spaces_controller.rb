@@ -39,14 +39,15 @@ module Api
         rescue ActionController::ParameterMissing
             render json: [],status: :bad_request
         
-          rescue ActiveRecord::RecordNotFound
+        rescue ActiveRecord::RecordNotFound
             render json: [],status: :not_found
       end
 
       # PATCH/PUT /spaces/1
       def update
-        @space = Service.find(params[:id])
-        if @space.update(space_params)
+        @lessee = Lessee.find(params[:lessee][:id])
+        @space = Space.find(params[:id])
+        if @space.update(lessee_id: @lessee.id, status: params[:status], width: [:width], height: params[:height], area: params[:area])
             render json: @space, status: :ok
         end
 

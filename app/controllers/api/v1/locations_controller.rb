@@ -44,8 +44,10 @@ module Api
 
 
             def update
+                @space = Space.find(params[:space][:id])
+
                 @location = Location.find(params[:id])
-                if @location.update(location_params)
+                if @location.update(space_id: @space.id, address: params[:address], latitude: params[:latitude], longitude: params[:longitude])
                     render json: @location, status: :ok
                 end
 

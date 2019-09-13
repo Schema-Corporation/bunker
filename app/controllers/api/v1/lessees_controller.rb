@@ -45,8 +45,10 @@ module Api
 
 
             def update
+                @user = User.find(params[:user][:id])
+
                 @lessee = Lessee.find(params[:id])
-                if @lessee.update(lessee_params)
+                if @lessee.update(user_id: @user.id, ruc: params[:ruc], commercial_name: params[:commercial_name], first_name: params[:first_name], last_name: params[:last_name], doc_type: params[:doc_type], doc_number: params[:doc_number], phone: params[:phone], email: params[:email])
                     render json: @lessee, status: :ok
                 end
 
@@ -80,7 +82,7 @@ module Api
                   :phone, 
                   :email,
                   
-                  user: [:id, :email, :encrypted_password, :reset_password_token, :reset_password_sent_at, remember_created_at, created_at, updated_at]
+                  user: [:id, :email, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at, :created_at, :updated_at]
                 )
             end
 

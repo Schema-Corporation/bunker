@@ -48,8 +48,11 @@ module Api
 
             # PATCH/PUT /space_service_details/1
             def update
+                @space = Space.find(params[:space][:id])
+                @service = Service.find(params[:service][:id])
+
                 @space_service_detail = SpaceServiceDetail.find(params[:id])
-                if @space_service_detail.update(space_service_detail_params)
+                if @space_service_detail.update(space_id: @space.id, service_id: @service.id, status: params[:status], start_date: params[:start_date], end_date: params[:end_date])
                     render json: @space_service_detail, status: :ok
                 end
 
@@ -79,8 +82,8 @@ module Api
                     :start_date,
                     :end_date,
                     
-                    space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, updated_at, rent_price],
-                    service: [:id, :name, :description, :created_at, updated_at]
+                    space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price],
+                    service: [:id, :name, :description, :created_at, :updated_at]
                 )
             end
 
