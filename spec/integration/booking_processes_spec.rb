@@ -25,13 +25,14 @@ describe 'Booking Processes API' do
                                         password: { type: :string}
                                     }
                                 },
+                                ruc: { type: :string},
+                                commercial_name: { type: :string},
                                 first_name: { type: :string},
                                 last_name: { type: :string},
                                 doc_type: { type: :integer},
                                 doc_number: { type: :string},
                                 phone: { type: :string},
-                                email: { type: :string},
-                                type: { type: :string}
+                                email: { type: :string}
                         }
                     },
                     space: {
@@ -48,8 +49,7 @@ describe 'Booking Processes API' do
                                         password: { type: :string}
                                     }
                                 },
-                                ruc: { type: :string},
-                                commercial_name: { type: :string},
+                                
                                 first_name: { type: :string},
                                 last_name: { type: :string},
                                 doc_type: { type: :integer},
@@ -59,9 +59,9 @@ describe 'Booking Processes API' do
 
                             },
                             status: { type: :integer},
-                            width: { type: :number, format: :float},
-                            height: { type: :number, format: :float},
-                            area: { type: :float}
+                            width: { type: :number, format: :double},
+                            height: { type: :number, format: :double},
+                            area: { type: :number, format: :double}
                         }
                     },
                     document: {
@@ -143,13 +143,14 @@ describe 'Booking Processes API' do
                                         password: { type: :string}
                                     }
                                 },
+                                ruc: { type: :string},
+                                commercial_name: { type: :string},
                                 first_name: { type: :string},
                                 last_name: { type: :string},
                                 doc_type: { type: :integer},
                                 doc_number: { type: :string},
                                 phone: { type: :string},
-                                email: { type: :string},
-                                type: { type: :string}
+                                email: { type: :string}
                         }
                     },
                     space: {
@@ -166,8 +167,7 @@ describe 'Booking Processes API' do
                                         password: { type: :string}
                                     }
                                 },
-                                ruc: { type: :string},
-                                commercial_name: { type: :string},
+                                
                                 first_name: { type: :string},
                                 last_name: { type: :string},
                                 doc_type: { type: :integer},
@@ -243,13 +243,14 @@ describe 'Booking Processes API' do
                                         password: { type: :string}
                                     }
                                 },
+                                ruc: { type: :string},
+                                commercial_name: { type: :string},
                                 first_name: { type: :string},
                                 last_name: { type: :string},
                                 doc_type: { type: :integer},
                                 doc_number: { type: :string},
                                 phone: { type: :string},
-                                email: { type: :string},
-                                type: { type: :string}
+                                email: { type: :string}
                         }
                     },
                     space: {
@@ -266,8 +267,7 @@ describe 'Booking Processes API' do
                                         password: { type: :string}
                                     }
                                 },
-                                ruc: { type: :string},
-                                commercial_name: { type: :string},
+                                
                                 first_name: { type: :string},
                                 last_name: { type: :string},
                                 doc_type: { type: :integer},

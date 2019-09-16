@@ -28,7 +28,7 @@ module Api
             def create
                 @user = User.find(params[:user][:id])
 
-                @lessee = Lessee.new(user_id: @user.id, ruc: params[:ruc], commercial_name: params[:commercial_name], first_name: params[:first_name], last_name: params[:last_name], doc_type: params[:doc_type], doc_number: params[:doc_number], phone: params[:phone], email: params[:email])
+                @lessee = Lessee.new(user_id: @user.id, first_name: params[:first_name], last_name: params[:last_name], doc_type: params[:doc_type], doc_number: params[:doc_number], phone: params[:phone], email: params[:email])
                 if @lessee.save
                     render json: @lessee, adapter: :attributes, status: :created
                 end
@@ -48,7 +48,7 @@ module Api
                 @user = User.find(params[:user][:id])
 
                 @lessee = Lessee.find(params[:id])
-                if @lessee.update(user_id: @user.id, ruc: params[:ruc], commercial_name: params[:commercial_name], first_name: params[:first_name], last_name: params[:last_name], doc_type: params[:doc_type], doc_number: params[:doc_number], phone: params[:phone], email: params[:email])
+                if @lessee.update(user_id: @user.id, first_name: params[:first_name], last_name: params[:last_name], doc_type: params[:doc_type], doc_number: params[:doc_number], phone: params[:phone], email: params[:email])
                     render json: @lessee, status: :ok
                 end
 
@@ -72,9 +72,7 @@ module Api
 
             private 
             def lessee_params
-              params.require(:lessee).permit(
-                  :ruc,
-                  :commercial_name, 
+              params.require(:lessee).permit( 
                   :first_name, 
                   :last_name, 
                   :doc_type, 

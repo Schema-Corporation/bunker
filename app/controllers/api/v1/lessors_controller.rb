@@ -27,7 +27,7 @@ module Api
             def create
                 @user = User.find(params[:user][:id])
 
-                @lessor = Lessor.new(user_id: @user.id, first_name: params[:first_name], last_name: params[:last_name], doc_type: params[:doc_type], doc_number: params[:doc_number], phone: params[:phone], email: params[:email], type: params[:type])
+                @lessor = Lessor.new(user_id: @user.id, ruc: params[:ruc], commercial_name: params[:commercial_name], first_name: params[:first_name], last_name: params[:last_name], doc_type: params[:doc_type], doc_number: params[:doc_number], phone: params[:phone], email: params[:email])
                 if @lessor.save
                     render json: @lessor, adapter: :attributes, status: :created
                 end
@@ -46,7 +46,7 @@ module Api
                 @user = User.find(params[:user][:id])
 
                 @lessor = Lessor.find(params[:id])
-                if @lessor.update(user_id: @user.id, first_name: params[:first_name], last_name: params[:last_name], doc_type: params[:doc_type], doc_number: params[:doc_number], phone: params[:phone], email: params[:email], type: params[:type])
+                if @lessor.update(user_id: @user.id, ruc: params[:ruc], commercial_name: params[:commercial_name], first_name: params[:first_name], last_name: params[:last_name], doc_type: params[:doc_type], doc_number: params[:doc_number], phone: params[:phone], email: params[:email])
                     render json: @lessor, status: :ok
                 end
 
@@ -72,13 +72,15 @@ module Api
             private 
             def lessor_params
               params.require(:lessor).permit(
+                  :ruc,
+                  :commercial_name,
                   :first_name, 
                   :last_name, 
                   :doc_type, 
                   :doc_number, 
                   :phone, 
                   :email, 
-                  :type,
+                  
                   user:  [:id, :email, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at, :created_at, :updated_at]
                 )
             end

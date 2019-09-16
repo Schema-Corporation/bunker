@@ -26,9 +26,9 @@ module Api
 
       # POST /spaces
       def create
-        @lessee = Lessee.find(params[:lessee][:id])
+        @lessor = Lessor.find(params[:lessor][:id])
 
-        @space = Space.new(lessee_id: @lessee.id, status: params[:status], width: [:width], height: params[:height], area: params[:area])
+        @space = Space.new(lessor_id: @lessor.id, status: params[:status], width: params[:width], height: params[:height], area: params[:area], rent_price: params[:rent_price])
         if @space.save
             render json: @space, adapter: :attributes, status: :created
         end
@@ -45,9 +45,9 @@ module Api
 
       # PATCH/PUT /spaces/1
       def update
-        @lessee = Lessee.find(params[:lessee][:id])
+        @lessor = Lessor.find(params[:lessor][:id])
         @space = Space.find(params[:id])
-        if @space.update(lessee_id: @lessee.id, status: params[:status], width: [:width], height: params[:height], area: params[:area])
+        if @space.update(lessor_id: @lessor.id, status: params[:status], width: params[:width], height: params[:height], area: params[:area], rent_price: params[:rent_price])
             render json: @space, status: :ok
         end
 
@@ -71,13 +71,13 @@ module Api
 
       private
       def space_params
-        params.require(:lessee).permit(
+        params.require(:lessor).permit(
           :status,
           :width,
           :height,
           :area,
-          :lessee_id,
-          lessee: [:id, :user_id, :ruc, :commercial_name, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at]
+          :rent_price,
+          lessor: [:id, :user_id, :ruc, :commercial_name, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at]
         )
       end
 

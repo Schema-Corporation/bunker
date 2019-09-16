@@ -467,9 +467,6 @@
                     },
                     "email": {
                       "type": "string"
-                    },
-                    "type": {
-                      "type": "string"
                     }
                   }
                 },
@@ -1320,12 +1317,6 @@
                     }
                   }
                 },
-                "ruc": {
-                  "type": "string"
-                },
-                "commercial_name": {
-                  "type": "string"
-                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1347,8 +1338,6 @@
               },
               "required": [
                 "user",
-                "ruc",
-                "commercial_name",
                 "first_name",
                 "last_name",
                 "doc_type",
@@ -1429,12 +1418,6 @@
                     }
                   }
                 },
-                "ruc": {
-                  "type": "string"
-                },
-                "commercial_name": {
-                  "type": "string"
-                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1456,8 +1439,6 @@
               },
               "required": [
                 "user",
-                "ruc",
-                "commercial_name",
                 "first_name",
                 "last_name",
                 "doc_type",
@@ -1513,12 +1494,6 @@
                     }
                   }
                 },
-                "ruc": {
-                  "type": "string"
-                },
-                "commercial_name": {
-                  "type": "string"
-                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1540,8 +1515,6 @@
               },
               "required": [
                 "user",
-                "ruc",
-                "commercial_name",
                 "first_name",
                 "last_name",
                 "doc_type",
@@ -1643,6 +1616,12 @@
                     }
                   }
                 },
+                "ruc": {
+                  "type": "string"
+                },
+                "commercial_name": {
+                  "type": "string"
+                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1660,20 +1639,18 @@
                 },
                 "email": {
                   "type": "string"
-                },
-                "type": {
-                  "type": "string"
                 }
               },
               "required": [
                 "user",
+                "ruc",
+                "commercial_name",
                 "first_name",
                 "last_name",
                 "doc_type",
                 "doc_number",
                 "phone",
-                "email",
-                "type"
+                "email"
               ]
             }
           },
@@ -1748,6 +1725,12 @@
                     }
                   }
                 },
+                "ruc": {
+                  "type": "string"
+                },
+                "commercial_name": {
+                  "type": "string"
+                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1765,21 +1748,19 @@
                 },
                 "email": {
                   "type": "string"
-                },
-                "type": {
-                  "type": "string"
                 }
               },
               "required": [
                 "id",
                 "user",
+                "ruc",
+                "commercial_name",
                 "first_name",
                 "last_name",
                 "doc_type",
                 "doc_number",
                 "phone",
-                "email",
-                "type"
+                "email"
               ]
             }
           },
@@ -1829,6 +1810,12 @@
                     }
                   }
                 },
+                "ruc": {
+                  "type": "string"
+                },
+                "commercial_name": {
+                  "type": "string"
+                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1846,20 +1833,18 @@
                 },
                 "email": {
                   "type": "string"
-                },
-                "type": {
-                  "type": "string"
                 }
               },
               "required": [
                 "user",
+                "ruc",
+                "commercial_name",
                 "first_name",
                 "last_name",
                 "doc_type",
                 "doc_number",
                 "phone",
-                "email",
-                "type"
+                "email"
               ]
             }
           },

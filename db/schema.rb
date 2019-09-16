@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_09_11_010636) do
 
   create_table "booking_processes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "lessor_id"
+    t.bigint "lessee_id"
     t.bigint "space_id"
     t.bigint "document_id"
     t.integer "step"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["document_id"], name: "index_booking_processes_on_document_id"
-    t.index ["lessor_id"], name: "index_booking_processes_on_lessor_id"
+    t.index ["lessee_id"], name: "index_booking_processes_on_lessee_id"
     t.index ["space_id"], name: "index_booking_processes_on_space_id"
   end
 
@@ -58,8 +58,6 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
 
   create_table "lessees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "ruc"
-    t.string "commercial_name"
     t.string "first_name"
     t.string "last_name"
     t.integer "doc_type"
@@ -73,13 +71,14 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
 
   create_table "lessors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
+    t.string "ruc"
+    t.string "commercial_name"
     t.string "first_name"
     t.string "last_name"
     t.integer "doc_type"
     t.string "doc_number"
     t.string "phone"
     t.text "email"
-    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_lessors_on_user_id"
@@ -124,7 +123,7 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
   end
 
   create_table "spaces", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "lessee_id"
+    t.bigint "lessor_id"
     t.integer "status"
     t.decimal "width", precision: 10
     t.decimal "height", precision: 10
@@ -132,7 +131,7 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "rent_price", precision: 10
-    t.index ["lessee_id"], name: "index_spaces_on_lessee_id"
+    t.index ["lessor_id"], name: "index_spaces_on_lessor_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -148,7 +147,7 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
   end
 
   add_foreign_key "booking_processes", "documents"
-  add_foreign_key "booking_processes", "lessors"
+  add_foreign_key "booking_processes", "lessees"
   add_foreign_key "booking_processes", "spaces"
   add_foreign_key "documents", "document_types"
   add_foreign_key "lessees", "users"
@@ -157,5 +156,5 @@ ActiveRecord::Schema.define(version: 2019_09_11_010636) do
   add_foreign_key "photos", "spaces"
   add_foreign_key "space_service_details", "services"
   add_foreign_key "space_service_details", "spaces"
-  add_foreign_key "spaces", "lessees"
+  add_foreign_key "spaces", "lessors"
 end

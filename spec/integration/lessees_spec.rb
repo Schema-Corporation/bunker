@@ -20,8 +20,7 @@ describe 'Lessees API' do
                             password: { type: :string}
                         }
                     },
-                    ruc: { type: :string},
-                    commercial_name: { type: :string},
+                    
                     first_name: { type: :string},
                     last_name: { type: :string},
                     doc_type: { type: :integer},
@@ -29,7 +28,7 @@ describe 'Lessees API' do
                     phone: { type: :string},
                     email: { type: :string}
                 },
-                required: [ 'user', 'ruc', 'commercial_name', 'first_name', 'last_name', 
+                required: [ 'user', 'first_name', 'last_name', 
                 'doc_type', 'doc_number', 'phone', 'email']
             }
 
@@ -42,7 +41,7 @@ describe 'Lessees API' do
             })
 
             response '201', 'Created' do
-                let(:lessee) { {ruc: '52191894', commercial_name: 'NombreComercial', first_name: 'Kevin',
+                let(:lessee) { { first_name: 'Kevin',
                 last_name: 'Burga', doc_type: '1', doc_number: '7', phone: '933436802', email: 'kevinburga@hotmail.com'}}
                 run_test!
             end
@@ -84,8 +83,7 @@ describe 'Lessees API' do
                             password: { type: :string}
                         }
                     },
-                    ruc: { type: :string},
-                    commercial_name: { type: :string},
+                    
                     first_name: { type: :string},
                     last_name: { type: :string},
                     doc_type: { type: :integer},
@@ -93,10 +91,10 @@ describe 'Lessees API' do
                     phone: { type: :string},
                     email: { type: :string}
                 },
-                required: [ 'user', 'ruc', 'commercial_name', 'first_name', 'last_name', 
+                required: [ 'user', 'first_name', 'last_name', 
                 'doc_type', 'doc_number', 'phone', 'email']
 
-                let(:id) { Lessee.create(ruc: '52191894', commercial_name: 'NombreComercial', first_name: 'Kevin',
+                let(:id) { Lessee.create( first_name: 'Kevin',
                 last_name: 'Burga', doc_type: '1', doc_number: '7', phone: '933436802', email: 'kevinburga@hotmail.com').id }
                 run_test!
                 end
@@ -131,8 +129,7 @@ describe 'Lessees API' do
                             password: { type: :string}
                         }
                     },
-                    ruc: { type: :string},
-                    commercial_name: { type: :string},
+                   
                     first_name: { type: :string},
                     last_name: { type: :string},
                     doc_type: { type: :integer},
@@ -140,7 +137,7 @@ describe 'Lessees API' do
                     phone: { type: :string},
                     email: { type: :string}
                 },
-                required: [ 'user', 'ruc', 'commercial_name', 'first_name', 'last_name', 
+                required: [ 'user', 'first_name', 'last_name', 
                 'doc_type', 'doc_number', 'phone', 'email']
             }
     

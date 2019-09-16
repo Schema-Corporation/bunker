@@ -20,16 +20,17 @@ describe 'Lessors API' do
                             password: { type: :string}
                         }
                     },
+                    ruc: { type: :string},
+                    commercial_name: { type: :string},
                     first_name: { type: :string},
                     last_name: { type: :string},
                     doc_type: { type: :integer},
                     doc_number: { type: :string},
                     phone: { type: :string},
-                    email: { type: :string},
-                    type: { type: :string} #Sale error porque el type es una palabra reservada
+                    email: { type: :string}
                 },
-                required: [ 'user', 'first_name', 'last_name', 
-                'doc_type', 'doc_number', 'phone', 'email', 'type']
+                required: [ 'user', 'ruc', 'commercial_name', 'first_name', 'last_name', 
+                'doc_type', 'doc_number', 'phone', 'email']
             }
 
             parameter({
@@ -41,8 +42,8 @@ describe 'Lessors API' do
             })
 
             response '201', 'Created' do
-                let(:lessor) { { first_name: 'Kevin', last_name: 'Burga', doc_type: '1', 
-                doc_number: '7', phone: '933436802', email: 'kevinburga@hotmail.com', type: 'Tipo'}}
+                let(:lessor) { { ruc: '6465464', commercial_name: 'Empresa', first_name: 'Kevin', last_name: 'Burga', doc_type: '1', 
+                doc_number: '7', phone: '933436802', email: 'kevinburga@hotmail.com'}}
                 run_test!
             end
 
@@ -83,19 +84,20 @@ describe 'Lessors API' do
                             password: { type: :string}
                         }
                     },
+                    ruc: { type: :string},
+                    commercial_name: { type: :string},
                     first_name: { type: :string},
                     last_name: { type: :string},
                     doc_type: { type: :integer},
                     doc_number: { type: :string},
                     phone: { type: :string},
-                    email: { type: :string},
-                    type: { type: :string}
+                    email: { type: :string}
                 },
-                required: [ 'id','user', 'first_name', 'last_name', 
-                'doc_type', 'doc_number', 'phone', 'email', 'type']
+                required: [ 'id', 'user', 'ruc', 'commercial_name', 'first_name', 'last_name', 
+                'doc_type', 'doc_number', 'phone', 'email']
 
-                let(:id) { Lessor.create(first_name: 'Kevin', last_name: 'Burga', doc_type: '1', 
-                doc_number: '7', phone: '933436802', email: 'kevinburga@hotmail.com', type: 'Tipo').id }
+                let(:id) { Lessor.create( ruc: '6465464', commercial_name: 'Empresa', first_name: 'Kevin', last_name: 'Burga', doc_type: '1', 
+                doc_number: '7', phone: '933436802', email: 'kevinburga@hotmail.com').id }
                 run_test!
                 end
 
@@ -128,16 +130,17 @@ describe 'Lessors API' do
                             password: { type: :string}
                         }
                     },
+                    ruc: { type: :string},
+                    commercial_name: { type: :string},
                     first_name: { type: :string},
                     last_name: { type: :string},
                     doc_type: { type: :integer},
                     doc_number: { type: :string},
                     phone: { type: :string},
-                    email: { type: :string},
-                    type: { type: :string}
+                    email: { type: :string}
                 },
-                required: [ 'user', 'first_name', 'last_name', 
-                'doc_type', 'doc_number', 'phone', 'email', 'type']
+                required: [ 'user', 'ruc', 'commercial_name', 'first_name', 'last_name', 
+                'doc_type', 'doc_number', 'phone', 'email']
             }
     
             parameter({
