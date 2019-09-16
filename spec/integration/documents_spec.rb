@@ -1,21 +1,29 @@
 require 'swagger_helper'
 
-describe 'DocumentTypes API' do
+describe 'Documents API' do
 
 
-    path '/api/v1/document_types' do
+    path '/api/v1/documents' do
 
-        post 'Creates a Document Type' do
-            tags 'Document_Type'
+        post 'Creates a Document' do
+            tags 'Document'
             security [Bearer: {}]
             consumes 'application/json'
-            parameter name: :document_type, in: :body, schema: {
+            parameter name: :document, in: :body, schema: {
                 type: :object,
                 properties: {
-                    name: { type: :string},
-                    description: { type: :string}
+
+                    document_type: { 
+                        type: :object,
+                        properties: {
+                            id: { type: :integer},
+                            name: { type: :string},
+                            description: { type: :string}
+                        } },
+
+                    url_document: { type: :string }
                 },
-                required: [ 'name', 'description']
+                required: [ 'document_type', 'url_document']
             }
 
             parameter({
@@ -28,12 +36,12 @@ describe 'DocumentTypes API' do
 
             response '201', 'Created' do
                 let(:Authorization) { 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTY4NTg4MzkyLCJleHAiOjE1Njg1OTAxOTIsImp0aSI6IjRlMzk5ODU1LWMyMzEtNDc1Yi05MGUzLTYyNDY5NWFmNWRkZiJ9.nkUhw506t3vyt0lLEsPMB74EY4JFzh1IPnyMREmSWLk'}
-                let(:document_type) { {name: 'Contrato', description: 'Descripcion de contrato'}}
+                let(:document) { { url_document: 'URL del documento'}}
                 run_test!
             end
 
             response '404', 'Not Found' do
-                let(:document_type) { { name: 'foo' } }
+                let(:document) { { url_document: '999' } }
                 run_test!
             end
 
@@ -41,14 +49,14 @@ describe 'DocumentTypes API' do
     end
 
 
-    path '/api/v1/document_types/{id}' do
+    path '/api/v1/documents/{id}' do
 
-        get 'Retrieves a document type' do
-            tags 'Document_Type'
+        get 'Retrieves a document' do
+            tags 'Document'
             security [Bearer: {}]
             produces 'application/json'
-            parameter name: :id, in: :path, type: :integer
-    
+            parameter name: :id, :in => :path, :type => :string
+
             parameter({
                 in: :header,
                 type: :string,
@@ -56,17 +64,25 @@ describe 'DocumentTypes API' do
                 required: :true,
                 description: 'Authorization token'
             })
-
+    
             response '200', 'OK' do
                 schema type: :object,
                 properties: {
-                    id: { type: :integer },
-                    name: { type: :string },
-                    description: { type: :string }
-                },
-                required: [ 'id', 'name', 'status' ]
+                    id: { type: :integer},
+                  
+                    document_type: { 
+                        type: :object,
+                        properties: {
+                            id: { type: :integer},
+                            name: { type: :string},
+                            description: { type: :string}
+                        } },
 
-                let(:id) { DocumentTypes.create(name: 'Contrato', description: 'Tipo de documento').id }
+                    url_document: { type: :string }
+                },
+                required: [ 'document_type', 'url_document' ]
+
+                let(:id) { Documents.create(url_document: 'URL del documento').id }
                 run_test!
                 end
 
@@ -77,22 +93,33 @@ describe 'DocumentTypes API' do
         end
     end
 
-    path '/api/v1/document_types/{id}' do
 
-        patch 'Modifies a document type' do
-            tags 'Document_Type'
+    path '/api/v1/documents/{id}' do
+
+        patch 'Modifies a document' do
+            tags 'Document'
             security [Bearer: {}]
             produces 'application/json'
 
             parameter name: :id, in: :path, type: :integer
             
-            parameter name: :document_type, in: :body, schema: {
+            parameter name: :document, in: :body, schema: {
                 type: :object,
                 properties: {
-                    name: { type: :string },
-                    description: { type: :string }
+
+                    document_type: { 
+                        type: :object,
+                        properties: {
+                            id: { type: :integer},
+                            name: { type: :string},
+                            description: { type: :string}
+                        } },
+
+                    url_document: { type: :string }
                 },
-                required: [ 'name', 'description']
+                required: [ 
+                'document_type',
+                'url_document']
             }
     
             parameter({
@@ -105,7 +132,7 @@ describe 'DocumentTypes API' do
 
             response '200', 'OK' do
                 let(:Authorization) { 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTY4NTg4MzkyLCJleHAiOjE1Njg1OTAxOTIsImp0aSI6IjRlMzk5ODU1LWMyMzEtNDc1Yi05MGUzLTYyNDY5NWFmNWRkZiJ9.nkUhw506t3vyt0lLEsPMB74EY4JFzh1IPnyMREmSWLk'}
-                let(:id) { DocumentType.create(name: 'abcabc', description: 'descripcion').id }
+                let(:id) { Document.create( url_document: 'descripcion').id }
                 run_test!
                 end
 
@@ -117,10 +144,10 @@ describe 'DocumentTypes API' do
     end
 
 
-    path '/api/v1/document_types/{id}' do
+    path '/api/v1/documents/{id}' do
 
-        delete 'Deletes a document type' do
-            tags 'Document_Type'
+        delete 'Deletes a document' do
+            tags 'Document'
             security [Bearer: {}]
             produces 'application/json'
 
@@ -136,7 +163,7 @@ describe 'DocumentTypes API' do
 
             response '200', 'OK' do
                 let(:Authorization) { 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTY4NTg4MzkyLCJleHAiOjE1Njg1OTAxOTIsImp0aSI6IjRlMzk5ODU1LWMyMzEtNDc1Yi05MGUzLTYyNDY5NWFmNWRkZiJ9.nkUhw506t3vyt0lLEsPMB74EY4JFzh1IPnyMREmSWLk'}
-                let(:id) { Document_Type.create(name: 'abcabc', description: 'descripcion').id }
+                let(:id) { Document.create(url_document: 'descripcion').id }
                 run_test!
                 end
 
@@ -150,6 +177,5 @@ describe 'DocumentTypes API' do
 
 
 
-end
 
-    
+end

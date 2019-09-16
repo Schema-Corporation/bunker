@@ -40,6 +40,7 @@ module Api
 
       # PATCH/PUT /document_types/1
       def update
+        @document_type = DocumentType.find(params[:id])
         if @document_type.update(document_type_params)
           render json: @document_type
         else

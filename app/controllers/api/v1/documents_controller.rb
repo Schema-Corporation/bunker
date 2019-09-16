@@ -29,9 +29,12 @@ module Api
             #POST /documents
             def create
 
-                @documentType = DocumentType.find(params[:document_type][:id])
+                @document_type = DocumentType.find(params[:document_type][:id])
 
-                @document = Document.new(document_type_id: @documentType.id, url_document: params[:url_document])
+                @document = Document.new(
+                    document_type_id: @document_type.id, 
+                    url_document: params[:url_document]
+                    )
 
                 if @document.save
                     render json: @document, adapter: :attributes, status: :created

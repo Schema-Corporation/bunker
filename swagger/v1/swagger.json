@@ -5,11 +5,850 @@
     "version": "v1"
   },
   "paths": {
+    "/api/v1/booking_processes": {
+      "post": {
+        "summary": "Creates a Booking Process",
+        "tags": [
+          "Booking_Process"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Booking_Process",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "lessor": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "password": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "first_name": {
+                      "type": "string"
+                    },
+                    "last_name": {
+                      "type": "string"
+                    },
+                    "doc_type": {
+                      "type": "integer"
+                    },
+                    "doc_number": {
+                      "type": "string"
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessee": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "user": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "password": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "ruc": {
+                        "type": "string"
+                      },
+                      "commercial_name": {
+                        "type": "string"
+                      },
+                      "first_name": {
+                        "type": "string"
+                      },
+                      "last_name": {
+                        "type": "string"
+                      },
+                      "doc_type": {
+                        "type": "integer"
+                      },
+                      "doc_number": {
+                        "type": "string"
+                      },
+                      "phone": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string"
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "height": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "area": {
+                      "type": "float"
+                    }
+                  }
+                },
+                "document": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "document_type": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "url_document": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "step": {
+                  "type": "integer"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "monthly_fee": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "lessor",
+                "space",
+                "document",
+                "step",
+                "start_date",
+                "end_date",
+                "monthly_fee"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/booking_processes/{id}": {
+      "get": {
+        "summary": "Retrieves a Booking Process",
+        "tags": [
+          "Booking_Process"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "lessor": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "password": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "first_name": {
+                      "type": "string"
+                    },
+                    "last_name": {
+                      "type": "string"
+                    },
+                    "doc_type": {
+                      "type": "integer"
+                    },
+                    "doc_number": {
+                      "type": "string"
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessee": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "user": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "password": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "ruc": {
+                        "type": "string"
+                      },
+                      "commercial_name": {
+                        "type": "string"
+                      },
+                      "first_name": {
+                        "type": "string"
+                      },
+                      "last_name": {
+                        "type": "string"
+                      },
+                      "doc_type": {
+                        "type": "integer"
+                      },
+                      "doc_number": {
+                        "type": "string"
+                      },
+                      "phone": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string"
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "height": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "area": {
+                      "type": "float"
+                    }
+                  }
+                },
+                "document": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "document_type": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "url_document": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "step": {
+                  "type": "integer"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "monthly_fee": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "lessor",
+                "space",
+                "document",
+                "step",
+                "start_date",
+                "end_date",
+                "monthly_fee"
+              ]
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a Booking Proccess",
+        "tags": [
+          "Booking_Process"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "booking_process",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "lessor": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "password": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "first_name": {
+                      "type": "string"
+                    },
+                    "last_name": {
+                      "type": "string"
+                    },
+                    "doc_type": {
+                      "type": "integer"
+                    },
+                    "doc_number": {
+                      "type": "string"
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessee": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "user": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "password": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "ruc": {
+                        "type": "string"
+                      },
+                      "commercial_name": {
+                        "type": "string"
+                      },
+                      "first_name": {
+                        "type": "string"
+                      },
+                      "last_name": {
+                        "type": "string"
+                      },
+                      "doc_type": {
+                        "type": "integer"
+                      },
+                      "doc_number": {
+                        "type": "string"
+                      },
+                      "phone": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string"
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "height": {
+                      "type": "number",
+                      "format": "float"
+                    },
+                    "area": {
+                      "type": "float"
+                    }
+                  }
+                },
+                "document": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "document_type": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "url_document": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "step": {
+                  "type": "integer"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "monthly_fee": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "lessor",
+                "space",
+                "document",
+                "step",
+                "start_date",
+                "end_date",
+                "monthly_fee"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a Booking Process",
+        "tags": [
+          "Booking_Process"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/devices": {
+      "post": {
+        "summary": "Creates a Device",
+        "tags": [
+          "Device"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "device",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "device_token": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "device_token"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "409": {
+            "description": "Conflict"
+          }
+        }
+      }
+    },
+    "/api/v1/devices/{id}": {
+      "get": {
+        "summary": "Retrieves a device",
+        "tags": [
+          "Device"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "device_token": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "device_token"
+              ]
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a device",
+        "tags": [
+          "Device"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "device",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "device_token": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "device_token"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a device",
+        "tags": [
+          "Device"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
     "/api/v1/document_types": {
       "post": {
         "summary": "Creates a Document Type",
         "tags": [
           "Document_Type"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
         ],
         "consumes": [
           "application/json"
@@ -25,7 +864,7 @@
                   "type": "string"
                 },
                 "description": {
-                  "type": "text"
+                  "type": "string"
                 }
               },
               "required": [
@@ -33,6 +872,13 @@
                 "description"
               ]
             }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
           }
         ],
         "responses": {
@@ -51,6 +897,12 @@
         "tags": [
           "Document_Type"
         ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
         "produces": [
           "application/json"
         ],
@@ -58,8 +910,15 @@
           {
             "name": "id",
             "in": "path",
-            "type": "string",
+            "type": "integer",
             "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
           }
         ],
         "responses": {
@@ -75,7 +934,7 @@
                   "type": "string"
                 },
                 "description": {
-                  "type": "text"
+                  "type": "string"
                 }
               },
               "required": [
@@ -91,9 +950,15 @@
         }
       },
       "patch": {
-        "summary": "Updates a document type",
+        "summary": "Modifies a document type",
         "tags": [
           "Document_Type"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
         ],
         "produces": [
           "application/json"
@@ -102,42 +967,159 @@
           {
             "name": "id",
             "in": "path",
-            "type": "string",
+            "type": "integer",
             "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "name found - OK",
+          },
+          {
+            "name": "document_type",
+            "in": "body",
             "schema": {
               "type": "object",
               "properties": {
-                "id": {
-                  "type": "integer"
-                },
                 "name": {
                   "type": "string"
                 },
                 "description": {
-                  "type": "text"
+                  "type": "string"
                 }
               },
               "required": [
-                "id",
                 "name",
-                "status"
+                "description"
               ]
             }
           },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
           "404": {
-            "description": "no se encontró el tipo de documento"
+            "description": "Not Found"
           }
         }
       },
       "delete": {
-        "summary": "Updates a document type",
+        "summary": "Deletes a document type",
         "tags": [
           "Document_Type"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/documents": {
+      "post": {
+        "summary": "Creates a Document",
+        "tags": [
+          "Document"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "document",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "document_type": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "url_document": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "document_type",
+                "url_document"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/documents/{id}": {
+      "get": {
+        "summary": "Retrieves a document",
+        "tags": [
+          "Document"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
         ],
         "produces": [
           "application/json"
@@ -148,6 +1130,13 @@
             "in": "path",
             "type": "string",
             "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
           }
         ],
         "responses": {
@@ -159,25 +1148,786 @@
                 "id": {
                   "type": "integer"
                 },
-                "name": {
-                  "type": "string"
+                "document_type": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
                 },
-                "description": {
-                  "type": "text"
+                "url_document": {
+                  "type": "string"
                 }
               },
               "required": [
-                "id",
-                "name",
-                "status"
+                "document_type",
+                "url_document"
               ]
             }
           },
           "404": {
-            "description": "no se encontró el tipo de documento"
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a document",
+        "tags": [
+          "Document"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "document",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "document_type": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "url_document": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "document_type",
+                "url_document"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a document",
+        "tags": [
+          "Document"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
+    },
+    "/api/v1/lessees": {
+      "post": {
+        "summary": "Creates a Lessee",
+        "tags": [
+          "Lessee"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "lessee",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "ruc": {
+                  "type": "string"
+                },
+                "commercial_name": {
+                  "type": "string"
+                },
+                "first_name": {
+                  "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                },
+                "doc_type": {
+                  "type": "integer"
+                },
+                "doc_number": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "user",
+                "ruc",
+                "commercial_name",
+                "first_name",
+                "last_name",
+                "doc_type",
+                "doc_number",
+                "phone",
+                "email"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/lessees/{id}": {
+      "get": {
+        "summary": "Retrieves a lessee",
+        "tags": [
+          "Lessee"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "ruc": {
+                  "type": "string"
+                },
+                "commercial_name": {
+                  "type": "string"
+                },
+                "first_name": {
+                  "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                },
+                "doc_type": {
+                  "type": "integer"
+                },
+                "doc_number": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "user",
+                "ruc",
+                "commercial_name",
+                "first_name",
+                "last_name",
+                "doc_type",
+                "doc_number",
+                "phone",
+                "email"
+              ]
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a lessee",
+        "tags": [
+          "Lessee"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "lessee",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "ruc": {
+                  "type": "string"
+                },
+                "commercial_name": {
+                  "type": "string"
+                },
+                "first_name": {
+                  "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                },
+                "doc_type": {
+                  "type": "integer"
+                },
+                "doc_number": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "user",
+                "ruc",
+                "commercial_name",
+                "first_name",
+                "last_name",
+                "doc_type",
+                "doc_number",
+                "phone",
+                "email"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a lessee",
+        "tags": [
+          "Lessee"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/lessors": {
+      "post": {
+        "summary": "Creates a Lessor",
+        "tags": [
+          "Lessor"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "lessor",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "first_name": {
+                  "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                },
+                "doc_type": {
+                  "type": "integer"
+                },
+                "doc_number": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "user",
+                "first_name",
+                "last_name",
+                "doc_type",
+                "doc_number",
+                "phone",
+                "email",
+                "type"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/lessors/{id}": {
+      "get": {
+        "summary": "Retrieves a lessor",
+        "tags": [
+          "Lessor"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "first_name": {
+                  "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                },
+                "doc_type": {
+                  "type": "integer"
+                },
+                "doc_number": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "user",
+                "first_name",
+                "last_name",
+                "doc_type",
+                "doc_number",
+                "phone",
+                "email",
+                "type"
+              ]
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a lessor",
+        "tags": [
+          "Lessor"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "lessor",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "first_name": {
+                  "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                },
+                "doc_type": {
+                  "type": "integer"
+                },
+                "doc_number": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "user",
+                "first_name",
+                "last_name",
+                "doc_type",
+                "doc_number",
+                "phone",
+                "email",
+                "type"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/lessor/{id}": {
+      "delete": {
+        "summary": "Deletes a lessor",
+        "tags": [
+          "Lessor"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "description": "...",
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
     }
   }
 }
