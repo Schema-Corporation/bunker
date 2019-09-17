@@ -72,7 +72,7 @@ module Api
               params.require(:photo).permit(
                   :space_id, 
                   :photo_url,
-                  space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, updated_at, rent_price]
+                  space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price]
                 )
             end
 

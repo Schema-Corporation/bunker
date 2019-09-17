@@ -4,7 +4,7 @@ module Api
       
       # Solicitamos autenticación a la acción "show" (mostrar en inglés)
       #before_action :authenticate_user!
-      before_action :authenticate_user, only: [:show, :update, :destroy]
+      before_action :authenticate_user!, only: [:show, :update, :destroy]
       before_action :set_user, only: [:show, :update, :destroy]
 
       # GET /users

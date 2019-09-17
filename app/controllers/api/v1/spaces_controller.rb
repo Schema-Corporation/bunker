@@ -71,7 +71,7 @@ module Api
 
       private
       def space_params
-        params.require(:lessor).permit(
+        params.require(:space).permit(
           :status,
           :width,
           :height,

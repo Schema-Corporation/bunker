@@ -28,12 +28,12 @@ module Api
 
             #POST /booking_process
             def create
-                @lessor = Lessor.find(params[:lessor][:id])
+                @lessee = Lessee.find(params[:lessee][:id])
                 @space = Space.find(params[:space][:id])
                 @document = Document.find(params[:document][:id])
 
                 @booking_process = BookingProcess.new(
-                    lessor_id: @lessor.id,
+                    lessee_id: @lessee.id,
                     space_id: @space.id,
                     document_id: @document.id,
                     step: params[:step],
@@ -58,13 +58,13 @@ module Api
 
             #PATCH/PUT /booking_process/1
             def update
-                @lessor = Lessor.find(params[:lessor][:id])
+                @lessee = Lessee.find(params[:lessee][:id])
                 @space = Space.find(params[:space][:id])
                 @document = Document.find(params[:document][:id])
 
                 @booking_process=BookingProcess.find(params[:id])
                 if @booking_process.update(
-                    lessor_id: @lessor.id,
+                    lessee_id: @lessee.id,
                     space_id: @space.id,
                     document_id: @document.id,
                     step: params[:step],
@@ -103,7 +103,7 @@ module Api
                     :end_date,
                     :monthly_fee,
                     
-                    lessor: [:id, :user_id, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at],
+                    lessee: [:id, :user_id, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at],
                     space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price],
                     document: [:id, :document_type_id, :url_document, :created_at, :updated_at]
                 )
