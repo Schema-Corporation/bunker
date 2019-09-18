@@ -5,7 +5,7 @@ describe 'Services API' do
 
     path '/api/v1/services' do
 
-        post 'Creates a service' do
+        post 'Creates a Service' do
             tags 'Service'
             security [Bearer: {}]
             consumes 'application/json'
@@ -43,7 +43,7 @@ describe 'Services API' do
 
     path '/api/v1/services/{id}' do
 
-        get 'Retrieves a service' do
+        get 'Retrieves a Service' do
             tags 'Service'
             security [Bearer: {}]
             produces 'application/json'
@@ -79,7 +79,7 @@ describe 'Services API' do
 
     path '/api/v1/services/{id}' do
 
-        patch 'Modifies a service' do
+        patch 'Modifies a Service' do
             tags 'Service'
             security [Bearer: {}]
             produces 'application/json'
@@ -119,7 +119,7 @@ describe 'Services API' do
 
     path '/api/v1/services/{id}' do
 
-        delete 'Deletes a service' do
+        delete 'Deletes a Service' do
             tags 'Service'
             security [Bearer: {}]
             produces 'application/json'

@@ -4,7 +4,7 @@ describe 'Location  API' do
    #########POST
     path '/api/v1/locations' do
 
-        post 'Creates a location' do
+        post 'Creates a Location' do
             tags 'Location'
             security [Bearer: {}]
             consumes 'application/json'
@@ -81,7 +81,7 @@ describe 'Location  API' do
     ############GET
     path '/api/v1/locations/{id}' do
 
-        get 'Retrieves a location' do
+        get 'Retrieves a Location' do
             tags 'Location'
             security [Bearer: {}]
             produces 'application/json'
@@ -155,7 +155,7 @@ describe 'Location  API' do
     ######Patch
     path '/api/v1/locations/{id}' do
 
-        patch 'Modifies a location' do
+        patch 'Modifies a Location' do
             tags 'Location'
             security [Bearer: {}]
             produces 'application/json'
@@ -233,7 +233,7 @@ describe 'Location  API' do
 #########delete
     path '/api/v1/locations/{id}' do
 
-        delete 'Deletes a location' do
+        delete 'Deletes a Location' do
             tags 'Location'
             security [Bearer: {}]
             produces 'application/json'

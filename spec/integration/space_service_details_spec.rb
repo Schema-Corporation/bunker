@@ -4,7 +4,7 @@ describe 'Space Service Detail  API' do
    #########POST
     path '/api/v1/space_service_details' do
 
-        post 'Creates a space service detail' do
+        post 'Creates a Space Service Detail' do
             tags 'Space Service Detail'
             security [Bearer: {}]
             consumes 'application/json'
@@ -91,7 +91,7 @@ describe 'Space Service Detail  API' do
     ############GET
     path '/api/v1/space_service_details/{id}' do
 
-        get 'Retrieves a space service detail' do
+        get 'Retrieves a Space Service Detail' do
             tags 'Space Service Detail'
             security [Bearer: {}]
             produces 'application/json'
@@ -175,7 +175,7 @@ describe 'Space Service Detail  API' do
     ######Patch
     path '/api/v1/space_service_details/{id}' do
 
-        patch 'Modifies a space service detail' do
+        patch 'Modifies a Space Service Detail' do
             tags 'Space Service Detail'
             security [Bearer: {}]
             produces 'application/json'
@@ -263,7 +263,7 @@ describe 'Space Service Detail  API' do
 #########delete
     path '/api/v1/space_service_details/{id}' do
 
-        delete 'Deletes a space service detail' do
+        delete 'Deletes a Space Service Detail' do
             tags 'Space Service Detail'
             security [Bearer: {}]
             produces 'application/json'

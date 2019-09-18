@@ -4,7 +4,7 @@ describe 'Photo  API' do
    #########POST
     path '/api/v1/photos' do
 
-        post 'Creates a photo' do
+        post 'Creates a Photo' do
             tags 'Photo'
             security [Bearer: {}]
             consumes 'application/json'
@@ -79,7 +79,7 @@ describe 'Photo  API' do
     ############GET
     path '/api/v1/photos/{id}' do
 
-        get 'Retrieves a photo' do
+        get 'Retrieves a Photo' do
             tags 'Photo'
             security [Bearer: {}]
             produces 'application/json'
@@ -153,7 +153,7 @@ describe 'Photo  API' do
     ######Patch
     path '/api/v1/photos/{id}' do
 
-        patch 'Modifies a photo' do
+        patch 'Modifies a Photo' do
             tags 'Photo'
             security [Bearer: {}]
             produces 'application/json'
@@ -230,7 +230,7 @@ describe 'Photo  API' do
 #########delete
     path '/api/v1/photos/{id}' do
 
-        delete 'Deletes a photo' do
+        delete 'Deletes a Photo' do
             tags 'Photo'
             security [Bearer: {}]
             produces 'application/json'

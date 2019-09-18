@@ -4,7 +4,7 @@ describe 'Space  API' do
    #########POST
     path '/api/v1/spaces' do
 
-        post 'Creates a space' do
+        post 'Creates a Space' do
             tags 'Space'
             security [Bearer: {}]
             consumes 'application/json'
@@ -74,7 +74,7 @@ describe 'Space  API' do
     ############GET
     path '/api/v1/spaces/{id}' do
 
-        get 'Retrieves a space' do
+        get 'Retrieves a Space' do
             tags 'Space'
             security [Bearer: {}]
             produces 'application/json'
@@ -138,7 +138,7 @@ describe 'Space  API' do
     ######Patch
     path '/api/v1/spaces/{id}' do
 
-        patch 'Modifies a space' do
+        patch 'Modifies a Space' do
             tags 'Space'
             security [Bearer: {}]
             produces 'application/json'
@@ -207,7 +207,7 @@ describe 'Space  API' do
 #########delete
     path '/api/v1/spaces/{id}' do
 
-        delete 'Deletes a space' do
+        delete 'Deletes a Space' do
             tags 'Space'
             security [Bearer: {}]
             produces 'application/json'

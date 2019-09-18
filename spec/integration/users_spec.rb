@@ -5,7 +5,7 @@ describe 'Users API' do
 
     path '/api/v1/users' do
 
-        post 'Creates a user' do
+        post 'Creates a User' do
             tags 'User'
             security [Bearer: {}]
             consumes 'application/json'
@@ -43,7 +43,7 @@ describe 'Users API' do
 
     path '/api/v1/users/{id}' do
 
-        get 'Retrieves a user' do
+        get 'Retrieves a User' do
             tags 'User'
             security [Bearer: {}]
             produces 'application/json'
@@ -79,7 +79,7 @@ describe 'Users API' do
 
     path '/api/v1/users/{id}' do
 
-        patch 'Modifies a user' do
+        patch 'Modifies a User' do
             tags 'User'
             security [Bearer: {}]
             produces 'application/json'
@@ -119,7 +119,7 @@ describe 'Users API' do
 
     path '/api/v1/users/{id}' do
 
-        delete 'Deletes a user' do
+        delete 'Deletes a User' do
             tags 'User'
             security [Bearer: {}]
             produces 'application/json'
