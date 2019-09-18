@@ -4,7 +4,7 @@ describe 'Space Service Detail  API' do
    #########POST
     path '/api/v1/space_service_details' do
 
-        post 'Creates a Space Service Detail ' do
+        post 'Creates a space service detail' do
             tags 'Space Service Detail'
             security [Bearer: {}]
             consumes 'application/json'
@@ -43,8 +43,8 @@ describe 'Space Service Detail  API' do
                                         status: { type: :integer},
                                         width: { type: :number},
                                         height: { type: :number},
-                                        area: { type: :number}
-                                    
+                                        area: { type: :number},
+                                        rent_price: { type: :number}
                                 }
                               },
 
@@ -59,7 +59,7 @@ describe 'Space Service Detail  API' do
                     status: { type: :number},
                     start_date: { type: :string},
                     end_date: { type: :string},
-                             
+                    service_price: { type: :number}
                   
                 },
                 required: [ 'space','service','status','start_date','end_date']
@@ -91,7 +91,7 @@ describe 'Space Service Detail  API' do
     ############GET
     path '/api/v1/space_service_details/{id}' do
 
-        get 'Retrieves a space Service Detail' do
+        get 'Retrieves a space service detail' do
             tags 'Space Service Detail'
             security [Bearer: {}]
             produces 'application/json'
@@ -108,7 +108,7 @@ describe 'Space Service Detail  API' do
             response '200', 'OK' do
                 schema type: :object,
                 properties: {
-
+                    id: {type: :integer },
                     space: { 
                                 type: :object, 
                                 properties: {
@@ -140,8 +140,8 @@ describe 'Space Service Detail  API' do
                                         status: { type: :integer},
                                         width: { type: :number},
                                         height: { type: :number},
-                                        area: { type: :number}
-                                    
+                                        area: { type: :number},
+                                        rent_price: { type: :number}
                                 }
                               },
 
@@ -156,7 +156,7 @@ describe 'Space Service Detail  API' do
                     status: { type: :number},
                     start_date: { type: :string},
                     end_date: { type: :string},
-                             
+                    service_price: { type: :number}
                   
                 },
                 required: [ 'space','service','status','start_date','end_date']
@@ -175,7 +175,7 @@ describe 'Space Service Detail  API' do
     ######Patch
     path '/api/v1/space_service_details/{id}' do
 
-        patch 'Modifies a Space Service Detail' do
+        patch 'Modifies a space service detail' do
             tags 'Space Service Detail'
             security [Bearer: {}]
             produces 'application/json'
@@ -217,8 +217,8 @@ describe 'Space Service Detail  API' do
                                         status: { type: :integer},
                                         width: { type: :number},
                                         height: { type: :number},
-                                        area: { type: :number}
-                                    
+                                        area: { type: :number},
+                                        rent_price: { type: :number}
                                 }
                               },
 
@@ -233,7 +233,7 @@ describe 'Space Service Detail  API' do
                     status: { type: :number},
                     start_date: { type: :string},
                     end_date: { type: :string},
-                             
+                    service_price: { type: :number}
                   
                 },
                 required: [ 'space','service','status','start_date','end_date']
@@ -261,9 +261,9 @@ describe 'Space Service Detail  API' do
     end
 
 #########delete
-    path '/api/v1/spaces_service_details/{id}' do
+    path '/api/v1/space_service_details/{id}' do
 
-        delete 'Deletes a Space Service Detail' do
+        delete 'Deletes a space service detail' do
             tags 'Space Service Detail'
             security [Bearer: {}]
             produces 'application/json'

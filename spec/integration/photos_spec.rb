@@ -4,7 +4,7 @@ describe 'Photo  API' do
    #########POST
     path '/api/v1/photos' do
 
-        post 'Creates a Photo' do
+        post 'Creates a photo' do
             tags 'Photo'
             security [Bearer: {}]
             consumes 'application/json'
@@ -96,7 +96,7 @@ describe 'Photo  API' do
             response '200', 'OK' do
                 schema type: :object,
                 properties: {
-
+                    id: { type: :integer},
                     space: { 
                                 type: :object, 
                                 properties: {

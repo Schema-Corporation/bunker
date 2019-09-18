@@ -4,7 +4,7 @@ describe 'Space  API' do
    #########POST
     path '/api/v1/spaces' do
 
-        post 'Creates a Space' do
+        post 'Creates a space' do
             tags 'Space'
             security [Bearer: {}]
             consumes 'application/json'
@@ -39,13 +39,13 @@ describe 'Space  API' do
                     status: { type: :integer},
                     width: { type: :number},
                     height: { type: :number},
-                    area: { type: :number}
-                                        
+                    area: { type: :number},
+                    rent_price: { type: :number}
                                     
                         },  
                                 
                      
-                required: [ 'lessor', 'status', 'width','height','area']
+                required: [ 'lessor', 'status', 'width','height','area', 'rent_price']
             }
 
             parameter({
@@ -118,11 +118,11 @@ describe 'Space  API' do
                     status: { type: :integer},
                     width: { type: :number},
                     height: { type: :number},
-                    area: { type: :number}
-                                        
+                    area: { type: :number},
+                    rent_price: { type: :number}              
                                     
                                 }, 
-                required: [ 'lessor', 'status', 'width','height','area']
+                required: [ 'lessor', 'status', 'width','height','area', 'rent_price']
                 let(:Authorization) { 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTY4NTg4MzkyLCJleHAiOjE1Njg1OTAxOTIsImp0aSI6IjRlMzk5ODU1LWMyMzEtNDc1Yi05MGUzLTYyNDY5NWFmNWRkZiJ9.nkUhw506t3vyt0lLEsPMB74EY4JFzh1IPnyMREmSWLk'}                  
                 let(:id) { Spaces.create(status:'1',width: '40',height: '50',area: '200').id }
                 run_test!
@@ -175,12 +175,12 @@ describe 'Space  API' do
                     status: { type: :integer},
                     width: { type: :number},
                     height: { type: :number},
-                    area: { type: :number}
-                                        
+                    area: { type: :number},
+                    rent_price: { type: :number}                
                         
                     
                 },
-                required: [ 'lessor', 'status', 'width','height','area']
+                required: [ 'lessor', 'status', 'width','height','area', 'rent_price']
             }
     
             parameter({

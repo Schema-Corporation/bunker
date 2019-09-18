@@ -43,7 +43,7 @@ describe 'DocumentTypes API' do
 
     path '/api/v1/document_types/{id}' do
 
-        get 'Retrieves a document type' do
+        get 'Retrieves a Document Type' do
             tags 'Document_Type'
             security [Bearer: {}]
             produces 'application/json'
@@ -79,7 +79,7 @@ describe 'DocumentTypes API' do
 
     path '/api/v1/document_types/{id}' do
 
-        patch 'Modifies a document type' do
+        patch 'Modifies a Document Type' do
             tags 'Document_Type'
             security [Bearer: {}]
             produces 'application/json'
@@ -119,7 +119,7 @@ describe 'DocumentTypes API' do
 
     path '/api/v1/document_types/{id}' do
 
-        delete 'Deletes a document type' do
+        delete 'Deletes a Document Type' do
             tags 'Document_Type'
             security [Bearer: {}]
             produces 'application/json'

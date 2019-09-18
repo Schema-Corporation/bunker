@@ -57,7 +57,7 @@ describe 'Lessees API' do
 
     path '/api/v1/lessees/{id}' do
 
-        get 'Retrieves a lessee' do
+        get 'Retrieves a Lessee' do
             tags 'Lessee'
             security [Bearer: {}]
             produces 'application/json'
@@ -110,7 +110,7 @@ describe 'Lessees API' do
 
     path '/api/v1/lessees/{id}' do
 
-        patch 'Modifies a lessee' do
+        patch 'Modifies a Lessee' do
             tags 'Lessee'
             security [Bearer: {}]
             produces 'application/json'
@@ -165,7 +165,7 @@ describe 'Lessees API' do
 
     path '/api/v1/lessees/{id}' do
 
-        delete 'Deletes a lessee' do
+        delete 'Deletes a Lessee' do
             tags 'Lessee'
             security [Bearer: {}]
             produces 'application/json'

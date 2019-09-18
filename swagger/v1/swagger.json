@@ -47,6 +47,12 @@
                         }
                       }
                     },
+                    "ruc": {
+                      "type": "string"
+                    },
+                    "commercial_name": {
+                      "type": "string"
+                    },
                     "first_name": {
                       "type": "string"
                     },
@@ -63,9 +69,6 @@
                       "type": "string"
                     },
                     "email": {
-                      "type": "string"
-                    },
-                    "type": {
                       "type": "string"
                     }
                   }
@@ -94,12 +97,6 @@
                           }
                         }
                       },
-                      "ruc": {
-                        "type": "string"
-                      },
-                      "commercial_name": {
-                        "type": "string"
-                      },
                       "first_name": {
                         "type": "string"
                       },
@@ -124,14 +121,15 @@
                     },
                     "width": {
                       "type": "number",
-                      "format": "float"
+                      "format": "double"
                     },
                     "height": {
                       "type": "number",
-                      "format": "float"
+                      "format": "double"
                     },
                     "area": {
-                      "type": "float"
+                      "type": "number",
+                      "format": "double"
                     }
                   }
                 },
@@ -261,6 +259,12 @@
                         }
                       }
                     },
+                    "ruc": {
+                      "type": "string"
+                    },
+                    "commercial_name": {
+                      "type": "string"
+                    },
                     "first_name": {
                       "type": "string"
                     },
@@ -277,9 +281,6 @@
                       "type": "string"
                     },
                     "email": {
-                      "type": "string"
-                    },
-                    "type": {
                       "type": "string"
                     }
                   }
@@ -307,12 +308,6 @@
                             "type": "string"
                           }
                         }
-                      },
-                      "ruc": {
-                        "type": "string"
-                      },
-                      "commercial_name": {
-                        "type": "string"
                       },
                       "first_name": {
                         "type": "string"
@@ -450,6 +445,12 @@
                         }
                       }
                     },
+                    "ruc": {
+                      "type": "string"
+                    },
+                    "commercial_name": {
+                      "type": "string"
+                    },
                     "first_name": {
                       "type": "string"
                     },
@@ -493,12 +494,6 @@
                             "type": "string"
                           }
                         }
-                      },
-                      "ruc": {
-                        "type": "string"
-                      },
-                      "commercial_name": {
-                        "type": "string"
                       },
                       "first_name": {
                         "type": "string"
@@ -691,7 +686,7 @@
     },
     "/api/v1/devices/{id}": {
       "get": {
-        "summary": "Retrieves a device",
+        "summary": "Retrieves a Device",
         "tags": [
           "Device"
         ],
@@ -744,7 +739,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a device",
+        "summary": "Modifies a Device",
         "tags": [
           "Device"
         ],
@@ -797,7 +792,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a device",
+        "summary": "Deletes a Device",
         "tags": [
           "Device"
         ],
@@ -890,7 +885,7 @@
     },
     "/api/v1/document_types/{id}": {
       "get": {
-        "summary": "Retrieves a document type",
+        "summary": "Retrieves a Document Type",
         "tags": [
           "Document_Type"
         ],
@@ -947,7 +942,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a document type",
+        "summary": "Modifies a Document Type",
         "tags": [
           "Document_Type"
         ],
@@ -1004,7 +999,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a document type",
+        "summary": "Deletes a Document Type",
         "tags": [
           "Document_Type"
         ],
@@ -1108,7 +1103,7 @@
     },
     "/api/v1/documents/{id}": {
       "get": {
-        "summary": "Retrieves a document",
+        "summary": "Retrieves a Document",
         "tags": [
           "Document"
         ],
@@ -1175,7 +1170,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a document",
+        "summary": "Modifies a Document",
         "tags": [
           "Document"
         ],
@@ -1243,7 +1238,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a document",
+        "summary": "Deletes a Document",
         "tags": [
           "Document"
         ],
@@ -1367,7 +1362,7 @@
     },
     "/api/v1/lessees/{id}": {
       "get": {
-        "summary": "Retrieves a lessee",
+        "summary": "Retrieves a Lessee",
         "tags": [
           "Lessee"
         ],
@@ -1454,7 +1449,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a lessee",
+        "summary": "Modifies a Lessee",
         "tags": [
           "Lessee"
         ],
@@ -1542,7 +1537,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a lessee",
+        "summary": "Deletes a Lessee",
         "tags": [
           "Lessee"
         ],
@@ -1674,7 +1669,7 @@
     },
     "/api/v1/lessors/{id}": {
       "get": {
-        "summary": "Retrieves a lessor",
+        "summary": "Retrieves a Lessor",
         "tags": [
           "Lessor"
         ],
@@ -1770,7 +1765,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a lessor",
+        "summary": "Modifies a Lessor",
         "tags": [
           "Lessor"
         ],
@@ -1868,9 +1863,2096 @@
     },
     "/api/v1/lessor/{id}": {
       "delete": {
-        "summary": "Deletes a lessor",
+        "summary": "Deletes a Lessor",
         "tags": [
           "Lessor"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/locations": {
+      "post": {
+        "summary": "Creates a Location",
+        "tags": [
+          "Location"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "location",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "password": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "number"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "address": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "space",
+                "address",
+                "latitude",
+                "longitude"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/locations/{id}": {
+      "get": {
+        "summary": "Retrieves a Location",
+        "tags": [
+          "Location"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "password": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "number"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "address": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "space",
+                "address",
+                "latitude",
+                "longitude"
+              ]
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a Location",
+        "tags": [
+          "Location"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "location",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "password": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "number"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "address": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "space",
+                "address",
+                "latitude",
+                "longitude"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a Location",
+        "tags": [
+          "Location"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/photos": {
+      "post": {
+        "summary": "Creates a Photo",
+        "tags": [
+          "Photo"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "photo",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "password": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "number"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "photo_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "space",
+                "photo_url"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/photos/{id}": {
+      "get": {
+        "summary": "Retrieves a Photo",
+        "tags": [
+          "Photo"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "password": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "number"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "photo_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "space",
+                "photo_url"
+              ]
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a Photo",
+        "tags": [
+          "Photo"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "photo",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "password": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "number"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "photo_url": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "space",
+                "photo_url"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a Photo",
+        "tags": [
+          "Photo"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/services": {
+      "post": {
+        "summary": "Creates a Service",
+        "tags": [
+          "Service"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "service",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "description"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/services/{id}": {
+      "get": {
+        "summary": "Retrieves a Service",
+        "tags": [
+          "Service"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "status"
+              ]
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a Service",
+        "tags": [
+          "Service"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "service",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "description"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a Service",
+        "tags": [
+          "Service"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/space_service_details": {
+      "post": {
+        "summary": "Creates a Space Service Detail",
+        "tags": [
+          "Space Service Detail"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "space_service_detail",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "password": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "number"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "service": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "status": {
+                  "type": "number"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "service_price": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "space",
+                "service",
+                "status",
+                "start_date",
+                "end_date"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/space_service_details/{id}": {
+      "get": {
+        "summary": "Retrieves a Space Service Detail",
+        "tags": [
+          "Space Service Detail"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "password": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "number"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "service": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "status": {
+                  "type": "number"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "service_price": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "space",
+                "service",
+                "status",
+                "start_date",
+                "end_date"
+              ]
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a Space Service Detail",
+        "tags": [
+          "Space Service Detail"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "space_service_detail",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "password": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "number"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "service": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "status": {
+                  "type": "number"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "service_price": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "space",
+                "service",
+                "status",
+                "start_date",
+                "end_date"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a Space Service Detail",
+        "tags": [
+          "Space Service Detail"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/spaces": {
+      "post": {
+        "summary": "Creates a Space",
+        "tags": [
+          "Space"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "space",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "lessor": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "password": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "ruc": {
+                      "type": "string"
+                    },
+                    "comercial_name": {
+                      "type": "string"
+                    },
+                    "first_name": {
+                      "type": "string"
+                    },
+                    "last_name": {
+                      "type": "string"
+                    },
+                    "doc_type": {
+                      "type": "number"
+                    },
+                    "doc_number": {
+                      "type": "string"
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "area": {
+                  "type": "number"
+                },
+                "rent_price": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "lessor",
+                "status",
+                "width",
+                "height",
+                "area",
+                "rent_price"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/spaces/{id}": {
+      "get": {
+        "summary": "Retrieves a Space",
+        "tags": [
+          "Space"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "lessor": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "password": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "ruc": {
+                      "type": "string"
+                    },
+                    "comercial_name": {
+                      "type": "string"
+                    },
+                    "first_name": {
+                      "type": "string"
+                    },
+                    "last_name": {
+                      "type": "string"
+                    },
+                    "doc_type": {
+                      "type": "number"
+                    },
+                    "doc_number": {
+                      "type": "string"
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "area": {
+                  "type": "number"
+                },
+                "rent_price": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "lessor",
+                "status",
+                "width",
+                "height",
+                "area",
+                "rent_price"
+              ]
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a Space",
+        "tags": [
+          "Space"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "space",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "lessor": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "password": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "ruc": {
+                      "type": "string"
+                    },
+                    "comercial_name": {
+                      "type": "string"
+                    },
+                    "first_name": {
+                      "type": "string"
+                    },
+                    "last_name": {
+                      "type": "string"
+                    },
+                    "doc_type": {
+                      "type": "number"
+                    },
+                    "doc_number": {
+                      "type": "string"
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "area": {
+                  "type": "number"
+                },
+                "rent_price": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "lessor",
+                "status",
+                "width",
+                "height",
+                "area",
+                "rent_price"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a Space",
+        "tags": [
+          "Space"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/users": {
+      "post": {
+        "summary": "Creates a User",
+        "tags": [
+          "User"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "email",
+                "password"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/api/v1/users/{id}": {
+      "get": {
+        "summary": "Retrieves a User",
+        "tags": [
+          "User"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "email",
+                "password"
+              ]
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "patch": {
+        "summary": "Modifies a User",
+        "tags": [
+          "User"
+        ],
+        "security": [
+          {
+            "Bearer": {
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "user",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "email",
+                "password"
+              ]
+            }
+          },
+          {
+            "in": "header",
+            "type": "string",
+            "name": "Authorization",
+            "required": "true",
+            "description": "Authorization token"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletes a User",
+        "tags": [
+          "User"
         ],
         "security": [
           {

@@ -42,7 +42,7 @@ describe 'Devices API' do
 
     path '/api/v1/devices/{id}' do
 
-        get 'Retrieves a device' do
+        get 'Retrieves a Device' do
             tags 'Device'
             security [Bearer: {}]
             produces 'application/json'
@@ -78,7 +78,7 @@ describe 'Devices API' do
 
     path '/api/v1/devices/{id}' do
 
-        patch 'Modifies a device' do
+        patch 'Modifies a Device' do
             tags 'Device'
             security [Bearer: {}]
             produces 'application/json'
@@ -117,7 +117,7 @@ describe 'Devices API' do
 
     path '/api/v1/devices/{id}' do
 
-        delete 'Deletes a device' do
+        delete 'Deletes a Device' do
             tags 'Device'
             security [Bearer: {}]
             produces 'application/json'

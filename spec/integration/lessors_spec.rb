@@ -58,7 +58,7 @@ describe 'Lessors API' do
 
     path '/api/v1/lessors/{id}' do
 
-        get 'Retrieves a lessor' do
+        get 'Retrieves a Lessor' do
             tags 'Lessor'
             security [Bearer: {}]
             produces 'application/json'
@@ -111,7 +111,7 @@ describe 'Lessors API' do
 
     path '/api/v1/lessors/{id}' do
 
-        patch 'Modifies a lessor' do
+        patch 'Modifies a Lessor' do
             tags 'Lessor'
             security [Bearer: {}]
             produces 'application/json'
@@ -167,7 +167,7 @@ describe 'Lessors API' do
 
     path '/api/v1/lessor/{id}' do
 
-        delete 'Deletes a lessor' do
+        delete 'Deletes a Lessor' do
             tags 'Lessor'
             security [Bearer: {}]
             produces 'application/json'

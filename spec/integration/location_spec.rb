@@ -4,7 +4,7 @@ describe 'Location  API' do
    #########POST
     path '/api/v1/locations' do
 
-        post 'Creates a Location' do
+        post 'Creates a location' do
             tags 'Location'
             security [Bearer: {}]
             consumes 'application/json'
@@ -49,7 +49,7 @@ describe 'Location  API' do
                               },
                     address: { type: :string },
                     latitude: { type: :number},
-                    longitute: { type: :number}
+                    longitude: { type: :number}
                   
                 },
                 required: [ 'space', 'address', 'latitude','longitude']
@@ -136,7 +136,7 @@ describe 'Location  API' do
                               },
                     address: { type: :string },
                     latitude: { type: :number},
-                    longitute: { type: :number}
+                    longitude: { type: :number}
                   
                 },
                 required: [ 'space', 'address', 'latitude','longitude']
@@ -203,7 +203,7 @@ describe 'Location  API' do
                               },
                     address: { type: :string },
                     latitude: { type: :number},
-                    longitute: { type: :number}
+                    longitude: { type: :number}
                   
                 },
                 required: [ 'space', 'address', 'latitude','longitude']

@@ -30,7 +30,7 @@ module Api
                 @space = Space.find(params[:space][:id])
                 @service = Service.find(params[:service][:id])
 
-                @space_service_detail = SpaceServiceDetail.new(space_id: @space.id, service_id: @service.id, status: params[:status], start_date: params[:start_date], end_date: params[:end_date])
+                @space_service_detail = SpaceServiceDetail.new(space_id: @space.id, service_id: @service.id, status: params[:status], start_date: params[:start_date], end_date: params[:end_date], service_price: params[:service_price])
                 if @space_service_detail.save
                     render json: @space_service_detail, adapter: :attributes, status: :created
                 end
@@ -52,7 +52,7 @@ module Api
                 @service = Service.find(params[:service][:id])
 
                 @space_service_detail = SpaceServiceDetail.find(params[:id])
-                if @space_service_detail.update(space_id: @space.id, service_id: @service.id, status: params[:status], start_date: params[:start_date], end_date: params[:end_date])
+                if @space_service_detail.update(space_id: @space.id, service_id: @service.id, status: params[:status], start_date: params[:start_date], end_date: params[:end_date], service_price: params[:service_price])
                     render json: @space_service_detail, status: :ok
                 end
 
@@ -81,7 +81,7 @@ module Api
                     :status,
                     :start_date,
                     :end_date,
-                    
+                    :service_price,
                     space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price],
                     service: [:id, :name, :description, :created_at, :updated_at]
                 )

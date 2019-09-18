@@ -177,9 +177,9 @@ describe 'Booking Processes API' do
 
                             },
                             status: { type: :integer},
-                            width: { type: :number, format: :float},
-                            height: { type: :number, format: :float},
-                            area: { type: :float}
+                            width: { type: :number},
+                            height: { type: :number},
+                            area: { type: :number}
                         }
                     },
                     document: {
@@ -277,9 +277,9 @@ describe 'Booking Processes API' do
 
                             },
                             status: { type: :integer},
-                            width: { type: :number, format: :float},
-                            height: { type: :number, format: :float},
-                            area: { type: :float}
+                            width: { type: :number},
+                            height: { type: :number},
+                            area: { type: :number}
                         }
                     },
                     document: {

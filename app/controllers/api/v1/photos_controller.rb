@@ -6,7 +6,7 @@ module Api
             
             def index
                 @photos = Photo.all
-                    render json: @photos,status: :ok
+                render json: @photos, status: :ok
 
                 rescue ActiveRecord::RecordNotFound
                     render json: [],status: :not_found
@@ -26,7 +26,10 @@ module Api
             def create
                 @space = Space.find(params[:space][:id])
 
-                @photo = Photo.new(space_id: @space.id, photo_url: params[:photo_url])
+                @photo = Photo.new(
+                    space_id: @space.id, 
+                    photo_url: params[:photo_url]
+                    )
                 if @photo.save
                     render json: @photo, adapter: :attributes, status: :created
                 end

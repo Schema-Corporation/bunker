@@ -5,7 +5,7 @@ describe 'Services API' do
 
     path '/api/v1/services' do
 
-        post 'Creates a Service' do
+        post 'Creates a service' do
             tags 'Service'
             security [Bearer: {}]
             consumes 'application/json'

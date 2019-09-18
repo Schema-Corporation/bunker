@@ -51,7 +51,7 @@ describe 'Documents API' do
 
     path '/api/v1/documents/{id}' do
 
-        get 'Retrieves a document' do
+        get 'Retrieves a Document' do
             tags 'Document'
             security [Bearer: {}]
             produces 'application/json'
@@ -96,7 +96,7 @@ describe 'Documents API' do
 
     path '/api/v1/documents/{id}' do
 
-        patch 'Modifies a document' do
+        patch 'Modifies a Document' do
             tags 'Document'
             security [Bearer: {}]
             produces 'application/json'
@@ -146,7 +146,7 @@ describe 'Documents API' do
 
     path '/api/v1/documents/{id}' do
 
-        delete 'Deletes a document' do
+        delete 'Deletes a Document' do
             tags 'Document'
             security [Bearer: {}]
             produces 'application/json'
