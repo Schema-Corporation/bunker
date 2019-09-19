@@ -48,7 +48,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: bunker_production
-  username: bunker
-  password: <%= ENV['BUNKER_DATABASE_PASSWORD'] %>
+  adapter: mysql2
+  pool: 5
+  timeout: 20000
+  username: "root"
+  password: "cJaKPIqzpoI3EuL0"
+  database: "bunker_production"
+  socket:   "/cloudsql/bunker-253200:us-central1:bunkerdb"
