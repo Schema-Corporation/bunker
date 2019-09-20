@@ -20,7 +20,8 @@ describe 'Documents API' do
                             description: { type: :string},
                             created_at: { type: :string },
                             updated_at: { type: :string }
-                        } },
+                        } 
+                    },
                     url_document: { type: :string },
                     created_at: { type: :string },
                     updated_at: { type: :string }
@@ -77,7 +78,8 @@ describe 'Documents API' do
                             id: { type: :integer},
                             name: { type: :string},
                             description: { type: :string}
-                        } },
+                        } 
+                    },
                     url_document: { type: :string },
                     created_at: { type: :string },
                     updated_at: { type: :string }
@@ -113,7 +115,8 @@ describe 'Documents API' do
                             id: { type: :integer},
                             name: { type: :string},
                             description: { type: :string}
-                        } },
+                        } 
+                    },
                     url_document: { type: :string },
                     created_at: { type: :string },
                     updated_at: { type: :string }
