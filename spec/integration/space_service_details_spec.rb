@@ -24,15 +24,14 @@ describe 'Space Service Detail  API' do
                                                     type: :object, 
                                                     properties: {  
                                                         id: { type: :integer},
-                                                        email: { type: :string },
-                                                        password: { type: :string}
+                                                        email: { type: :string }
                                                                 }
                                                       },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
                                                 last_name: { type: :string},
-                                                doc_type: { type: :number},
+                                                doc_type: { type: :integer},
                                                 doc_number: { type: :string},
                                                 phone: { type: :string},
                                                 email: { type: :string}
@@ -121,15 +120,14 @@ describe 'Space Service Detail  API' do
                                                     type: :object, 
                                                     properties: {  
                                                         id: { type: :integer},
-                                                        email: { type: :string },
-                                                        password: { type: :string}
+                                                        email: { type: :string }
                                                                 }
                                                       },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
                                                 last_name: { type: :string},
-                                                doc_type: { type: :number},
+                                                doc_type: { type: :integer},
                                                 doc_number: { type: :string},
                                                 phone: { type: :string},
                                                 email: { type: :string}
@@ -198,15 +196,14 @@ describe 'Space Service Detail  API' do
                                                     type: :object, 
                                                     properties: {  
                                                         id: { type: :integer},
-                                                        email: { type: :string },
-                                                        password: { type: :string}
+                                                        email: { type: :string }
                                                                 }
                                                       },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
                                                 last_name: { type: :string},
-                                                doc_type: { type: :number},
+                                                doc_type: { type: :integer},
                                                 doc_number: { type: :string},
                                                 phone: { type: :string},
                                                 email: { type: :string}

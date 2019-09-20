@@ -25,17 +25,20 @@ describe 'Photo  API' do
                                                     properties: {  
                                                         id: { type: :integer},
                                                         email: { type: :string },
-                                                        password: { type: :string}
+                                                        created_at: { type: :string},
+                                                        updated_at: { type: :string}
                                                                 }
                                                       },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
                                                 last_name: { type: :string},
-                                                doc_type: { type: :number},
+                                                doc_type: { type: :integer},
                                                 doc_number: { type: :string},
                                                 phone: { type: :string},
-                                                email: { type: :string}
+                                                email: { type: :string},
+                                                created_at: { type: :string},
+                                                updated_at: { type: :string}
 
                                               
                                                          }
@@ -43,11 +46,15 @@ describe 'Photo  API' do
                                         status: { type: :integer},
                                         width: { type: :number},
                                         height: { type: :number},
-                                        area: { type: :number}
+                                        area: { type: :number},
+                                        created_at: { type: :string},
+                                        updated_at: { type: :string}
                                     
                                 }
                               },
-                    photo_url: { type: :string }
+                    photo_url: { type: :string },
+                    created_at: { type: :string},
+                    updated_at: { type: :string}
                   
                 },
                 required: [ 'space', 'photo_url']
@@ -111,17 +118,20 @@ describe 'Photo  API' do
                                                     properties: {  
                                                         id: { type: :integer},
                                                         email: { type: :string },
-                                                        password: { type: :string}
+                                                        created_at: { type: :string},
+                                                        updated_at: { type: :string}
                                                                 }
                                                       },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
                                                 last_name: { type: :string},
-                                                doc_type: { type: :number},
+                                                doc_type: { type: :integer},
                                                 doc_number: { type: :string},
                                                 phone: { type: :string},
-                                                email: { type: :string}
+                                                email: { type: :string},
+                                                created_at: { type: :string},
+                                                updated_at: { type: :string}
 
                                               
                                                          }
@@ -129,11 +139,15 @@ describe 'Photo  API' do
                                         status: { type: :integer},
                                         width: { type: :number},
                                         height: { type: :number},
-                                        area: { type: :number}
+                                        area: { type: :number},
+                                        created_at: { type: :string},
+                                        updated_at: { type: :string}
                                     
                                 }
                               },
-                    photo_url: { type: :string }
+                    photo_url: { type: :string },
+                    created_at: { type: :string},
+                    updated_at: { type: :string}
                  
                   
                 },
@@ -178,17 +192,20 @@ describe 'Photo  API' do
                                                     properties: {  
                                                         id: { type: :integer},
                                                         email: { type: :string },
-                                                        password: { type: :string}
+                                                        created_at: { type: :string},
+                                                        updated_at: { type: :string}
                                                                 }
                                                       },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
                                                 last_name: { type: :string},
-                                                doc_type: { type: :number},
+                                                doc_type: { type: :integer},
                                                 doc_number: { type: :string},
                                                 phone: { type: :string},
-                                                email: { type: :string}
+                                                email: { type: :string},
+                                                created_at: { type: :string},
+                                                updated_at: { type: :string}
 
                                               
                                                          }
@@ -196,11 +213,15 @@ describe 'Photo  API' do
                                         status: { type: :integer},
                                         width: { type: :number},
                                         height: { type: :number},
-                                        area: { type: :number}
+                                        area: { type: :number},
+                                        created_at: { type: :string},
+                                        updated_at: { type: :string}
                                     
                                 }
                               },
-                    photo_url: { type: :string }
+                    photo_url: { type: :string },
+                    created_at: { type: :string},
+                    updated_at: { type: :string}
                   
                 },
                 required: [ 'space','photo_url']

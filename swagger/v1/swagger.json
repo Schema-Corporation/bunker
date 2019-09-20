@@ -1899,7 +1899,7 @@
     },
     "/api/v1/locations": {
       "post": {
-        "summary": "Creates a location",
+        "summary": "Creates a Location",
         "tags": [
           "Location"
         ],
@@ -2023,7 +2023,7 @@
     },
     "/api/v1/locations/{id}": {
       "get": {
-        "summary": "Retrieves a location",
+        "summary": "Retrieves a Location",
         "tags": [
           "Location"
         ],
@@ -2147,7 +2147,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a location",
+        "summary": "Modifies a Location",
         "tags": [
           "Location"
         ],
@@ -2275,7 +2275,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a location",
+        "summary": "Deletes a Location",
         "tags": [
           "Location"
         ],
@@ -2315,7 +2315,7 @@
     },
     "/api/v1/photos": {
       "post": {
-        "summary": "Creates a photo",
+        "summary": "Creates a Photo",
         "tags": [
           "Photo"
         ],
@@ -2431,7 +2431,7 @@
     },
     "/api/v1/photos/{id}": {
       "get": {
-        "summary": "Retrieves a photo",
+        "summary": "Retrieves a Photo",
         "tags": [
           "Photo"
         ],
@@ -2550,7 +2550,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a photo",
+        "summary": "Modifies a Photo",
         "tags": [
           "Photo"
         ],
@@ -2670,7 +2670,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a photo",
+        "summary": "Deletes a Photo",
         "tags": [
           "Photo"
         ],
@@ -2710,7 +2710,7 @@
     },
     "/api/v1/services": {
       "post": {
-        "summary": "Creates a service",
+        "summary": "Creates a Service",
         "tags": [
           "Service"
         ],
@@ -2763,7 +2763,7 @@
     },
     "/api/v1/services/{id}": {
       "get": {
-        "summary": "Retrieves a service",
+        "summary": "Retrieves a Service",
         "tags": [
           "Service"
         ],
@@ -2820,7 +2820,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a service",
+        "summary": "Modifies a Service",
         "tags": [
           "Service"
         ],
@@ -2877,7 +2877,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a service",
+        "summary": "Deletes a Service",
         "tags": [
           "Service"
         ],
@@ -2917,7 +2917,7 @@
     },
     "/api/v1/space_service_details": {
       "post": {
-        "summary": "Creates a space service detail",
+        "summary": "Creates a Space Service Detail",
         "tags": [
           "Space Service Detail"
         ],
@@ -3062,7 +3062,7 @@
     },
     "/api/v1/space_service_details/{id}": {
       "get": {
-        "summary": "Retrieves a space service detail",
+        "summary": "Retrieves a Space Service Detail",
         "tags": [
           "Space Service Detail"
         ],
@@ -3210,7 +3210,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a space service detail",
+        "summary": "Modifies a Space Service Detail",
         "tags": [
           "Space Service Detail"
         ],
@@ -3359,7 +3359,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a space service detail",
+        "summary": "Deletes a Space Service Detail",
         "tags": [
           "Space Service Detail"
         ],
@@ -3399,7 +3399,7 @@
     },
     "/api/v1/spaces": {
       "post": {
-        "summary": "Creates a space",
+        "summary": "Creates a Space",
         "tags": [
           "Space"
         ],
@@ -3511,7 +3511,7 @@
     },
     "/api/v1/spaces/{id}": {
       "get": {
-        "summary": "Retrieves a space",
+        "summary": "Retrieves a Space",
         "tags": [
           "Space"
         ],
@@ -3623,7 +3623,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a space",
+        "summary": "Modifies a Space",
         "tags": [
           "Space"
         ],
@@ -3739,7 +3739,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a space",
+        "summary": "Deletes a Space",
         "tags": [
           "Space"
         ],
@@ -3779,7 +3779,7 @@
     },
     "/api/v1/users": {
       "post": {
-        "summary": "Creates a user",
+        "summary": "Creates a User",
         "tags": [
           "User"
         ],
@@ -3832,7 +3832,7 @@
     },
     "/api/v1/users/{id}": {
       "get": {
-        "summary": "Retrieves a user",
+        "summary": "Retrieves a User",
         "tags": [
           "User"
         ],
@@ -3889,7 +3889,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a user",
+        "summary": "Modifies a User",
         "tags": [
           "User"
         ],
@@ -3946,7 +3946,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a user",
+        "summary": "Deletes a User",
         "tags": [
           "User"
         ],

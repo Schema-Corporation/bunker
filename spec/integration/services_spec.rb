@@ -13,7 +13,9 @@ describe 'Services API' do
                 type: :object,
                 properties: {
                     name: { type: :string},
-                    description: { type: :string}
+                    description: { type: :string},
+                    created_at: { type: :string},
+                    updated_at: { type: :string}
                 },
                 required: [ 'name', 'description']
             }
@@ -62,7 +64,9 @@ describe 'Services API' do
                 properties: {
                     id: { type: :integer },
                     name: { type: :string },
-                    description: { type: :string }
+                    description: { type: :string },
+                    created_at: { type: :string},
+                    updated_at: { type: :string}
                 },
                 required: [ 'id', 'name', 'status' ]
                 let(:Authorization) { 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTY4NTg4MzkyLCJleHAiOjE1Njg1OTAxOTIsImp0aSI6IjRlMzk5ODU1LWMyMzEtNDc1Yi05MGUzLTYyNDY5NWFmNWRkZiJ9.nkUhw506t3vyt0lLEsPMB74EY4JFzh1IPnyMREmSWLk'}
@@ -90,7 +94,9 @@ describe 'Services API' do
                 type: :object,
                 properties: {
                     name: { type: :string },
-                    description: { type: :string }
+                    description: { type: :string },
+                    created_at: { type: :string},
+                    updated_at: { type: :string}
                 },
                 required: [ 'name', 'description']
             }
