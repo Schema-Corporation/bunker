@@ -12,9 +12,10 @@ describe 'Devices API' do
             parameter name: :device, in: :body, schema: {
                 type: :object,
                 properties: {
-                    device_token: { type: :string}
-                },
-                required: [ 'device_token']
+                    device_token: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string }
+                }
             }
 
             parameter({
@@ -60,9 +61,10 @@ describe 'Devices API' do
                 schema type: :object,
                 properties: {
                     id: { type: :integer },
-                    device_token: { type: :string }
-                },
-                required: [ 'id', 'device_token' ]
+                    device_token: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string }
+                }
 
                 let(:id) { Device.create(device_token: 'abcabc').id }
                 run_test!
@@ -88,9 +90,10 @@ describe 'Devices API' do
             parameter name: :device, in: :body, schema: {
                 type: :object,
                 properties: {
-                    device_token: { type: :string}
-                },
-                required: [ 'device_token']
+                    device_token: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string }
+                }
             }
     
             parameter({

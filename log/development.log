@@ -6810,3 +6810,331 @@ Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2019-09-18 16
   ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
 Started GET "/api-docs/v1/swagger.json" for ::1 at 2019-09-18 16:53:23 -0500
 Started GET "/api-docs/favicon-32x32.png" for ::1 at 2019-09-18 16:53:24 -0500
+Started GET "/api-docs/index.html" for ::1 at 2019-09-19 19:48:22 -0500
+Started GET "/" for ::1 at 2019-09-19 19:48:22 -0500
+  [1m[35m (146.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (157.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (12.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2019-09-19 19:48:26 -0500
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2019-09-19 19:48:26 -0500
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2019-09-19 19:48:26 -0500
+  Rendering C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (117.2ms)
+Completed 200 OK in 992ms (Views: 537.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/api-docs/v1/swagger.json" for ::1 at 2019-09-19 19:48:31 -0500
+Started GET "/api/v1/booking_processes/" for ::1 at 2019-09-19 19:50:23 -0500
+Processing by Api::V1::BookingProcessesController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "booking_process"=>{"step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+Completed 401 Unauthorized in 129ms (ActiveRecord: 85.1ms)
+
+
+Started POST "/signup" for ::1 at 2019-09-19 19:50:49 -0500
+Processing by RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr5@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"marcesftwr5@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (70.3ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'marcesftwr5@gmail.com' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (115.5ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('marcesftwr5@gmail.com', '$2a$11$iGq7Ii7EmRzGwJNFpZNzVuYa5sUM0Kphgw7zvkzxDTOr8xgLMzgOm', '2019-09-20 00:50:51', '2019-09-20 00:50:51')[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (80.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 1065ms (Views: 0.3ms | ActiveRecord: 291.9ms)
+
+
+Started GET "/login" for ::1 at 2019-09-19 19:51:05 -0500
+Processing by SessionsController#new as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr5@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"marcesftwr5@gmail.com", "password"=>"[FILTERED]"}}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.66ms)
+Completed 200 OK in 659ms (Views: 163.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/booking_processes/" for ::1 at 2019-09-19 19:51:24 -0500
+Processing by Api::V1::BookingProcessesController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "booking_process"=>{"step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (145.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '7653743a-9e77-4973-b84c-f162417b467c' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mBookingProcess Load (1.6ms)[0m  [1m[34mSELECT `booking_processes`.* FROM `booking_processes`[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:11
+[active_model_serializers]   [1m[36mLessee Load (1.1ms)[0m  [1m[34mSELECT  `lessees`.* FROM `lessees` WHERE `lessees`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:11
+[active_model_serializers]   [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:11
+[active_model_serializers]   [1m[36mDocument Load (1.6ms)[0m  [1m[34mSELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:11
+[active_model_serializers]   [1m[36mLessor Load (1.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:11
+[active_model_serializers]   [1m[36mDocumentType Load (1.1ms)[0m  [1m[34mSELECT  `document_types`.* FROM `document_types` WHERE `document_types`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2001.75ms)
+Completed 200 OK in 3515ms (Views: 2782.8ms | ActiveRecord: 239.3ms)
+
+
+Started GET "/api/v1/devices/" for ::1 at 2019-09-19 20:22:33 -0500
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::DevicesController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "device"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 81.3ms)
+
+
+Started POST "/signup" for ::1 at 2019-09-19 20:22:59 -0500
+Processing by RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr6@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"marcesftwr6@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (79.7ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'marcesftwr6@gmail.com' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (10.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('marcesftwr6@gmail.com', '$2a$11$vTX6A16mdccs/42vX5B0SuNzGvQCaUUIW9UUz6ILEE9N4DP0QlkTm', '2019-09-20 01:23:00', '2019-09-20 01:23:00')[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (32.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 804ms (Views: 0.5ms | ActiveRecord: 122.5ms)
+
+
+Started GET "/api/v1/devices/" for ::1 at 2019-09-19 20:23:15 -0500
+Processing by Api::V1::DevicesController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "device"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (54.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '748b07cd-f266-42a3-93b3-39f2e4fab66a' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mDevice Load (13.7ms)[0m  [1m[34mSELECT `devices`.* FROM `devices`[0m
+  ↳ app/controllers/api/v1/devices_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 238ms (Views: 64.3ms | ActiveRecord: 69.1ms)
+
+
+Started GET "/api/v1/document_types/" for ::1 at 2019-09-19 22:02:02 -0500
+  [1m[35m (3.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::DocumentTypesController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "document_type"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+Completed 401 Unauthorized in 52ms (ActiveRecord: 13.0ms)
+
+
+Started POST "/signup" for ::1 at 2019-09-19 22:02:16 -0500
+Processing by RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr7@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"marcesftwr7@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'marcesftwr7@gmail.com' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('marcesftwr7@gmail.com', '$2a$11$3dMjrdV.yNQ4LH73BENdj.beesr4OvD2s5GSs67BUs1OnVy7Unye.', '2019-09-20 03:02:18', '2019-09-20 03:02:18')[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (35.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 1251ms (Views: 0.5ms | ActiveRecord: 55.9ms)
+
+
+Started GET "/api/v1/document_types/" for ::1 at 2019-09-19 22:02:29 -0500
+Processing by Api::V1::DocumentTypesController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "document_type"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0798344f-5146-41dc-922a-f288d9782aa0' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mDocumentType Load (1.1ms)[0m  [1m[34mSELECT `document_types`.* FROM `document_types`[0m
+  ↳ app/controllers/api/v1/document_types_controller.rb:11
+No serializer found for resource: #<DocumentType id: 1, name: "hola", description: "descripción", created_at: "2019-09-16 23:10:25", updated_at: "2019-09-16 23:10:25">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with DocumentType::ActiveRecord_Relation (53.7ms)
+Completed 200 OK in 733ms (Views: 434.9ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/api/v1/lessees/" for ::1 at 2019-09-19 22:06:21 -0500
+Processing by Api::V1::LesseesController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0798344f-5146-41dc-922a-f288d9782aa0' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessee Load (35.7ms)[0m  [1m[34mSELECT `lessees`.* FROM `lessees`[0m
+  ↳ app/controllers/api/v1/lessees_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/lessees_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/lessees_controller.rb:11
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (579.1ms)
+Completed 200 OK in 1462ms (Views: 1201.8ms | ActiveRecord: 45.4ms)
+
+
+Started GET "/api/v1/lessor/" for ::1 at 2019-09-19 22:21:33 -0500
+  [1m[35m (2.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/lessor"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/lessors/" for ::1 at 2019-09-19 22:21:37 -0500
+Processing by Api::V1::LessorsController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (13.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (11.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0798344f-5146-41dc-922a-f288d9782aa0' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.6ms)[0m  [1m[34mSELECT `lessors`.* FROM `lessors`[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/lessors_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (479.23ms)
+Completed 200 OK in 1045ms (Views: 678.0ms | ActiveRecord: 45.7ms)
+
+
+Started GET "/api/v1/spaces/" for ::1 at 2019-09-19 22:29:40 -0500
+  [1m[35m (31.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}
+  [1m[36mUser Load (29.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (8.6ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0798344f-5146-41dc-922a-f288d9782aa0' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (27.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:10
+[active_model_serializers]   [1m[36mLessor Load (9.8ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:10
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (462.52ms)
+Completed 200 OK in 879ms (Views: 614.1ms | ActiveRecord: 107.7ms)
+
+
+Started GET "/api/v1/location/" for ::1 at 2019-09-19 22:29:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/location"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/locations/" for ::1 at 2019-09-19 22:30:02 -0500
+Processing by Api::V1::LocationsController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "location"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0798344f-5146-41dc-922a-f288d9782aa0' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLocation Load (20.5ms)[0m  [1m[34mSELECT `locations`.* FROM `locations`[0m
+  ↳ app/controllers/api/v1/locations_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 214ms (Views: 78.0ms | ActiveRecord: 53.8ms)
+
+
+Started GET "/api/v1/locations/" for ::1 at 2019-09-19 22:31:31 -0500
+Processing by Api::V1::LocationsController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "location"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0798344f-5146-41dc-922a-f288d9782aa0' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT `locations`.* FROM `locations`[0m
+  ↳ app/controllers/api/v1/locations_controller.rb:10
+No serializer found for resource: #<Location id: 1, space_id: 1, address: "example road", latitude: 192, longitude: 150, created_at: "2019-09-19 00:00:00", updated_at: "2019-09-19 00:00:00">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Location::ActiveRecord_Relation (2.14ms)
+Completed 200 OK in 415ms (Views: 265.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/api/v1/locations/" for ::1 at 2019-09-19 22:34:36 -0500
+Processing by Api::V1::LocationsController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "location"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+Completed 401 Unauthorized in 25ms (ActiveRecord: 5.8ms)
+
+
+Started POST "/signup" for ::1 at 2019-09-19 22:35:12 -0500
+Processing by RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr8@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"marcesftwr8@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'marcesftwr8@gmail.com' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (44.8ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('marcesftwr8@gmail.com', '$2a$11$sNzW0EVApXET/kUQmrzMnueODal8hBFqpZ7bfnOOdWsjIgKB9cn9O', '2019-09-20 03:35:13', '2019-09-20 03:35:13')[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (53.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 943ms (Views: 0.6ms | ActiveRecord: 105.4ms)
+
+
+Started GET "/api/v1/locations/" for ::1 at 2019-09-19 22:35:39 -0500
+Processing by Api::V1::LocationsController#index as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "location"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'a7f2a272-1446-41b9-8885-91434aa06ad1' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT `locations`.* FROM `locations`[0m
+  ↳ app/controllers/api/v1/locations_controller.rb:10
+[active_model_serializers]   [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/locations_controller.rb:10
+[active_model_serializers]   [1m[36mLessor Load (0.9ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/locations_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/locations_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (841.56ms)
+Completed 200 OK in 1331ms (Views: 1088.5ms | ActiveRecord: 41.2ms)
+
+

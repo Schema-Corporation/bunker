@@ -12,24 +12,24 @@ describe 'Lessees API' do
             parameter name: :lessee, in: :body, schema: {
                 type: :object,
                 properties: {
+                    first_name: { type: :string },
+                    last_name: { type: :string },
+                     doc_type: { type: :integer},
+                    doc_number: { type: :string },
+                    phone: { type: :string },
+                    email: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
                     user: { 
                         type: :object, 
                         properties: { 
-                            id: { type: :integer}, 
+                            id: { type: :integer }, 
                             email: { type: :string },
-                            password: { type: :string}
+                            created_at: { type: :string },
+                            updated_at: { type: :string }
                         }
-                    },
-                    
-                    first_name: { type: :string},
-                    last_name: { type: :string},
-                    doc_type: { type: :integer},
-                    doc_number: { type: :string},
-                    phone: { type: :string},
-                    email: { type: :string}
-                },
-                required: [ 'user', 'first_name', 'last_name', 
-                'doc_type', 'doc_number', 'phone', 'email']
+                    }
+                }
             }
 
             parameter({
@@ -75,24 +75,24 @@ describe 'Lessees API' do
                 schema type: :object,
                 properties: {
                     id: { type: :integer },
+                    first_name: { type: :string },
+                    last_name: { type: :string },
+                     doc_type: { type: :integer},
+                    doc_number: { type: :string },
+                    phone: { type: :string },
+                    email: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
                     user: { 
                         type: :object, 
                         properties: { 
-                            id: { type: :integer}, 
+                            id: { type: :integer }, 
                             email: { type: :string },
-                            password: { type: :string}
+                            created_at: { type: :string },
+                            updated_at: { type: :string }
                         }
-                    },
-                    
-                    first_name: { type: :string},
-                    last_name: { type: :string},
-                    doc_type: { type: :integer},
-                    doc_number: { type: :string},
-                    phone: { type: :string},
-                    email: { type: :string}
-                },
-                required: [ 'user', 'first_name', 'last_name', 
-                'doc_type', 'doc_number', 'phone', 'email']
+                    }
+                }
 
                 let(:id) { Lessee.create( first_name: 'Kevin',
                 last_name: 'Burga', doc_type: '1', doc_number: '7', phone: '933436802', email: 'kevinburga@hotmail.com').id }
@@ -120,25 +120,24 @@ describe 'Lessees API' do
             parameter name: :lessee, in: :body, schema: {
                 type: :object,
                 properties: {
-
+                    first_name: { type: :string },
+                    last_name: { type: :string },
+                    doc_type: { type: :integer},
+                    doc_number: { type: :string },
+                    phone: { type: :string },
+                    email: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
                     user: { 
                         type: :object, 
                         properties: { 
-                            id: { type: :integer}, 
+                            id: { type: :integer }, 
                             email: { type: :string },
-                            password: { type: :string}
+                            created_at: { type: :string },
+                            updated_at: { type: :string }
                         }
-                    },
-                   
-                    first_name: { type: :string},
-                    last_name: { type: :string},
-                    doc_type: { type: :integer},
-                    doc_number: { type: :string},
-                    phone: { type: :string},
-                    email: { type: :string}
-                },
-                required: [ 'user', 'first_name', 'last_name', 
-                'doc_type', 'doc_number', 'phone', 'email']
+                    }
+                }
             }
     
             parameter({

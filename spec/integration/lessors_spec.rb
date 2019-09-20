@@ -12,25 +12,26 @@ describe 'Lessors API' do
             parameter name: :lessor, in: :body, schema: {
                 type: :object,
                 properties: {
+                    ruc: { type: :string},
+                    commercial_name: { type: :string},
+                    first_name: { type: :string},
+                    last_name: { type: :string},
+                    doc_type: { type: :string},
+                    doc_number: { type: :string},
+                    phone: { type: :string},
+                    email: { type: :string},
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
                     user: { 
                         type: :object, 
                         properties: {  
                             id: { type: :integer}, 
                             email: { type: :string },
-                            password: { type: :string}
+                            created_at: { type: :string },
+                            updated_at: { type: :string }
                         }
-                    },
-                    ruc: { type: :string},
-                    commercial_name: { type: :string},
-                    first_name: { type: :string},
-                    last_name: { type: :string},
-                    doc_type: { type: :integer},
-                    doc_number: { type: :string},
-                    phone: { type: :string},
-                    email: { type: :string}
-                },
-                required: [ 'user', 'ruc', 'commercial_name', 'first_name', 'last_name', 
-                'doc_type', 'doc_number', 'phone', 'email']
+                    }
+                }
             }
 
             parameter({
@@ -76,14 +77,6 @@ describe 'Lessors API' do
                 schema type: :object,
                 properties: {
                     id: { type: :integer },
-                    user: { 
-                        type: :object, 
-                        properties: {  
-                            id: { type: :integer}, 
-                            email: { type: :string },
-                            password: { type: :string}
-                        }
-                    },
                     ruc: { type: :string},
                     commercial_name: { type: :string},
                     first_name: { type: :string},
@@ -91,10 +84,19 @@ describe 'Lessors API' do
                     doc_type: { type: :integer},
                     doc_number: { type: :string},
                     phone: { type: :string},
-                    email: { type: :string}
-                },
-                required: [ 'id', 'user', 'ruc', 'commercial_name', 'first_name', 'last_name', 
-                'doc_type', 'doc_number', 'phone', 'email']
+                    email: { type: :string},
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
+                    user: { 
+                        type: :object, 
+                        properties: {  
+                            id: { type: :integer}, 
+                            email: { type: :string },
+                            created_at: { type: :string },
+                            updated_at: { type: :string }
+                        }
+                    }
+                }
 
                 let(:id) { Lessor.create( ruc: '6465464', commercial_name: 'Empresa', first_name: 'Kevin', last_name: 'Burga', doc_type: '1', 
                 doc_number: '7', phone: '933436802', email: 'kevinburga@hotmail.com').id }
@@ -121,15 +123,6 @@ describe 'Lessors API' do
             parameter name: :lessor, in: :body, schema: {
                 type: :object,
                 properties: {
-
-                    user: { 
-                        type: :object, 
-                        properties: {  
-                            id: { type: :integer}, 
-                            email: { type: :string },
-                            password: { type: :string}
-                        }
-                    },
                     ruc: { type: :string},
                     commercial_name: { type: :string},
                     first_name: { type: :string},
@@ -137,10 +130,19 @@ describe 'Lessors API' do
                     doc_type: { type: :integer},
                     doc_number: { type: :string},
                     phone: { type: :string},
-                    email: { type: :string}
-                },
-                required: [ 'user', 'ruc', 'commercial_name', 'first_name', 'last_name', 
-                'doc_type', 'doc_number', 'phone', 'email']
+                    email: { type: :string},
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
+                    user: { 
+                        type: :object, 
+                        properties: {  
+                            id: { type: :integer}, 
+                            email: { type: :string },
+                            created_at: { type: :string },
+                            updated_at: { type: :string }
+                        }
+                    }
+                }
             }
     
             parameter({

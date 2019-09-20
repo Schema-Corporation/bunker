@@ -11,48 +11,50 @@ describe 'Location  API' do
             parameter name: :location, in: :body, schema: {
                 type: :object,
                 properties: {
-
+                    address:  { type: :string },
+                    latitude: { type: :number },
+                    longitude: { type: :number },
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
                     space: { 
+                        type: :object, 
+                        properties: { 
+                            id: { type: :string },
+                            status: { type: :integer },
+                            width: { type: :number },
+                            height: { type: :number },
+                            area: { type: :number },
+                            created_at: { type: :string },
+                            updated_at: { type: :string },
+                            rent_price: { type: :number },
+                            lessor: { 
                                 type: :object, 
                                 properties: { 
-                                        id: { type: :integer },
-                                        lessor: { 
-                                            type: :object, 
-                                            properties: { 
-                                                id: { type: :integer }, 
-                                                user: { 
-                                                    type: :object, 
-                                                    properties: {  
-                                                        id: { type: :integer},
-                                                        email: { type: :string },
-                                                        password: { type: :string}
-                                                                }
-                                                      },
-                                                ruc: { type: :string},
-                                                comercial_name: { type: :string},
-                                                first_name: { type: :string},
-                                                last_name: { type: :string},
-                                                doc_type: { type: :number},
-                                                doc_number: { type: :string},
-                                                phone: { type: :string},
-                                                email: { type: :string}
-
-                                              
-                                                         }
-                                                },
-                                        status: { type: :integer},
-                                        width: { type: :number},
-                                        height: { type: :number},
-                                        area: { type: :number}
-                                    
+                                    id: { type: :integer },
+                                    ruc: { type: :string},
+                                    comercial_name: { type: :string},
+                                    first_name: { type: :string},
+                                    last_name: { type: :string},
+                                    doc_type: { type: :integer},
+                                    doc_number: { type: :string},
+                                    phone: { type: :string},
+                                    email: { type: :string},
+                                    created_at: { type: :string },
+                                    updated_at: { type: :string },
+                                    user: { 
+                                        type: :object, 
+                                        properties: {  
+                                            id: { type: :integer},
+                                            email: { type: :string },
+                                            created_at: { type: :string },
+                                            updated_at: { type: :string },
+                                        }
+                                    }    
                                 }
-                              },
-                    address: { type: :string },
-                    latitude: { type: :number},
-                    longitude: { type: :number}
-                  
-                },
-                required: [ 'space', 'address', 'latitude','longitude']
+                            }
+                        }
+                    }
+                }
             }
 
             parameter({
@@ -98,48 +100,51 @@ describe 'Location  API' do
             response '200', 'OK' do
                 schema type: :object,
                 properties: {
-
+                    id: { type: :integer },
+                    address:  { type: :string },
+                    latitude: { type: :number },
+                    longitude: { type: :number },
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
                     space: { 
+                        type: :object, 
+                        properties: { 
+                            id: { type: :string },
+                            status: { type: :integer },
+                            width: { type: :number },
+                            height: { type: :number },
+                            area: { type: :number },
+                            created_at: { type: :string },
+                            updated_at: { type: :string },
+                            rent_price: { type: :number },
+                            lessor: { 
                                 type: :object, 
                                 properties: { 
-                                        id: { type: :integer },
-                                        lessor: { 
-                                            type: :object, 
-                                            properties: {  
-                                                id: { type: :integer },
-                                                user: { 
-                                                    type: :object, 
-                                                    properties: {  
-                                                        id: { type: :integer},
-                                                        email: { type: :string },
-                                                        password: { type: :string}
-                                                                }
-                                                      },
-                                                ruc: { type: :string},
-                                                comercial_name: { type: :string},
-                                                first_name: { type: :string},
-                                                last_name: { type: :string},
-                                                doc_type: { type: :number},
-                                                doc_number: { type: :string},
-                                                phone: { type: :string},
-                                                email: { type: :string}
-
-                                              
-                                                         }
-                                                },
-                                        status: { type: :integer},
-                                        width: { type: :number},
-                                        height: { type: :number},
-                                        area: { type: :number}
-                                    
+                                    id: { type: :integer },
+                                    ruc: { type: :string},
+                                    comercial_name: { type: :string},
+                                    first_name: { type: :string},
+                                    last_name: { type: :string},
+                                    doc_type: { type: :integer},
+                                    doc_number: { type: :string},
+                                    phone: { type: :string},
+                                    email: { type: :string},
+                                    created_at: { type: :string },
+                                    updated_at: { type: :string },
+                                    user: { 
+                                        type: :object, 
+                                        properties: {  
+                                            id: { type: :integer},
+                                            email: { type: :string },
+                                            created_at: { type: :string },
+                                            updated_at: { type: :string },
+                                        }
+                                    }    
                                 }
-                              },
-                    address: { type: :string },
-                    latitude: { type: :number},
-                    longitude: { type: :number}
-                  
-                },
-                required: [ 'space', 'address', 'latitude','longitude']
+                            }
+                        }
+                    }
+                }
                 let(:Authorization) { 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTY4NTg4MzkyLCJleHAiOjE1Njg1OTAxOTIsImp0aSI6IjRlMzk5ODU1LWMyMzEtNDc1Yi05MGUzLTYyNDY5NWFmNWRkZiJ9.nkUhw506t3vyt0lLEsPMB74EY4JFzh1IPnyMREmSWLk'}
                 let(:id) { Locations.create(address: 'Calle bayobar 126', latitude: '123123.23',longitude: '43123.12').id }
                 run_test!
@@ -165,48 +170,50 @@ describe 'Location  API' do
             parameter name: :location, in: :body, schema: {
                 type: :object,
                 properties: {
-
+                    address:  { type: :string },
+                    latitude: { type: :number },
+                    longitude: { type: :number },
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
                     space: { 
+                        type: :object, 
+                        properties: { 
+                            id: { type: :string },
+                            status: { type: :integer },
+                            width: { type: :number },
+                            height: { type: :number },
+                            area: { type: :number },
+                            created_at: { type: :string },
+                            updated_at: { type: :string },
+                            rent_price: { type: :number },
+                            lessor: { 
                                 type: :object, 
                                 properties: { 
-                                        id: { type: :integer },
-                                        lessor: { 
-                                            type: :object, 
-                                            properties: {  
-                                                id: { type: :integer },
-                                                user: { 
-                                                    type: :object, 
-                                                    properties: {  
-                                                        id: { type: :integer},
-                                                        email: { type: :string },
-                                                        password: { type: :string}
-                                                                }
-                                                      },
-                                                ruc: { type: :string},
-                                                comercial_name: { type: :string},
-                                                first_name: { type: :string},
-                                                last_name: { type: :string},
-                                                doc_type: { type: :number},
-                                                doc_number: { type: :string},
-                                                phone: { type: :string},
-                                                email: { type: :string}
-
-                                              
-                                                         }
-                                                },
-                                        status: { type: :integer},
-                                        width: { type: :number},
-                                        height: { type: :number},
-                                        area: { type: :number}
-                                    
+                                    id: { type: :integer },
+                                    ruc: { type: :string},
+                                    comercial_name: { type: :string},
+                                    first_name: { type: :string},
+                                    last_name: { type: :string},
+                                    doc_type: { type: :integer},
+                                    doc_number: { type: :string},
+                                    phone: { type: :string},
+                                    email: { type: :string},
+                                    created_at: { type: :string },
+                                    updated_at: { type: :string },
+                                    user: { 
+                                        type: :object, 
+                                        properties: {  
+                                            id: { type: :integer},
+                                            email: { type: :string },
+                                            created_at: { type: :string },
+                                            updated_at: { type: :string },
+                                        }
+                                    }    
                                 }
-                              },
-                    address: { type: :string },
-                    latitude: { type: :number},
-                    longitude: { type: :number}
-                  
-                },
-                required: [ 'space', 'address', 'latitude','longitude']
+                            }
+                        }
+                    }
+                }
             }
     
             parameter({

@@ -22,8 +22,7 @@ describe 'Space  API' do
                                     email: { type: :string },
                                     password: { type: :string}
                                             }
-                                  },
-                           
+                            },
                             ruc: { type: :string},
                             comercial_name: { type: :string},
                             first_name: { type: :string},
