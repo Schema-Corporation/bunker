@@ -11,24 +11,24 @@ describe 'Photo  API' do
             parameter name: :photo, in: :body, schema: {
                 type: :object,
                 properties: {
-
+                    photo_url: { type: :string },
+                    created_at: { type: :string},
+                    updated_at: { type: :string},
                     space: { 
                                 type: :object, 
                                 properties: { 
                                         id: { type: :integer },
+                                        status: { type: :integer},
+                                        width: { type: :number},
+                                        height: { type: :number},
+                                        area: { type: :number},
+                                        created_at: { type: :string},
+                                        updated_at: { type: :string},
+                                        rent_price: { type: :number},
                                         lessor: { 
                                             type: :object, 
                                             properties: {
-                                                id: { type: :integer },  
-                                                user: { 
-                                                    type: :object, 
-                                                    properties: {  
-                                                        id: { type: :integer},
-                                                        email: { type: :string },
-                                                        created_at: { type: :string},
-                                                        updated_at: { type: :string}
-                                                                }
-                                                      },
+                                                id: { type: :integer },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
@@ -38,24 +38,20 @@ describe 'Photo  API' do
                                                 phone: { type: :string},
                                                 email: { type: :string},
                                                 created_at: { type: :string},
-                                                updated_at: { type: :string}
-
-                                              
-                                                         }
-                                                },
-                                        status: { type: :integer},
-                                        width: { type: :number},
-                                        height: { type: :number},
-                                        area: { type: :number},
-                                        created_at: { type: :string},
-                                        updated_at: { type: :string}
-                                    
+                                                updated_at: { type: :string},  
+                                                user: { 
+                                                    type: :object, 
+                                                    properties: {  
+                                                        id: { type: :integer},
+                                                        email: { type: :string },
+                                                        created_at: { type: :string},
+                                                        updated_at: { type: :string}
+                                                    }
+                                                }
+                                            }
+                                        }  
                                 }
-                              },
-                    photo_url: { type: :string },
-                    created_at: { type: :string},
-                    updated_at: { type: :string}
-                  
+                    }                 
                 },
                 required: [ 'space', 'photo_url']
             }
@@ -104,24 +100,24 @@ describe 'Photo  API' do
                 schema type: :object,
                 properties: {
                     id: { type: :integer},
+                    photo_url: { type: :string },
+                    created_at: { type: :string},
+                    updated_at: { type: :string},
                     space: { 
                                 type: :object, 
-                                properties: {
-                                        id: { type: :integer }, 
-                                        lessor: {
-                                             
+                                properties: { 
+                                        id: { type: :integer },
+                                        status: { type: :integer},
+                                        width: { type: :number},
+                                        height: { type: :number},
+                                        area: { type: :number},
+                                        created_at: { type: :string},
+                                        updated_at: { type: :string},
+                                        rent_price: { type: :number},
+                                        lessor: { 
                                             type: :object, 
                                             properties: {
-                                                id: { type: :integer },  
-                                                user: { 
-                                                    type: :object, 
-                                                    properties: {  
-                                                        id: { type: :integer},
-                                                        email: { type: :string },
-                                                        created_at: { type: :string},
-                                                        updated_at: { type: :string}
-                                                                }
-                                                      },
+                                                id: { type: :integer },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
@@ -131,25 +127,20 @@ describe 'Photo  API' do
                                                 phone: { type: :string},
                                                 email: { type: :string},
                                                 created_at: { type: :string},
-                                                updated_at: { type: :string}
-
-                                              
-                                                         }
-                                                },
-                                        status: { type: :integer},
-                                        width: { type: :number},
-                                        height: { type: :number},
-                                        area: { type: :number},
-                                        created_at: { type: :string},
-                                        updated_at: { type: :string}
-                                    
+                                                updated_at: { type: :string},  
+                                                user: { 
+                                                    type: :object, 
+                                                    properties: {  
+                                                        id: { type: :integer},
+                                                        email: { type: :string },
+                                                        created_at: { type: :string},
+                                                        updated_at: { type: :string}
+                                                    }
+                                                }
+                                            }
+                                        }  
                                 }
-                              },
-                    photo_url: { type: :string },
-                    created_at: { type: :string},
-                    updated_at: { type: :string}
-                 
-                  
+                    }                 
                 },
                 required: [ 'space','photo_url']
                 let(:Authorization) { 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTY4NTg4MzkyLCJleHAiOjE1Njg1OTAxOTIsImp0aSI6IjRlMzk5ODU1LWMyMzEtNDc1Yi05MGUzLTYyNDY5NWFmNWRkZiJ9.nkUhw506t3vyt0lLEsPMB74EY4JFzh1IPnyMREmSWLk'}
@@ -177,25 +168,24 @@ describe 'Photo  API' do
             parameter name: :photo, in: :body, schema: {
                 type: :object,
                 properties: {
-
+                    photo_url: { type: :string },
+                    created_at: { type: :string},
+                    updated_at: { type: :string},
                     space: { 
                                 type: :object, 
-                                properties: {
-                                        id: { type: :integer }, 
-                                        lessor: {
-                                             
+                                properties: { 
+                                        id: { type: :integer },
+                                        status: { type: :integer},
+                                        width: { type: :number},
+                                        height: { type: :number},
+                                        area: { type: :number},
+                                        created_at: { type: :string},
+                                        updated_at: { type: :string},
+                                        rent_price: { type: :number},
+                                        lessor: { 
                                             type: :object, 
                                             properties: {
-                                                id: { type: :integer },  
-                                                user: { 
-                                                    type: :object, 
-                                                    properties: {  
-                                                        id: { type: :integer},
-                                                        email: { type: :string },
-                                                        created_at: { type: :string},
-                                                        updated_at: { type: :string}
-                                                                }
-                                                      },
+                                                id: { type: :integer },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
@@ -205,24 +195,20 @@ describe 'Photo  API' do
                                                 phone: { type: :string},
                                                 email: { type: :string},
                                                 created_at: { type: :string},
-                                                updated_at: { type: :string}
-
-                                              
-                                                         }
-                                                },
-                                        status: { type: :integer},
-                                        width: { type: :number},
-                                        height: { type: :number},
-                                        area: { type: :number},
-                                        created_at: { type: :string},
-                                        updated_at: { type: :string}
-                                    
+                                                updated_at: { type: :string},  
+                                                user: { 
+                                                    type: :object, 
+                                                    properties: {  
+                                                        id: { type: :integer},
+                                                        email: { type: :string },
+                                                        created_at: { type: :string},
+                                                        updated_at: { type: :string}
+                                                    }
+                                                }
+                                            }
+                                        }  
                                 }
-                              },
-                    photo_url: { type: :string },
-                    created_at: { type: :string},
-                    updated_at: { type: :string}
-                  
+                    }                 
                 },
                 required: [ 'space','photo_url']
             }

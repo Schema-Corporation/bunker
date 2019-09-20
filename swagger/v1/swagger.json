@@ -2526,34 +2526,47 @@
             "schema": {
               "type": "object",
               "properties": {
+                "photo_url": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "created_at": {
-                              "type": "string"
-                            },
-                            "updated_at": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -2584,37 +2597,27 @@
                         },
                         "updated_at": {
                           "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
-                    },
-                    "created_at": {
-                      "type": "string"
-                    },
-                    "updated_at": {
-                      "type": "string"
                     }
                   }
-                },
-                "photo_url": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
                 }
               },
               "required": [
@@ -2680,34 +2683,47 @@
                 "id": {
                   "type": "integer"
                 },
+                "photo_url": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "created_at": {
-                              "type": "string"
-                            },
-                            "updated_at": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -2738,37 +2754,27 @@
                         },
                         "updated_at": {
                           "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
-                    },
-                    "created_at": {
-                      "type": "string"
-                    },
-                    "updated_at": {
-                      "type": "string"
                     }
                   }
-                },
-                "photo_url": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
                 }
               },
               "required": [
@@ -2809,34 +2815,47 @@
             "schema": {
               "type": "object",
               "properties": {
+                "photo_url": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "created_at": {
-                              "type": "string"
-                            },
-                            "updated_at": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -2867,37 +2886,27 @@
                         },
                         "updated_at": {
                           "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
-                    },
-                    "created_at": {
-                      "type": "string"
-                    },
-                    "updated_at": {
-                      "type": "string"
                     }
                   }
-                },
-                "photo_url": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
                 }
               },
               "required": [
@@ -3209,28 +3218,76 @@
             "schema": {
               "type": "object",
               "properties": {
+                "status": {
+                  "type": "number"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "service_price": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "service": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -3255,51 +3312,33 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
-                    },
-                    "rent_price": {
-                      "type": "number"
                     }
                   }
-                },
-                "service": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "status": {
-                  "type": "number"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "service_price": {
-                  "type": "number"
                 }
               },
               "required": [
@@ -3307,7 +3346,8 @@
                 "service",
                 "status",
                 "start_date",
-                "end_date"
+                "end_date",
+                "service_price"
               ]
             }
           },
@@ -3368,28 +3408,76 @@
                 "id": {
                   "type": "integer"
                 },
+                "status": {
+                  "type": "number"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "service_price": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "service": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -3414,51 +3502,33 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
-                    },
-                    "rent_price": {
-                      "type": "number"
                     }
                   }
-                },
-                "service": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "status": {
-                  "type": "number"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "service_price": {
-                  "type": "number"
                 }
               },
               "required": [
@@ -3466,7 +3536,8 @@
                 "service",
                 "status",
                 "start_date",
-                "end_date"
+                "end_date",
+                "service_price"
               ]
             }
           },
@@ -3502,28 +3573,76 @@
             "schema": {
               "type": "object",
               "properties": {
+                "status": {
+                  "type": "number"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "service_price": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "service": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -3548,51 +3667,33 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
-                    },
-                    "rent_price": {
-                      "type": "number"
                     }
                   }
-                },
-                "service": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "status": {
-                  "type": "number"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "service_price": {
-                  "type": "number"
                 }
               },
               "required": [
@@ -3600,7 +3701,8 @@
                 "service",
                 "status",
                 "start_date",
-                "end_date"
+                "end_date",
+                "service_price"
               ]
             }
           },
@@ -3682,22 +3784,32 @@
             "schema": {
               "type": "object",
               "properties": {
+                "status": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "area": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "rent_price": {
+                  "type": "number"
+                },
                 "lessor": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
-                    },
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "email": {
-                          "type": "string"
-                        }
-                      }
                     },
                     "ruc": {
                       "type": "string"
@@ -3722,23 +3834,31 @@
                     },
                     "email": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
-                },
-                "status": {
-                  "type": "integer"
-                },
-                "width": {
-                  "type": "number"
-                },
-                "height": {
-                  "type": "number"
-                },
-                "area": {
-                  "type": "number"
-                },
-                "rent_price": {
-                  "type": "number"
                 }
               },
               "required": [
@@ -3805,22 +3925,35 @@
             "schema": {
               "type": "object",
               "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "area": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "rent_price": {
+                  "type": "number"
+                },
                 "lessor": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
-                    },
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "email": {
-                          "type": "string"
-                        }
-                      }
                     },
                     "ruc": {
                       "type": "string"
@@ -3845,23 +3978,31 @@
                     },
                     "email": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
-                },
-                "status": {
-                  "type": "integer"
-                },
-                "width": {
-                  "type": "number"
-                },
-                "height": {
-                  "type": "number"
-                },
-                "area": {
-                  "type": "number"
-                },
-                "rent_price": {
-                  "type": "number"
                 }
               },
               "required": [

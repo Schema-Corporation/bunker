@@ -11,22 +11,37 @@ describe 'Space Service Detail  API' do
             parameter name: :space_service_detail, in: :body, schema: {
                 type: :object,
                 properties: {
-
+                    status: { type: :number},
+                    start_date: { type: :string},
+                    end_date: { type: :string},
+                    service_price: { type: :number},
+                    created_at: { type: :string},
+                    updated_at: { type: :string},
+                    service: { 
+                        type: :object, 
+                        properties: {
+                            id: { type: :integer},
+                            name: { type: :string},
+                            description: { type: :string},
+                            created_at: { type: :string},
+                            updated_at: { type: :string}
+                        }
+                    },  
                     space: { 
                                 type: :object, 
                                 properties: {
-                                         id: { type: :integer }, 
+                                        id: { type: :integer },
+                                        status: { type: :integer},
+                                        width: { type: :number},
+                                        height: { type: :number},
+                                        area: { type: :number},
+                                        rent_price: { type: :number},
+                                        created_at: { type: :string},
+                                        updated_at: { type: :string}, 
                                         lessor: { 
                                             type: :object, 
                                             properties: {
-                                                id: { type: :integer },  
-                                                user: { 
-                                                    type: :object, 
-                                                    properties: {  
-                                                        id: { type: :integer},
-                                                        email: { type: :string }
-                                                                }
-                                                      },
+                                                id: { type: :integer },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
@@ -34,34 +49,24 @@ describe 'Space Service Detail  API' do
                                                 doc_type: { type: :integer},
                                                 doc_number: { type: :string},
                                                 phone: { type: :string},
-                                                email: { type: :string}
-
-                                              
-                                                         }
-                                                },
-                                        status: { type: :integer},
-                                        width: { type: :number},
-                                        height: { type: :number},
-                                        area: { type: :number},
-                                        rent_price: { type: :number}
-                                }
-                              },
-
-                    service: { 
-                            type: :object, 
-                            properties: {
-                                id: { type: :integer},
-                                name: { type: :string},
-                                description: { type: :string}
+                                                email: { type: :string},
+                                                created_at: { type: :string},
+                                                updated_at: { type: :string},  
+                                                user: { 
+                                                    type: :object, 
+                                                    properties: {  
+                                                        id: { type: :integer},
+                                                        email: { type: :string },
+                                                        created_at: { type: :string},
+                                                        updated_at: { type: :string}
+                                                    }
+                                                }
+                                            }
                                         }
-                            },  
-                    status: { type: :number},
-                    start_date: { type: :string},
-                    end_date: { type: :string},
-                    service_price: { type: :number}
-                  
+                                }
+                    }
                 },
-                required: [ 'space','service','status','start_date','end_date']
+                required: [ 'space','service','status','start_date','end_date','service_price']
             }
 
             parameter({
@@ -107,22 +112,38 @@ describe 'Space Service Detail  API' do
             response '200', 'OK' do
                 schema type: :object,
                 properties: {
-                    id: {type: :integer },
+                    id: { type: :integer},
+                    status: { type: :number},
+                    start_date: { type: :string},
+                    end_date: { type: :string},
+                    service_price: { type: :number},
+                    created_at: { type: :string},
+                    updated_at: { type: :string},
+                    service: { 
+                        type: :object, 
+                        properties: {
+                            id: { type: :integer},
+                            name: { type: :string},
+                            description: { type: :string},
+                            created_at: { type: :string},
+                            updated_at: { type: :string}
+                        }
+                    },  
                     space: { 
                                 type: :object, 
                                 properties: {
-                                        id: { type: :integer }, 
+                                        id: { type: :integer },
+                                        status: { type: :integer},
+                                        width: { type: :number},
+                                        height: { type: :number},
+                                        area: { type: :number},
+                                        rent_price: { type: :number},
+                                        created_at: { type: :string},
+                                        updated_at: { type: :string}, 
                                         lessor: { 
                                             type: :object, 
                                             properties: {
-                                                id: { type: :integer },  
-                                                user: { 
-                                                    type: :object, 
-                                                    properties: {  
-                                                        id: { type: :integer},
-                                                        email: { type: :string }
-                                                                }
-                                                      },
+                                                id: { type: :integer },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
@@ -130,34 +151,24 @@ describe 'Space Service Detail  API' do
                                                 doc_type: { type: :integer},
                                                 doc_number: { type: :string},
                                                 phone: { type: :string},
-                                                email: { type: :string}
-
-                                              
-                                                         }
-                                                },
-                                        status: { type: :integer},
-                                        width: { type: :number},
-                                        height: { type: :number},
-                                        area: { type: :number},
-                                        rent_price: { type: :number}
-                                }
-                              },
-
-                    service: { 
-                            type: :object, 
-                            properties: {
-                                id: { type: :integer},
-                                name: { type: :string},
-                                description: { type: :string}
+                                                email: { type: :string},
+                                                created_at: { type: :string},
+                                                updated_at: { type: :string},  
+                                                user: { 
+                                                    type: :object, 
+                                                    properties: {  
+                                                        id: { type: :integer},
+                                                        email: { type: :string },
+                                                        created_at: { type: :string},
+                                                        updated_at: { type: :string}
+                                                    }
+                                                }
+                                            }
                                         }
-                            },  
-                    status: { type: :number},
-                    start_date: { type: :string},
-                    end_date: { type: :string},
-                    service_price: { type: :number}
-                  
+                                }
+                    }
                 },
-                required: [ 'space','service','status','start_date','end_date']
+                required: [ 'space','service','status','start_date','end_date','service_price']
                 let(:Authorization) { 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIzIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNTY4NTg4MzkyLCJleHAiOjE1Njg1OTAxOTIsImp0aSI6IjRlMzk5ODU1LWMyMzEtNDc1Yi05MGUzLTYyNDY5NWFmNWRkZiJ9.nkUhw506t3vyt0lLEsPMB74EY4JFzh1IPnyMREmSWLk'}
                 let(:id) { Space_service_details.create(status: '1',start_date: '2019-05-13',end_date:'2020-01-14').id }
                 run_test!
@@ -183,22 +194,37 @@ describe 'Space Service Detail  API' do
             parameter name: :space_service_detail, in: :body, schema: {
                 type: :object,
                 properties: {
-
+                    status: { type: :number},
+                    start_date: { type: :string},
+                    end_date: { type: :string},
+                    service_price: { type: :number},
+                    created_at: { type: :string},
+                    updated_at: { type: :string},
+                    service: { 
+                        type: :object, 
+                        properties: {
+                            id: { type: :integer},
+                            name: { type: :string},
+                            description: { type: :string},
+                            created_at: { type: :string},
+                            updated_at: { type: :string}
+                        }
+                    },  
                     space: { 
                                 type: :object, 
                                 properties: {
-                                        id: { type: :integer }, 
+                                        id: { type: :integer },
+                                        status: { type: :integer},
+                                        width: { type: :number},
+                                        height: { type: :number},
+                                        area: { type: :number},
+                                        rent_price: { type: :number},
+                                        created_at: { type: :string},
+                                        updated_at: { type: :string}, 
                                         lessor: { 
                                             type: :object, 
                                             properties: {
-                                                id: { type: :integer },  
-                                                user: { 
-                                                    type: :object, 
-                                                    properties: {  
-                                                        id: { type: :integer},
-                                                        email: { type: :string }
-                                                                }
-                                                      },
+                                                id: { type: :integer },
                                                 ruc: { type: :string},
                                                 comercial_name: { type: :string},
                                                 first_name: { type: :string},
@@ -206,34 +232,24 @@ describe 'Space Service Detail  API' do
                                                 doc_type: { type: :integer},
                                                 doc_number: { type: :string},
                                                 phone: { type: :string},
-                                                email: { type: :string}
-
-                                              
-                                                         }
-                                                },
-                                        status: { type: :integer},
-                                        width: { type: :number},
-                                        height: { type: :number},
-                                        area: { type: :number},
-                                        rent_price: { type: :number}
-                                }
-                              },
-
-                    service: { 
-                            type: :object, 
-                            properties: {
-                                id: { type: :integer},
-                                name: { type: :string},
-                                description: { type: :string}
+                                                email: { type: :string},
+                                                created_at: { type: :string},
+                                                updated_at: { type: :string},  
+                                                user: { 
+                                                    type: :object, 
+                                                    properties: {  
+                                                        id: { type: :integer},
+                                                        email: { type: :string },
+                                                        created_at: { type: :string},
+                                                        updated_at: { type: :string}
+                                                    }
+                                                }
+                                            }
                                         }
-                            },  
-                    status: { type: :number},
-                    start_date: { type: :string},
-                    end_date: { type: :string},
-                    service_price: { type: :number}
-                  
+                                }
+                    }
                 },
-                required: [ 'space','service','status','start_date','end_date']
+                required: [ 'space','service','status','start_date','end_date','service_price']
             }
     
             parameter({
