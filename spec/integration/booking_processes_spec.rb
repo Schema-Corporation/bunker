@@ -137,7 +137,7 @@ describe 'Booking Processes API' do
             response '200', 'OK' do
                 schema type: :object,
                 properties: {
-                    id: { type: :integer }
+                    id: { type: :integer },
                     step: { type: :integer },
                     start_date: { type: :string },
                     end_date: { type: :string },

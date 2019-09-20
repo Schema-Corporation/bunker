@@ -22,36 +22,34 @@
         ],
         "parameters": [
           {
-            "name": "Booking_Process",
+            "name": "booking_process",
             "in": "body",
             "schema": {
               "type": "object",
               "properties": {
-                "lessor": {
+                "step": {
+                  "type": "integer"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "monthly_fee": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "lessee": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
-                    },
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "email": {
-                          "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "ruc": {
-                      "type": "string"
-                    },
-                    "commercial_name": {
-                      "type": "string"
                     },
                     "first_name": {
                       "type": "string"
@@ -70,6 +68,29 @@
                     },
                     "email": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 },
@@ -79,23 +100,40 @@
                     "id": {
                       "type": "integer"
                     },
-                    "lessee": {
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "height": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "area": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "lessor": {
                       "id": {
                         "type": "integer"
                       },
-                      "user": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "email": {
-                            "type": "string"
-                          },
-                          "password": {
-                            "type": "string"
-                          }
-                        }
+                      "ruc": {
+                        "type": "string"
+                      },
+                      "commercial_name": {
+                        "type": "string"
                       },
                       "first_name": {
                         "type": "string"
@@ -114,22 +152,30 @@
                       },
                       "email": {
                         "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      },
+                      "user": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          }
+                        }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number",
-                      "format": "double"
-                    },
-                    "height": {
-                      "type": "number",
-                      "format": "double"
-                    },
-                    "area": {
-                      "type": "number",
-                      "format": "double"
                     }
                   }
                 },
@@ -138,6 +184,9 @@
                   "properties": {
                     "id": {
                       "type": "integer"
+                    },
+                    "url_document": {
+                      "type": "string"
                     },
                     "document_type": {
                       "type": "object",
@@ -150,36 +199,18 @@
                         },
                         "description": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
                         }
                       }
-                    },
-                    "url_document": {
-                      "type": "string"
                     }
                   }
-                },
-                "step": {
-                  "type": "integer"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "monthly_fee": {
-                  "type": "integer"
                 }
-              },
-              "required": [
-                "lessor",
-                "space",
-                "document",
-                "step",
-                "start_date",
-                "end_date",
-                "monthly_fee"
-              ]
+              }
             }
           },
           {
@@ -239,31 +270,29 @@
                 "id": {
                   "type": "integer"
                 },
-                "lessor": {
+                "step": {
+                  "type": "integer"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "monthly_fee": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "lessee": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
-                    },
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "email": {
-                          "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "ruc": {
-                      "type": "string"
-                    },
-                    "commercial_name": {
-                      "type": "string"
                     },
                     "first_name": {
                       "type": "string"
@@ -282,6 +311,29 @@
                     },
                     "email": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 },
@@ -291,23 +343,40 @@
                     "id": {
                       "type": "integer"
                     },
-                    "lessee": {
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "height": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "area": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "lessor": {
                       "id": {
                         "type": "integer"
                       },
-                      "user": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "email": {
-                            "type": "string"
-                          },
-                          "password": {
-                            "type": "string"
-                          }
-                        }
+                      "ruc": {
+                        "type": "string"
+                      },
+                      "commercial_name": {
+                        "type": "string"
                       },
                       "first_name": {
                         "type": "string"
@@ -326,19 +395,30 @@
                       },
                       "email": {
                         "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      },
+                      "user": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          }
+                        }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
                 },
@@ -347,6 +427,9 @@
                   "properties": {
                     "id": {
                       "type": "integer"
+                    },
+                    "url_document": {
+                      "type": "string"
                     },
                     "document_type": {
                       "type": "object",
@@ -359,36 +442,18 @@
                         },
                         "description": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
                         }
                       }
-                    },
-                    "url_document": {
-                      "type": "string"
                     }
                   }
-                },
-                "step": {
-                  "type": "integer"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "monthly_fee": {
-                  "type": "integer"
                 }
-              },
-              "required": [
-                "lessor",
-                "space",
-                "document",
-                "step",
-                "start_date",
-                "end_date",
-                "monthly_fee"
-              ]
+              }
             }
           },
           "404": {
@@ -423,31 +488,29 @@
             "schema": {
               "type": "object",
               "properties": {
-                "lessor": {
+                "step": {
+                  "type": "integer"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "monthly_fee": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "lessee": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
-                    },
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "email": {
-                          "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "ruc": {
-                      "type": "string"
-                    },
-                    "commercial_name": {
-                      "type": "string"
                     },
                     "first_name": {
                       "type": "string"
@@ -466,6 +529,29 @@
                     },
                     "email": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 },
@@ -475,23 +561,40 @@
                     "id": {
                       "type": "integer"
                     },
-                    "lessee": {
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "height": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "area": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "lessor": {
                       "id": {
                         "type": "integer"
                       },
-                      "user": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "email": {
-                            "type": "string"
-                          },
-                          "password": {
-                            "type": "string"
-                          }
-                        }
+                      "ruc": {
+                        "type": "string"
+                      },
+                      "commercial_name": {
+                        "type": "string"
                       },
                       "first_name": {
                         "type": "string"
@@ -510,19 +613,30 @@
                       },
                       "email": {
                         "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      },
+                      "user": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          }
+                        }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
                 },
@@ -531,6 +645,9 @@
                   "properties": {
                     "id": {
                       "type": "integer"
+                    },
+                    "url_document": {
+                      "type": "string"
                     },
                     "document_type": {
                       "type": "object",
@@ -543,36 +660,18 @@
                         },
                         "description": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
                         }
                       }
-                    },
-                    "url_document": {
-                      "type": "string"
                     }
                   }
-                },
-                "step": {
-                  "type": "integer"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "monthly_fee": {
-                  "type": "integer"
                 }
-              },
-              "required": [
-                "lessor",
-                "space",
-                "document",
-                "step",
-                "start_date",
-                "end_date",
-                "monthly_fee"
-              ]
+              }
             }
           },
           {
@@ -655,11 +754,14 @@
               "properties": {
                 "device_token": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "device_token"
-              ]
+              }
             }
           },
           {
@@ -721,12 +823,14 @@
                 },
                 "device_token": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "device_token"
-              ]
+              }
             }
           },
           "404": {
@@ -763,11 +867,14 @@
               "properties": {
                 "device_token": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "device_token"
-              ]
+              }
             }
           },
           {
@@ -853,12 +960,14 @@
                 },
                 "description": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "name",
-                "description"
-              ]
+              }
             }
           },
           {
@@ -923,6 +1032,12 @@
                 },
                 "description": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
               },
               "required": [
@@ -968,6 +1083,12 @@
                   "type": "string"
                 },
                 "description": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -1066,10 +1187,22 @@
                     },
                     "description": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
                     }
                   }
                 },
                 "url_document": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -1152,12 +1285,14 @@
                 },
                 "url_document": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "document_type",
-                "url_document"
-              ]
+              }
             }
           },
           "404": {
@@ -1207,6 +1342,12 @@
                   }
                 },
                 "url_document": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -1294,20 +1435,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1325,17 +1452,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "user",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           {
@@ -1395,20 +1536,6 @@
                 "id": {
                   "type": "integer"
                 },
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1426,17 +1553,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "user",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           "404": {
@@ -1471,20 +1612,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1502,17 +1629,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "user",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           {
@@ -1593,20 +1734,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "ruc": {
                   "type": "string"
                 },
@@ -1620,7 +1747,7 @@
                   "type": "string"
                 },
                 "doc_type": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "doc_number": {
                   "type": "string"
@@ -1630,19 +1757,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "user",
-                "ruc",
-                "commercial_name",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           {
@@ -1702,20 +1841,6 @@
                 "id": {
                   "type": "integer"
                 },
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "ruc": {
                   "type": "string"
                 },
@@ -1739,20 +1864,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "id",
-                "user",
-                "ruc",
-                "commercial_name",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           "404": {
@@ -1787,20 +1923,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "ruc": {
                   "type": "string"
                 },
@@ -1824,19 +1946,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "user",
-                "ruc",
-                "commercial_name",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           {
@@ -1919,31 +2053,53 @@
             "schema": {
               "type": "object",
               "properties": {
+                "address": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
+                      "type": "string"
+                    },
+                    "status": {
                       "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
                     },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -1958,7 +2114,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -1968,39 +2124,35 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
-                },
-                "address": {
-                  "type": "string"
-                },
-                "latitude": {
-                  "type": "number"
-                },
-                "longitude": {
-                  "type": "number"
                 }
-              },
-              "required": [
-                "space",
-                "address",
-                "latitude",
-                "longitude"
-              ]
+              }
             }
           },
           {
@@ -2057,31 +2209,56 @@
             "schema": {
               "type": "object",
               "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
+                      "type": "string"
+                    },
+                    "status": {
                       "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
                     },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -2096,7 +2273,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -2106,39 +2283,35 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
-                },
-                "address": {
-                  "type": "string"
-                },
-                "latitude": {
-                  "type": "number"
-                },
-                "longitude": {
-                  "type": "number"
                 }
-              },
-              "required": [
-                "space",
-                "address",
-                "latitude",
-                "longitude"
-              ]
+              }
             }
           },
           "404": {
@@ -2173,31 +2346,53 @@
             "schema": {
               "type": "object",
               "properties": {
+                "address": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
+                      "type": "string"
+                    },
+                    "status": {
                       "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
                     },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -2212,7 +2407,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -2222,39 +2417,35 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
-                },
-                "address": {
-                  "type": "string"
-                },
-                "latitude": {
-                  "type": "number"
-                },
-                "longitude": {
-                  "type": "number"
                 }
-              },
-              "required": [
-                "space",
-                "address",
-                "latitude",
-                "longitude"
-              ]
+              }
             }
           },
           {
@@ -2356,7 +2547,10 @@
                             "email": {
                               "type": "string"
                             },
-                            "password": {
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
                               "type": "string"
                             }
                           }
@@ -2374,7 +2568,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -2383,6 +2577,12 @@
                           "type": "string"
                         },
                         "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
                           "type": "string"
                         }
                       }
@@ -2398,10 +2598,22 @@
                     },
                     "area": {
                       "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
                     }
                   }
                 },
                 "photo_url": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -2489,7 +2701,10 @@
                             "email": {
                               "type": "string"
                             },
-                            "password": {
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
                               "type": "string"
                             }
                           }
@@ -2507,7 +2722,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -2516,6 +2731,12 @@
                           "type": "string"
                         },
                         "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
                           "type": "string"
                         }
                       }
@@ -2531,10 +2752,22 @@
                     },
                     "area": {
                       "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
                     }
                   }
                 },
                 "photo_url": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -2597,7 +2830,10 @@
                             "email": {
                               "type": "string"
                             },
-                            "password": {
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
                               "type": "string"
                             }
                           }
@@ -2615,7 +2851,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -2624,6 +2860,12 @@
                           "type": "string"
                         },
                         "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
                           "type": "string"
                         }
                       }
@@ -2639,10 +2881,22 @@
                     },
                     "area": {
                       "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
                     }
                   }
                 },
                 "photo_url": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -2735,6 +2989,12 @@
                 },
                 "description": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
               },
               "required": [
@@ -2805,6 +3065,12 @@
                 },
                 "description": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
               },
               "required": [
@@ -2850,6 +3116,12 @@
                   "type": "string"
                 },
                 "description": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -2957,9 +3229,6 @@
                             },
                             "email": {
                               "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
                             }
                           }
                         },
@@ -2976,7 +3245,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -3119,9 +3388,6 @@
                             },
                             "email": {
                               "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
                             }
                           }
                         },
@@ -3138,7 +3404,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -3256,9 +3522,6 @@
                             },
                             "email": {
                               "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
                             }
                           }
                         },
@@ -3275,7 +3538,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -3433,9 +3696,6 @@
                         },
                         "email": {
                           "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
                         }
                       }
                     },
@@ -3452,7 +3712,7 @@
                       "type": "string"
                     },
                     "doc_type": {
-                      "type": "number"
+                      "type": "integer"
                     },
                     "doc_number": {
                       "type": "string"
@@ -3559,9 +3819,6 @@
                         },
                         "email": {
                           "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
                         }
                       }
                     },
@@ -3578,7 +3835,7 @@
                       "type": "string"
                     },
                     "doc_type": {
-                      "type": "number"
+                      "type": "integer"
                     },
                     "doc_number": {
                       "type": "string"
@@ -3663,9 +3920,6 @@
                         },
                         "email": {
                           "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
                         }
                       }
                     },
@@ -3682,7 +3936,7 @@
                       "type": "string"
                     },
                     "doc_type": {
-                      "type": "number"
+                      "type": "integer"
                     },
                     "doc_number": {
                       "type": "string"
