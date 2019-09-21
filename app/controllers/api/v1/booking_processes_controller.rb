@@ -104,7 +104,7 @@ module Api
                     :monthly_fee,
                     
                     lessee: [:id, :user_id, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at],
-                    space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price],
+                    space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price, :space_type, :description],
                     document: [:id, :document_type_id, :url_document, :created_at, :updated_at]
                 )
             end

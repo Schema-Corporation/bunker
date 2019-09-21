@@ -28,7 +28,16 @@ module Api
       def create
         @lessor = Lessor.find(params[:lessor][:id])
 
-        @space = Space.new(lessor_id: @lessor.id, status: params[:status], width: params[:width], height: params[:height], area: params[:area], rent_price: params[:rent_price])
+        @space = Space.new(
+          lessor_id: @lessor.id, 
+          status: params[:status], 
+          width: params[:width], 
+          height: params[:height], 
+          area: params[:area], 
+          rent_price: params[:rent_price], 
+          space_type: params[:space_type],
+          description: params[:description]
+          )
         if @space.save
             render json: @space, adapter: :attributes, status: :created
         end
@@ -47,7 +56,16 @@ module Api
       def update
         @lessor = Lessor.find(params[:lessor][:id])
         @space = Space.find(params[:id])
-        if @space.update(lessor_id: @lessor.id, status: params[:status], width: params[:width], height: params[:height], area: params[:area], rent_price: params[:rent_price])
+        if @space.update(
+          lessor_id: @lessor.id, 
+          status: params[:status], 
+          width: params[:width], 
+          height: params[:height], 
+          area: params[:area], 
+          rent_price: params[:rent_price], 
+          space_type: params[:space_type],
+          description: params[:description]
+          )
             render json: @space, status: :ok
         end
 
@@ -77,6 +95,8 @@ module Api
           :height,
           :area,
           :rent_price,
+          :space_type,
+          :description,
           lessor: [:id, :user_id, :ruc, :commercial_name, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at]
         )
       end

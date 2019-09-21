@@ -9239,3 +9239,285 @@ Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2019-09-20 09
   ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
 Started GET "/api-docs/v1/swagger.json" for ::1 at 2019-09-20 09:14:35 -0500
 Started GET "/api-docs/favicon-32x32.png" for ::1 at 2019-09-20 09:14:35 -0500
+  [1m[35m (59.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (43.1ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `ar_internal_metadata`.`value` FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment'[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (4097.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS `bunker_development`[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (3646.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS `bunker_test`[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (920.4ms)[0m  [1m[35mCREATE DATABASE `bunker_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE DATABASE `bunker_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (361.8ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (521.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (17.7ms)[0m  [1m[34mSELECT GET_LOCK('5770563288286295520', 0)[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to DeviseCreateUsers (20190904004450)
+  [1m[35m (377.7ms)[0m  [1m[35mCREATE TABLE `users` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190904004450_devise_create_users.rb:5
+  [1m[35m (524.1ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  ↳ db/migrate/20190904004450_devise_create_users.rb:39
+  [1m[35m (309.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  ↳ db/migrate/20190904004450_devise_create_users.rb:40
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (36.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190904004450')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (39.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateLessors (20190905170826)
+  [1m[35m (401.2ms)[0m  [1m[35mCREATE TABLE `lessors` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `ruc` varchar(255), `commercial_name` varchar(255), `first_name` varchar(255), `last_name` varchar(255), `doc_type` int, `doc_number` varchar(255), `phone` varchar(255), `email` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_lessors_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_46c7a7ab67`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  ↳ db/migrate/20190905170826_create_lessors.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190905170826')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (43.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateSpaces (20190905171618)
+  [1m[35m (353.6ms)[0m  [1m[35mCREATE TABLE `spaces` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `lessor_id` bigint, `status` int, `width` decimal, `height` decimal, `area` decimal, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_spaces_on_lessor_id`  (`lessor_id`), CONSTRAINT `fk_rails_663277904e`
+FOREIGN KEY (`lessor_id`)
+  REFERENCES `lessors` (`id`)
+)[0m
+  ↳ db/migrate/20190905171618_create_spaces.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190905171618')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreatePhotos (20190905171649)
+  [1m[35m (264.8ms)[0m  [1m[35mCREATE TABLE `photos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `space_id` bigint, `photo_url` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_photos_on_space_id`  (`space_id`), CONSTRAINT `fk_rails_209616ac80`
+FOREIGN KEY (`space_id`)
+  REFERENCES `spaces` (`id`)
+)[0m
+  ↳ db/migrate/20190905171649_create_photos.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190905171649')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (42.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateLocations (20190905171921)
+  [1m[35m (336.3ms)[0m  [1m[35mCREATE TABLE `locations` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `space_id` bigint, `address` varchar(255), `latitude` decimal, `longitude` decimal, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_locations_on_space_id`  (`space_id`), CONSTRAINT `fk_rails_8c95f6bc19`
+FOREIGN KEY (`space_id`)
+  REFERENCES `spaces` (`id`)
+)[0m
+  ↳ db/migrate/20190905171921_create_locations.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190905171921')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (29.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateLessees (20190905171954)
+  [1m[35m (252.2ms)[0m  [1m[35mCREATE TABLE `lessees` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `user_id` bigint, `first_name` varchar(255), `last_name` varchar(255), `doc_type` int, `doc_number` varchar(255), `phone` varchar(255), `email` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_lessees_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_84b23c1f85`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+)[0m
+  ↳ db/migrate/20190905171954_create_lessees.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (10.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190905171954')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateDevices (20190905172053)
+  [1m[35m (363.3ms)[0m  [1m[35mCREATE TABLE `devices` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `device_token` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190905172053_create_devices.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (11.9ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190905172053')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (42.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateDocumentTypes (20190905172131)
+  [1m[35m (401.2ms)[0m  [1m[35mCREATE TABLE `document_types` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190905172131_create_document_types.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190905172131')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (33.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateDocuments (20190905172205)
+  [1m[35m (358.4ms)[0m  [1m[35mCREATE TABLE `documents` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `document_type_id` bigint, `url_document` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_documents_on_document_type_id`  (`document_type_id`), CONSTRAINT `fk_rails_e77e122717`
+FOREIGN KEY (`document_type_id`)
+  REFERENCES `document_types` (`id`)
+)[0m
+  ↳ db/migrate/20190905172205_create_documents.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190905172205')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (42.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateBookingProcesses (20190905231017)
+  [1m[35m (425.6ms)[0m  [1m[35mCREATE TABLE `booking_processes` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `lessee_id` bigint, `space_id` bigint, `document_id` bigint, `step` int, `start_date` timestamp NULL, `end_date` timestamp NULL, `monthly_fee` decimal, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_booking_processes_on_lessee_id`  (`lessee_id`),  INDEX `index_booking_processes_on_space_id`  (`space_id`),  INDEX `index_booking_processes_on_document_id`  (`document_id`), CONSTRAINT `fk_rails_7ff91c2e90`
+FOREIGN KEY (`lessee_id`)
+  REFERENCES `lessees` (`id`)
+, CONSTRAINT `fk_rails_ae5bf99157`
+FOREIGN KEY (`space_id`)
+  REFERENCES `spaces` (`id`)
+, CONSTRAINT `fk_rails_86422e2c06`
+FOREIGN KEY (`document_id`)
+  REFERENCES `documents` (`id`)
+)[0m
+  ↳ db/migrate/20190905231017_create_booking_processes.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (1.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190905231017')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateServices (20190906035948)
+  [1m[35m (296.5ms)[0m  [1m[35mCREATE TABLE `services` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `description` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190906035948_create_services.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190906035948')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (36.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateSpaceServiceDetails (20190906045111)
+  [1m[35m (452.4ms)[0m  [1m[35mCREATE TABLE `space_service_details` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `space_id` bigint, `service_id` bigint, `status` int, `start_date` timestamp NULL, `end_date` timestamp NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_space_service_details_on_space_id`  (`space_id`),  INDEX `index_space_service_details_on_service_id`  (`service_id`), CONSTRAINT `fk_rails_984188cf28`
+FOREIGN KEY (`space_id`)
+  REFERENCES `spaces` (`id`)
+, CONSTRAINT `fk_rails_bf6a319992`
+FOREIGN KEY (`service_id`)
+  REFERENCES `services` (`id`)
+)[0m
+  ↳ db/migrate/20190906045111_create_space_service_details.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190906045111')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to AddPriceToSpace (20190909120848)
+  [1m[35m (570.1ms)[0m  [1m[35mALTER TABLE `spaces` ADD `rent_price` decimal[0m
+  ↳ db/migrate/20190909120848_add_price_to_space.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190909120848')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (38.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to AddPriceToSpaceServiceDetail (20190909151209)
+  [1m[35m (1065.1ms)[0m  [1m[35mALTER TABLE `space_service_details` ADD `service_price` decimal[0m
+  ↳ db/migrate/20190909151209_add_price_to_space_service_detail.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (24.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190909151209')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (77.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateJwtBlacklists (20190911010636)
+  [1m[35m (364.5ms)[0m  [1m[35mCREATE TABLE `jwt_blacklists` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `jti` varchar(255), `exp` datetime, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ db/migrate/20190911010636_create_jwt_blacklists.rb:3
+  [1m[35m (319.3ms)[0m  [1m[35mCREATE  INDEX `index_jwt_blacklists_on_jti`  ON `jwt_blacklists` (`jti`) [0m
+  ↳ db/migrate/20190911010636_create_jwt_blacklists.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (13.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190911010636')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to AddSpaceTypeToSpace (20190921005334)
+  [1m[35m (662.1ms)[0m  [1m[35mALTER TABLE `spaces` ADD `space_type` int[0m
+  ↳ db/migrate/20190921005334_add_space_type_to_space.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (9.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190921005334')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (54.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (9.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2019-09-21 00:57:22', '2019-09-21 00:57:22')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (35.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT RELEASE_LOCK('5770563288286295520')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (16.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT GET_LOCK('5770563288286295520', 0)[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to AddDescriptionToSpace (20190921134748)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5770563288286295520')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('5770563288286295520', 0)[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to AddDescriptionToSpace (20190921134748)
+  [1m[35m (912.6ms)[0m  [1m[35mALTER TABLE `spaces` ADD `description` text[0m
+  ↳ db/migrate/20190921134748_add_description_to_space.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (33.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190921134748')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('5770563288286295520')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Started GET "/api-docs/index.html" for ::1 at 2019-09-21 09:17:58 -0500
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (43.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/api-docs/swagger-ui.css" for ::1 at 2019-09-21 09:17:58 -0500
+Started GET "/api-docs/swagger-ui-bundle.js" for ::1 at 2019-09-21 09:17:58 -0500
+Started GET "/api-docs/swagger-ui-standalone-preset.js" for ::1 at 2019-09-21 09:17:58 -0500
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/api-docs/v1/swagger.json" for ::1 at 2019-09-21 09:17:59 -0500

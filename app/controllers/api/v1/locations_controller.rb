@@ -76,7 +76,7 @@ module Api
                   :address, 
                   :latitude, 
                   :longitude, 
-                  space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, updated_at, rent_price]
+                  space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price, :space_type, :description]
                 )
             end            
 

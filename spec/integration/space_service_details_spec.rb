@@ -37,7 +37,9 @@ describe 'Space Service Detail  API' do
                                         area: { type: :number},
                                         rent_price: { type: :number},
                                         created_at: { type: :string},
-                                        updated_at: { type: :string}, 
+                                        updated_at: { type: :string},
+                                        space_type: { type: :integer}, 
+                                        description: { type: :string},
                                         lessor: { 
                                             type: :object, 
                                             properties: {
@@ -140,6 +142,8 @@ describe 'Space Service Detail  API' do
                                         rent_price: { type: :number},
                                         created_at: { type: :string},
                                         updated_at: { type: :string}, 
+                                        space_type: { type: :integer},
+                                        description: { type: :string},
                                         lessor: { 
                                             type: :object, 
                                             properties: {
@@ -220,7 +224,9 @@ describe 'Space Service Detail  API' do
                                         area: { type: :number},
                                         rent_price: { type: :number},
                                         created_at: { type: :string},
-                                        updated_at: { type: :string}, 
+                                        updated_at: { type: :string},
+                                        space_type: { type: :integer}, 
+                                        description: { type: :string},
                                         lessor: { 
                                             type: :object, 
                                             properties: {

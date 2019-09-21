@@ -25,6 +25,8 @@ describe 'Photo  API' do
                                         created_at: { type: :string},
                                         updated_at: { type: :string},
                                         rent_price: { type: :number},
+                                        space_type: { type: :integer},
+                                        description: { type: :string},
                                         lessor: { 
                                             type: :object, 
                                             properties: {
@@ -114,6 +116,8 @@ describe 'Photo  API' do
                                         created_at: { type: :string},
                                         updated_at: { type: :string},
                                         rent_price: { type: :number},
+                                        space_type: { type: :integer},
+                                        description: { type: :string},
                                         lessor: { 
                                             type: :object, 
                                             properties: {
@@ -182,6 +186,8 @@ describe 'Photo  API' do
                                         created_at: { type: :string},
                                         updated_at: { type: :string},
                                         rent_price: { type: :number},
+                                        space_type: { type: :integer},
+                                        description: { type: :string},
                                         lessor: { 
                                             type: :object, 
                                             properties: {
