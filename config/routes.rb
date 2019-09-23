@@ -57,6 +57,9 @@ Rails.application.routes.draw do
       post 'lessors' => 'lessors#create'
       patch 'lessors/:id' => 'lessors#update'
       delete 'lessors/:id' => 'lessors#destroy'
+
+      get 'lessors/spaces/:id' => 'lessors#spaces'
+
       resources :lessors
 
       get 'locations' => 'locations#index'

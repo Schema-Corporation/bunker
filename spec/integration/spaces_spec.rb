@@ -18,8 +18,11 @@ describe 'Space  API' do
                     created_at: { type: :string},
                     updated_at: { type: :string},
                     rent_price: { type: :number},
+<<<<<<< Updated upstream
                     space_type: { type: :integer},
                     description: { type: :string},
+=======
+>>>>>>> Stashed changes
                     lessor: { 
                         type: :object, 
                         properties: { 
@@ -102,8 +105,11 @@ describe 'Space  API' do
                     created_at: { type: :string},
                     updated_at: { type: :string},
                     rent_price: { type: :number},
+<<<<<<< Updated upstream
                     space_type: { type: :integer},
                     description: { type: :string},
+=======
+>>>>>>> Stashed changes
                     lessor: { 
                         type: :object, 
                         properties: { 

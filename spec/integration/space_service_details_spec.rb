@@ -37,9 +37,13 @@ describe 'Space Service Detail  API' do
                                         area: { type: :number},
                                         rent_price: { type: :number},
                                         created_at: { type: :string},
+<<<<<<< Updated upstream
                                         updated_at: { type: :string},
                                         space_type: { type: :integer}, 
                                         description: { type: :string},
+=======
+                                        updated_at: { type: :string}, 
+>>>>>>> Stashed changes
                                         lessor: { 
                                             type: :object, 
                                             properties: {
@@ -142,8 +146,11 @@ describe 'Space Service Detail  API' do
                                         rent_price: { type: :number},
                                         created_at: { type: :string},
                                         updated_at: { type: :string}, 
+<<<<<<< Updated upstream
                                         space_type: { type: :integer},
                                         description: { type: :string},
+=======
+>>>>>>> Stashed changes
                                         lessor: { 
                                             type: :object, 
                                             properties: {
@@ -224,9 +231,13 @@ describe 'Space Service Detail  API' do
                                         area: { type: :number},
                                         rent_price: { type: :number},
                                         created_at: { type: :string},
+<<<<<<< Updated upstream
                                         updated_at: { type: :string},
                                         space_type: { type: :integer}, 
                                         description: { type: :string},
+=======
+                                        updated_at: { type: :string}, 
+>>>>>>> Stashed changes
                                         lessor: { 
                                             type: :object, 
                                             properties: {
