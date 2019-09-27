@@ -1,5 +1,6 @@
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
+  get "" => redirect("/api-docs")
   mount Rswag::Ui::Engine => '/api-docs'
   mount Rswag::Api::Engine => '/api-docs'
   devise_for :users,
@@ -13,7 +14,6 @@ Rails.application.routes.draw do
                sessions: 'sessions',
                registrations: 'registrations'
              }
-
   namespace 'api' do
     namespace 'v1' do
 
@@ -57,6 +57,9 @@ Rails.application.routes.draw do
       post 'lessors' => 'lessors#create'
       patch 'lessors/:id' => 'lessors#update'
       delete 'lessors/:id' => 'lessors#destroy'
+
+      get 'lessors/spaces/:id' => 'lessors#spaces'
+
       resources :lessors
 
       get 'locations' => 'locations#index'

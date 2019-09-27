@@ -12,16 +12,19 @@ describe 'Documents API' do
             parameter name: :document, in: :body, schema: {
                 type: :object,
                 properties: {
-
                     document_type: { 
                         type: :object,
                         properties: {
                             id: { type: :integer},
                             name: { type: :string},
-                            description: { type: :string}
-                        } },
-
-                    url_document: { type: :string }
+                            description: { type: :string},
+                            created_at: { type: :string },
+                            updated_at: { type: :string }
+                        } 
+                    },
+                    url_document: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string }
                 },
                 required: [ 'document_type', 'url_document']
             }
@@ -69,18 +72,18 @@ describe 'Documents API' do
                 schema type: :object,
                 properties: {
                     id: { type: :integer},
-                  
                     document_type: { 
                         type: :object,
                         properties: {
                             id: { type: :integer},
                             name: { type: :string},
                             description: { type: :string}
-                        } },
-
-                    url_document: { type: :string }
-                },
-                required: [ 'document_type', 'url_document' ]
+                        } 
+                    },
+                    url_document: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string }
+                }
 
                 let(:id) { Documents.create(url_document: 'URL del documento').id }
                 run_test!
@@ -106,16 +109,17 @@ describe 'Documents API' do
             parameter name: :document, in: :body, schema: {
                 type: :object,
                 properties: {
-
                     document_type: { 
                         type: :object,
                         properties: {
                             id: { type: :integer},
                             name: { type: :string},
                             description: { type: :string}
-                        } },
-
-                    url_document: { type: :string }
+                        } 
+                    },
+                    url_document: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string }
                 },
                 required: [ 
                 'document_type',

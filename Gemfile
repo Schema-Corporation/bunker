@@ -46,7 +46,8 @@ group :development, :test do
 end
 gem 'rswag'
 
-group :development do
+group :production do
+  gem "appengine", "~> 0.5.0"
 end
 
 
@@ -54,4 +55,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'hirb'
-gem "appengine", "~> 0.5.0"
+# gem "appengine", "~> 0.5.0"

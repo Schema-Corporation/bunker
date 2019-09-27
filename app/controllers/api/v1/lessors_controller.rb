@@ -69,6 +69,16 @@ module Api
                     render json: [],status: :not_found
             end
 
+            def spaces
+                @lessor = Lessor.find(params[:id])
+                if @lessor.spaces
+                    render json: @lessor.spaces, status: :ok
+                end
+
+                rescue ActiveRecord::RecordInvalid
+                    render json: [],status: :not_found
+            end
+
             private 
             def lessor_params
               params.require(:lessor).permit(

@@ -12,10 +12,11 @@ describe 'DocumentTypes API' do
             parameter name: :document_type, in: :body, schema: {
                 type: :object,
                 properties: {
-                    name: { type: :string},
-                    description: { type: :string}
-                },
-                required: [ 'name', 'description']
+                    name: { type: :string },
+                    description: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string }
+                }
             }
 
             parameter({
@@ -62,7 +63,9 @@ describe 'DocumentTypes API' do
                 properties: {
                     id: { type: :integer },
                     name: { type: :string },
-                    description: { type: :string }
+                    description: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string }
                 },
                 required: [ 'id', 'name', 'status' ]
 
@@ -90,7 +93,9 @@ describe 'DocumentTypes API' do
                 type: :object,
                 properties: {
                     name: { type: :string },
-                    description: { type: :string }
+                    description: { type: :string },
+                    created_at: { type: :string },
+                    updated_at: { type: :string }
                 },
                 required: [ 'name', 'description']
             }

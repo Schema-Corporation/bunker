@@ -9,84 +9,93 @@ describe 'Booking Processes API' do
             tags 'Booking_Process'
             security [Bearer: {}]
             consumes 'application/json'
-            parameter name: :Booking_Process, in: :body, schema: {
+            parameter name: :booking_process, in: :body, schema: {
                 type: :object,
                 properties: {
-
-                    lessor: { 
+                    step: { type: :integer },
+                    start_date: { type: :string },
+                    end_date: { type: :string },
+                    monthly_fee: { type: :integer },
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
+                    lessee: { 
                         type: :object, 
                         properties: { 
-                                id: { type: :integer}, 
-                                user: { 
-                                    type: :object, 
-                                    properties: {  
-                                        id: { type: :integer},
-                                        email: { type: :string },
-                                        password: { type: :string}
-                                    }
-                                },
-                                ruc: { type: :string},
-                                commercial_name: { type: :string},
-                                first_name: { type: :string},
-                                last_name: { type: :string},
-                                doc_type: { type: :integer},
-                                doc_number: { type: :string},
-                                phone: { type: :string},
-                                email: { type: :string}
+                            id: { type: :integer},
+                            first_name: { type: :string},
+                            last_name: { type: :string},
+                            doc_type: { type: :integer},
+                            doc_number: { type: :string},
+                            phone: { type: :string},
+                            email: { type: :string},
+                            created_at: { type: :string },
+                            updated_at: { type: :string },
+                            user: { 
+                                type: :object, 
+                                properties: {  
+                                    id: { type: :integer},
+                                    email: { type: :string },
+                                    created_at: { type: :string },
+                                    updated_at: { type: :string }
+                                }
+                            }
                         }
                     },
                     space: {
                         type: :object, 
                         properties: {
-                            id: { type: :integer},
-                            lessee: {
-                                id: { type: :integer},
+                            id: { type: :integer },
+                            status: { type: :integer },
+                            width: { type: :number, format: :double },
+                            height: { type: :number, format: :double },
+                            area: { type: :number, format: :double },
+                            created_at: { type: :string },
+                            updated_at: { type: :string },
+                            rent_price: { type: :number, format: :double },
+                            space_type: { type: :integer},
+                            description: { type: :string},
+                            lessor: {
+                                id: { type: :integer },
+                                ruc: { type: :string },
+                                commercial_name: { type: :string },
+                                first_name: { type: :string },
+                                last_name: { type: :string },
+                                 doc_type: { type: :integer},
+                                doc_number: { type: :string },
+                                phone: { type: :string },
+                                email: { type: :string },
+                                created_at: { type: :string },
+                                updated_at: { type: :string },
                                 user: { 
                                     type: :object, 
                                     properties: { 
-                                        id: { type: :integer}, 
+                                        id: { type: :integer },
                                         email: { type: :string },
-                                        password: { type: :string}
+                                        created_at: { type: :string },
+                                        updated_at: { type: :string }
                                     }
-                                },
-                                
-                                first_name: { type: :string},
-                                last_name: { type: :string},
-                                doc_type: { type: :integer},
-                                doc_number: { type: :string},
-                                phone: { type: :string},
-                                email: { type: :string}
-
-                            },
-                            status: { type: :integer},
-                            width: { type: :number, format: :double},
-                            height: { type: :number, format: :double},
-                            area: { type: :number, format: :double}
+                                }
+                            }
                         }
                     },
                     document: {
                         type: :object,
                         properties: {
                             id: { type: :integer},
+                            url_document: { type: :string },
                             document_type: { 
                                 type: :object,
                                 properties: {
                                     id: { type: :integer},
                                     name: { type: :string},
-                                    description: { type: :string}
+                                    description: { type: :string},
+                                    created_at: { type: :string },
+                                    updated_at: { type: :string }
                                 } 
-                            },
-
-                            url_document: { type: :string }
+                            }
                         } 
-                    },
-                    step: { type: :integer },
-                    start_date: { type: :string},
-                    end_date: { type: :string},
-                    monthly_fee: { type: :integer}
-                },
-                required: [ 'lessor', 'space', 'document', 
-                'step', 'start_date', 'end_date', 'monthly_fee']
+                    }
+                }
             }
 
             parameter({
@@ -131,80 +140,90 @@ describe 'Booking Processes API' do
                 schema type: :object,
                 properties: {
                     id: { type: :integer },
-                    lessor: { 
+                    step: { type: :integer },
+                    start_date: { type: :string },
+                    end_date: { type: :string },
+                    monthly_fee: { type: :integer },
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
+                    lessee: { 
                         type: :object, 
                         properties: { 
-                                id: { type: :integer}, 
-                                user: { 
-                                    type: :object, 
-                                    properties: {  
-                                        id: { type: :integer},
-                                        email: { type: :string },
-                                        password: { type: :string}
-                                    }
-                                },
-                                ruc: { type: :string},
-                                commercial_name: { type: :string},
-                                first_name: { type: :string},
-                                last_name: { type: :string},
-                                doc_type: { type: :integer},
-                                doc_number: { type: :string},
-                                phone: { type: :string},
-                                email: { type: :string}
+                            id: { type: :integer},
+                            first_name: { type: :string},
+                            last_name: { type: :string},
+                            doc_type: { type: :integer},
+                            doc_number: { type: :string},
+                            phone: { type: :string},
+                            email: { type: :string},
+                            created_at: { type: :string },
+                            updated_at: { type: :string },
+                            user: { 
+                                type: :object, 
+                                properties: {  
+                                    id: { type: :integer},
+                                    email: { type: :string },
+                                    created_at: { type: :string },
+                                    updated_at: { type: :string }
+                                }
+                            }
                         }
                     },
                     space: {
                         type: :object, 
                         properties: {
-                            id: { type: :integer},
-                            lessee: {
-                                id: { type: :integer},
+                            id: { type: :integer },
+                            status: { type: :integer },
+                            width: { type: :number, format: :double },
+                            height: { type: :number, format: :double },
+                            area: { type: :number, format: :double },
+                            created_at: { type: :string },
+                            updated_at: { type: :string },
+                            rent_price: { type: :number, format: :double },
+                            space_type: { type: :integer},
+                            description: { type: :string},
+                            lessor: {
+                                id: { type: :integer },
+                                ruc: { type: :string },
+                                commercial_name: { type: :string },
+                                first_name: { type: :string },
+                                last_name: { type: :string },
+                                 doc_type: { type: :integer},
+                                doc_number: { type: :string },
+                                phone: { type: :string },
+                                email: { type: :string },
+                                created_at: { type: :string },
+                                updated_at: { type: :string },
                                 user: { 
                                     type: :object, 
                                     properties: { 
-                                        id: { type: :integer}, 
+                                        id: { type: :integer },
                                         email: { type: :string },
-                                        password: { type: :string}
+                                        created_at: { type: :string },
+                                        updated_at: { type: :string }
                                     }
-                                },
-                                
-                                first_name: { type: :string},
-                                last_name: { type: :string},
-                                doc_type: { type: :integer},
-                                doc_number: { type: :string},
-                                phone: { type: :string},
-                                email: { type: :string}
-
-                            },
-                            status: { type: :integer},
-                            width: { type: :number},
-                            height: { type: :number},
-                            area: { type: :number}
+                                }
+                            }
                         }
                     },
                     document: {
                         type: :object,
                         properties: {
                             id: { type: :integer},
+                            url_document: { type: :string },
                             document_type: { 
                                 type: :object,
                                 properties: {
                                     id: { type: :integer},
                                     name: { type: :string},
-                                    description: { type: :string}
+                                    description: { type: :string},
+                                    created_at: { type: :string },
+                                    updated_at: { type: :string }
                                 } 
-                            },
-
-                            url_document: { type: :string }
+                            }
                         } 
-                    },
-                    step: { type: :integer },
-                    start_date: { type: :string},
-                    end_date: { type: :string},
-                    monthly_fee: { type: :integer}
-                },
-                required: [ 'lessor', 'space', 'document', 
-                'step', 'start_date', 'end_date', 'monthly_fee']
+                    }
+                }
 
                 let(:id) { BookingProcess.create(step: '1', start_date: '2019-09-15',
                  end_date: '2020-03-15', monthly_fee: '2000').id }
@@ -230,81 +249,90 @@ describe 'Booking Processes API' do
             parameter name: :booking_process, in: :body, schema: {
                 type: :object,
                 properties: {
-
-                    lessor: { 
+                    step: { type: :integer },
+                    start_date: { type: :string },
+                    end_date: { type: :string },
+                    monthly_fee: { type: :integer },
+                    created_at: { type: :string },
+                    updated_at: { type: :string },
+                    lessee: { 
                         type: :object, 
                         properties: { 
-                                id: { type: :integer}, 
-                                user: { 
-                                    type: :object, 
-                                    properties: {  
-                                        id: { type: :integer},
-                                        email: { type: :string },
-                                        password: { type: :string}
-                                    }
-                                },
-                                ruc: { type: :string},
-                                commercial_name: { type: :string},
-                                first_name: { type: :string},
-                                last_name: { type: :string},
-                                doc_type: { type: :integer},
-                                doc_number: { type: :string},
-                                phone: { type: :string},
-                                email: { type: :string}
+                            id: { type: :integer},
+                            first_name: { type: :string},
+                            last_name: { type: :string},
+                            doc_type: { type: :integer},
+                            doc_number: { type: :string},
+                            phone: { type: :string},
+                            email: { type: :string},
+                            created_at: { type: :string },
+                            updated_at: { type: :string },
+                            user: { 
+                                type: :object, 
+                                properties: {  
+                                    id: { type: :integer},
+                                    email: { type: :string },
+                                    created_at: { type: :string },
+                                    updated_at: { type: :string }
+                                }
+                            }
                         }
                     },
                     space: {
                         type: :object, 
                         properties: {
-                            id: { type: :integer},
-                            lessee: {
-                                id: { type: :integer},
+                            id: { type: :integer },
+                            status: { type: :integer },
+                            width: { type: :number, format: :double },
+                            height: { type: :number, format: :double },
+                            area: { type: :number, format: :double },
+                            created_at: { type: :string },
+                            updated_at: { type: :string },
+                            rent_price: { type: :number, format: :double },
+                            space_type: { type: :integer},
+                            description: { type: :string},
+                            lessor: {
+                                id: { type: :integer },
+                                ruc: { type: :string },
+                                commercial_name: { type: :string },
+                                first_name: { type: :string },
+                                last_name: { type: :string },
+                                 doc_type: { type: :integer},
+                                doc_number: { type: :string },
+                                phone: { type: :string },
+                                email: { type: :string },
+                                created_at: { type: :string },
+                                updated_at: { type: :string },
                                 user: { 
                                     type: :object, 
                                     properties: { 
-                                        id: { type: :integer}, 
+                                        id: { type: :integer },
                                         email: { type: :string },
-                                        password: { type: :string}
+                                        created_at: { type: :string },
+                                        updated_at: { type: :string }
                                     }
-                                },
-                                
-                                first_name: { type: :string},
-                                last_name: { type: :string},
-                                doc_type: { type: :integer},
-                                doc_number: { type: :string},
-                                phone: { type: :string},
-                                email: { type: :string}
-
-                            },
-                            status: { type: :integer},
-                            width: { type: :number},
-                            height: { type: :number},
-                            area: { type: :number}
+                                }
+                            }
                         }
                     },
                     document: {
                         type: :object,
                         properties: {
                             id: { type: :integer},
+                            url_document: { type: :string },
                             document_type: { 
                                 type: :object,
                                 properties: {
                                     id: { type: :integer},
                                     name: { type: :string},
-                                    description: { type: :string}
+                                    description: { type: :string},
+                                    created_at: { type: :string },
+                                    updated_at: { type: :string }
                                 } 
-                            },
-
-                            url_document: { type: :string }
+                            }
                         } 
-                    },
-                    step: { type: :integer },
-                    start_date: { type: :string},
-                    end_date: { type: :string},
-                    monthly_fee: { type: :integer}
-                },
-                required: [ 'lessor', 'space', 'document', 
-                'step', 'start_date', 'end_date', 'monthly_fee']
+                    }
+                }
             }
     
             parameter({

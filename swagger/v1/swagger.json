@@ -22,36 +22,34 @@
         ],
         "parameters": [
           {
-            "name": "Booking_Process",
+            "name": "booking_process",
             "in": "body",
             "schema": {
               "type": "object",
               "properties": {
-                "lessor": {
+                "step": {
+                  "type": "integer"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "monthly_fee": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "lessee": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
-                    },
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "email": {
-                          "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "ruc": {
-                      "type": "string"
-                    },
-                    "commercial_name": {
-                      "type": "string"
                     },
                     "first_name": {
                       "type": "string"
@@ -70,6 +68,29 @@
                     },
                     "email": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 },
@@ -79,23 +100,46 @@
                     "id": {
                       "type": "integer"
                     },
-                    "lessee": {
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "height": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "area": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "space_type": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "lessor": {
                       "id": {
                         "type": "integer"
                       },
-                      "user": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "email": {
-                            "type": "string"
-                          },
-                          "password": {
-                            "type": "string"
-                          }
-                        }
+                      "ruc": {
+                        "type": "string"
+                      },
+                      "commercial_name": {
+                        "type": "string"
                       },
                       "first_name": {
                         "type": "string"
@@ -114,22 +158,30 @@
                       },
                       "email": {
                         "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      },
+                      "user": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          }
+                        }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number",
-                      "format": "double"
-                    },
-                    "height": {
-                      "type": "number",
-                      "format": "double"
-                    },
-                    "area": {
-                      "type": "number",
-                      "format": "double"
                     }
                   }
                 },
@@ -138,6 +190,9 @@
                   "properties": {
                     "id": {
                       "type": "integer"
+                    },
+                    "url_document": {
+                      "type": "string"
                     },
                     "document_type": {
                       "type": "object",
@@ -150,36 +205,18 @@
                         },
                         "description": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
                         }
                       }
-                    },
-                    "url_document": {
-                      "type": "string"
                     }
                   }
-                },
-                "step": {
-                  "type": "integer"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "monthly_fee": {
-                  "type": "integer"
                 }
-              },
-              "required": [
-                "lessor",
-                "space",
-                "document",
-                "step",
-                "start_date",
-                "end_date",
-                "monthly_fee"
-              ]
+              }
             }
           },
           {
@@ -239,31 +276,29 @@
                 "id": {
                   "type": "integer"
                 },
-                "lessor": {
+                "step": {
+                  "type": "integer"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "monthly_fee": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "lessee": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
-                    },
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "email": {
-                          "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "ruc": {
-                      "type": "string"
-                    },
-                    "commercial_name": {
-                      "type": "string"
                     },
                     "first_name": {
                       "type": "string"
@@ -282,6 +317,29 @@
                     },
                     "email": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 },
@@ -291,23 +349,46 @@
                     "id": {
                       "type": "integer"
                     },
-                    "lessee": {
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "height": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "area": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "space_type": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "lessor": {
                       "id": {
                         "type": "integer"
                       },
-                      "user": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "email": {
-                            "type": "string"
-                          },
-                          "password": {
-                            "type": "string"
-                          }
-                        }
+                      "ruc": {
+                        "type": "string"
+                      },
+                      "commercial_name": {
+                        "type": "string"
                       },
                       "first_name": {
                         "type": "string"
@@ -326,19 +407,30 @@
                       },
                       "email": {
                         "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      },
+                      "user": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          }
+                        }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
                 },
@@ -347,6 +439,9 @@
                   "properties": {
                     "id": {
                       "type": "integer"
+                    },
+                    "url_document": {
+                      "type": "string"
                     },
                     "document_type": {
                       "type": "object",
@@ -359,36 +454,18 @@
                         },
                         "description": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
                         }
                       }
-                    },
-                    "url_document": {
-                      "type": "string"
                     }
                   }
-                },
-                "step": {
-                  "type": "integer"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "monthly_fee": {
-                  "type": "integer"
                 }
-              },
-              "required": [
-                "lessor",
-                "space",
-                "document",
-                "step",
-                "start_date",
-                "end_date",
-                "monthly_fee"
-              ]
+              }
             }
           },
           "404": {
@@ -423,31 +500,29 @@
             "schema": {
               "type": "object",
               "properties": {
-                "lessor": {
+                "step": {
+                  "type": "integer"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "monthly_fee": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "lessee": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
-                    },
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "email": {
-                          "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "ruc": {
-                      "type": "string"
-                    },
-                    "commercial_name": {
-                      "type": "string"
                     },
                     "first_name": {
                       "type": "string"
@@ -466,6 +541,29 @@
                     },
                     "email": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
                 },
@@ -475,23 +573,46 @@
                     "id": {
                       "type": "integer"
                     },
-                    "lessee": {
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "height": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "area": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number",
+                      "format": "double"
+                    },
+                    "space_type": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "lessor": {
                       "id": {
                         "type": "integer"
                       },
-                      "user": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "email": {
-                            "type": "string"
-                          },
-                          "password": {
-                            "type": "string"
-                          }
-                        }
+                      "ruc": {
+                        "type": "string"
+                      },
+                      "commercial_name": {
+                        "type": "string"
                       },
                       "first_name": {
                         "type": "string"
@@ -510,19 +631,30 @@
                       },
                       "email": {
                         "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      },
+                      "user": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "email": {
+                            "type": "string"
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          }
+                        }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
                 },
@@ -531,6 +663,9 @@
                   "properties": {
                     "id": {
                       "type": "integer"
+                    },
+                    "url_document": {
+                      "type": "string"
                     },
                     "document_type": {
                       "type": "object",
@@ -543,36 +678,18 @@
                         },
                         "description": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
                         }
                       }
-                    },
-                    "url_document": {
-                      "type": "string"
                     }
                   }
-                },
-                "step": {
-                  "type": "integer"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "monthly_fee": {
-                  "type": "integer"
                 }
-              },
-              "required": [
-                "lessor",
-                "space",
-                "document",
-                "step",
-                "start_date",
-                "end_date",
-                "monthly_fee"
-              ]
+              }
             }
           },
           {
@@ -655,11 +772,14 @@
               "properties": {
                 "device_token": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "device_token"
-              ]
+              }
             }
           },
           {
@@ -721,12 +841,14 @@
                 },
                 "device_token": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "device_token"
-              ]
+              }
             }
           },
           "404": {
@@ -763,11 +885,14 @@
               "properties": {
                 "device_token": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "device_token"
-              ]
+              }
             }
           },
           {
@@ -853,12 +978,14 @@
                 },
                 "description": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "name",
-                "description"
-              ]
+              }
             }
           },
           {
@@ -923,6 +1050,12 @@
                 },
                 "description": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
               },
               "required": [
@@ -968,6 +1101,12 @@
                   "type": "string"
                 },
                 "description": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -1066,10 +1205,22 @@
                     },
                     "description": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
                     }
                   }
                 },
                 "url_document": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -1152,12 +1303,14 @@
                 },
                 "url_document": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "document_type",
-                "url_document"
-              ]
+              }
             }
           },
           "404": {
@@ -1207,6 +1360,12 @@
                   }
                 },
                 "url_document": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -1294,20 +1453,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1325,17 +1470,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "user",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           {
@@ -1395,20 +1554,6 @@
                 "id": {
                   "type": "integer"
                 },
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1426,17 +1571,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "user",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           "404": {
@@ -1471,20 +1630,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "first_name": {
                   "type": "string"
                 },
@@ -1502,17 +1647,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "user",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           {
@@ -1593,20 +1752,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "ruc": {
                   "type": "string"
                 },
@@ -1620,7 +1765,7 @@
                   "type": "string"
                 },
                 "doc_type": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "doc_number": {
                   "type": "string"
@@ -1630,19 +1775,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "user",
-                "ruc",
-                "commercial_name",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           {
@@ -1702,20 +1859,6 @@
                 "id": {
                   "type": "integer"
                 },
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "ruc": {
                   "type": "string"
                 },
@@ -1739,20 +1882,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "id",
-                "user",
-                "ruc",
-                "commercial_name",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           "404": {
@@ -1787,20 +1941,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "user": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "email": {
-                      "type": "string"
-                    },
-                    "password": {
-                      "type": "string"
-                    }
-                  }
-                },
                 "ruc": {
                   "type": "string"
                 },
@@ -1824,19 +1964,31 @@
                 },
                 "email": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "user",
-                "ruc",
-                "commercial_name",
-                "first_name",
-                "last_name",
-                "doc_type",
-                "doc_number",
-                "phone",
-                "email"
-              ]
+              }
             }
           },
           {
@@ -1899,7 +2051,7 @@
     },
     "/api/v1/locations": {
       "post": {
-        "summary": "Creates a location",
+        "summary": "Creates a Location",
         "tags": [
           "Location"
         ],
@@ -1919,31 +2071,59 @@
             "schema": {
               "type": "object",
               "properties": {
+                "address": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
+                      "type": "string"
+                    },
+                    "status": {
                       "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
+                    "space_type": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
                     },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -1958,7 +2138,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -1968,39 +2148,35 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
-                },
-                "address": {
-                  "type": "string"
-                },
-                "latitude": {
-                  "type": "number"
-                },
-                "longitude": {
-                  "type": "number"
                 }
-              },
-              "required": [
-                "space",
-                "address",
-                "latitude",
-                "longitude"
-              ]
+              }
             }
           },
           {
@@ -2023,7 +2199,7 @@
     },
     "/api/v1/locations/{id}": {
       "get": {
-        "summary": "Retrieves a location",
+        "summary": "Retrieves a Location",
         "tags": [
           "Location"
         ],
@@ -2057,31 +2233,62 @@
             "schema": {
               "type": "object",
               "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
+                      "type": "string"
+                    },
+                    "status": {
                       "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
+                    "space_type": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
                     },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -2096,7 +2303,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -2106,39 +2313,35 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
-                },
-                "address": {
-                  "type": "string"
-                },
-                "latitude": {
-                  "type": "number"
-                },
-                "longitude": {
-                  "type": "number"
                 }
-              },
-              "required": [
-                "space",
-                "address",
-                "latitude",
-                "longitude"
-              ]
+              }
             }
           },
           "404": {
@@ -2147,7 +2350,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a location",
+        "summary": "Modifies a Location",
         "tags": [
           "Location"
         ],
@@ -2173,31 +2376,59 @@
             "schema": {
               "type": "object",
               "properties": {
+                "address": {
+                  "type": "string"
+                },
+                "latitude": {
+                  "type": "number"
+                },
+                "longitude": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
+                      "type": "string"
+                    },
+                    "status": {
                       "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
+                    "space_type": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
                     },
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -2212,7 +2443,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -2222,39 +2453,35 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
-                },
-                "address": {
-                  "type": "string"
-                },
-                "latitude": {
-                  "type": "number"
-                },
-                "longitude": {
-                  "type": "number"
                 }
-              },
-              "required": [
-                "space",
-                "address",
-                "latitude",
-                "longitude"
-              ]
+              }
             }
           },
           {
@@ -2275,7 +2502,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a location",
+        "summary": "Deletes a Location",
         "tags": [
           "Location"
         ],
@@ -2315,7 +2542,7 @@
     },
     "/api/v1/photos": {
       "post": {
-        "summary": "Creates a photo",
+        "summary": "Creates a Photo",
         "tags": [
           "Photo"
         ],
@@ -2335,31 +2562,56 @@
             "schema": {
               "type": "object",
               "properties": {
+                "photo_url": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
+<<<<<<< Updated upstream
+                    "space_type": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+=======
+>>>>>>> Stashed changes
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -2374,7 +2626,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -2384,25 +2636,33 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
-                },
-                "photo_url": {
-                  "type": "string"
                 }
               },
               "required": [
@@ -2431,7 +2691,7 @@
     },
     "/api/v1/photos/{id}": {
       "get": {
-        "summary": "Retrieves a photo",
+        "summary": "Retrieves a Photo",
         "tags": [
           "Photo"
         ],
@@ -2468,31 +2728,56 @@
                 "id": {
                   "type": "integer"
                 },
+                "photo_url": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
+<<<<<<< Updated upstream
+                    "space_type": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+=======
+>>>>>>> Stashed changes
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -2507,7 +2792,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -2517,25 +2802,33 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
-                },
-                "photo_url": {
-                  "type": "string"
                 }
               },
               "required": [
@@ -2550,7 +2843,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a photo",
+        "summary": "Modifies a Photo",
         "tags": [
           "Photo"
         ],
@@ -2576,31 +2869,56 @@
             "schema": {
               "type": "object",
               "properties": {
+                "photo_url": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
                 "space": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "width": {
+                      "type": "number"
+                    },
+                    "height": {
+                      "type": "number"
+                    },
+                    "area": {
+                      "type": "number"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "rent_price": {
+                      "type": "number"
+                    },
+<<<<<<< Updated upstream
+                    "space_type": {
+                      "type": "integer"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+=======
+>>>>>>> Stashed changes
                     "lessor": {
                       "type": "object",
                       "properties": {
                         "id": {
                           "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
                         },
                         "ruc": {
                           "type": "string"
@@ -2615,7 +2933,7 @@
                           "type": "string"
                         },
                         "doc_type": {
-                          "type": "number"
+                          "type": "integer"
                         },
                         "doc_number": {
                           "type": "string"
@@ -2625,25 +2943,33 @@
                         },
                         "email": {
                           "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
                         }
                       }
-                    },
-                    "status": {
-                      "type": "integer"
-                    },
-                    "width": {
-                      "type": "number"
-                    },
-                    "height": {
-                      "type": "number"
-                    },
-                    "area": {
-                      "type": "number"
                     }
                   }
-                },
-                "photo_url": {
-                  "type": "string"
                 }
               },
               "required": [
@@ -2670,7 +2996,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a photo",
+        "summary": "Deletes a Photo",
         "tags": [
           "Photo"
         ],
@@ -2710,7 +3036,7 @@
     },
     "/api/v1/services": {
       "post": {
-        "summary": "Creates a service",
+        "summary": "Creates a Service",
         "tags": [
           "Service"
         ],
@@ -2734,6 +3060,12 @@
                   "type": "string"
                 },
                 "description": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
                   "type": "string"
                 }
               },
@@ -2763,7 +3095,7 @@
     },
     "/api/v1/services/{id}": {
       "get": {
-        "summary": "Retrieves a service",
+        "summary": "Retrieves a Service",
         "tags": [
           "Service"
         ],
@@ -2805,6 +3137,12 @@
                 },
                 "description": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
               },
               "required": [
@@ -2820,7 +3158,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a service",
+        "summary": "Modifies a Service",
         "tags": [
           "Service"
         ],
@@ -2851,6 +3189,12 @@
                 },
                 "description": {
                   "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
                 }
               },
               "required": [
@@ -2877,7 +3221,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a service",
+        "summary": "Deletes a Service",
         "tags": [
           "Service"
         ],
@@ -2917,7 +3261,7 @@
     },
     "/api/v1/space_service_details": {
       "post": {
-        "summary": "Creates a space service detail",
+        "summary": "Creates a Space Service Detail",
         "tags": [
           "Space Service Detail"
         ],
@@ -2937,57 +3281,49 @@
             "schema": {
               "type": "object",
               "properties": {
-                "space": {
+                "status": {
+                  "type": "number"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "service_price": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "service": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
-                    "lessor": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
-                        },
-                        "ruc": {
-                          "type": "string"
-                        },
-                        "comercial_name": {
-                          "type": "string"
-                        },
-                        "first_name": {
-                          "type": "string"
-                        },
-                        "last_name": {
-                          "type": "string"
-                        },
-                        "doc_type": {
-                          "type": "number"
-                        },
-                        "doc_number": {
-                          "type": "string"
-                        },
-                        "phone": {
-                          "type": "string"
-                        },
-                        "email": {
-                          "type": "string"
-                        }
-                      }
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
                     },
                     "status": {
                       "type": "integer"
@@ -3003,34 +3339,78 @@
                     },
                     "rent_price": {
                       "type": "number"
-                    }
-                  }
-                },
-                "service": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
                     },
-                    "name": {
+                    "created_at": {
                       "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+<<<<<<< Updated upstream
+                    "space_type": {
+                      "type": "integer"
                     },
                     "description": {
                       "type": "string"
+                    },
+=======
+>>>>>>> Stashed changes
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "integer"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
                     }
                   }
-                },
-                "status": {
-                  "type": "number"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "service_price": {
-                  "type": "number"
                 }
               },
               "required": [
@@ -3038,7 +3418,8 @@
                 "service",
                 "status",
                 "start_date",
-                "end_date"
+                "end_date",
+                "service_price"
               ]
             }
           },
@@ -3062,7 +3443,7 @@
     },
     "/api/v1/space_service_details/{id}": {
       "get": {
-        "summary": "Retrieves a space service detail",
+        "summary": "Retrieves a Space Service Detail",
         "tags": [
           "Space Service Detail"
         ],
@@ -3099,57 +3480,49 @@
                 "id": {
                   "type": "integer"
                 },
-                "space": {
+                "status": {
+                  "type": "number"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "service_price": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "service": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
-                    "lessor": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
-                        },
-                        "ruc": {
-                          "type": "string"
-                        },
-                        "comercial_name": {
-                          "type": "string"
-                        },
-                        "first_name": {
-                          "type": "string"
-                        },
-                        "last_name": {
-                          "type": "string"
-                        },
-                        "doc_type": {
-                          "type": "number"
-                        },
-                        "doc_number": {
-                          "type": "string"
-                        },
-                        "phone": {
-                          "type": "string"
-                        },
-                        "email": {
-                          "type": "string"
-                        }
-                      }
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
                     },
                     "status": {
                       "type": "integer"
@@ -3165,34 +3538,78 @@
                     },
                     "rent_price": {
                       "type": "number"
-                    }
-                  }
-                },
-                "service": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
                     },
-                    "name": {
+                    "created_at": {
                       "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+<<<<<<< Updated upstream
+                    "space_type": {
+                      "type": "integer"
                     },
                     "description": {
                       "type": "string"
+                    },
+=======
+>>>>>>> Stashed changes
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "integer"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
                     }
                   }
-                },
-                "status": {
-                  "type": "number"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "service_price": {
-                  "type": "number"
                 }
               },
               "required": [
@@ -3200,7 +3617,8 @@
                 "service",
                 "status",
                 "start_date",
-                "end_date"
+                "end_date",
+                "service_price"
               ]
             }
           },
@@ -3210,7 +3628,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a space service detail",
+        "summary": "Modifies a Space Service Detail",
         "tags": [
           "Space Service Detail"
         ],
@@ -3236,57 +3654,49 @@
             "schema": {
               "type": "object",
               "properties": {
-                "space": {
+                "status": {
+                  "type": "number"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "service_price": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "service": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
-                    "lessor": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "user": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "email": {
-                              "type": "string"
-                            },
-                            "password": {
-                              "type": "string"
-                            }
-                          }
-                        },
-                        "ruc": {
-                          "type": "string"
-                        },
-                        "comercial_name": {
-                          "type": "string"
-                        },
-                        "first_name": {
-                          "type": "string"
-                        },
-                        "last_name": {
-                          "type": "string"
-                        },
-                        "doc_type": {
-                          "type": "number"
-                        },
-                        "doc_number": {
-                          "type": "string"
-                        },
-                        "phone": {
-                          "type": "string"
-                        },
-                        "email": {
-                          "type": "string"
-                        }
-                      }
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "space": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
                     },
                     "status": {
                       "type": "integer"
@@ -3302,34 +3712,78 @@
                     },
                     "rent_price": {
                       "type": "number"
-                    }
-                  }
-                },
-                "service": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
                     },
-                    "name": {
+                    "created_at": {
                       "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+<<<<<<< Updated upstream
+                    "space_type": {
+                      "type": "integer"
                     },
                     "description": {
                       "type": "string"
+                    },
+=======
+>>>>>>> Stashed changes
+                    "lessor": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "ruc": {
+                          "type": "string"
+                        },
+                        "comercial_name": {
+                          "type": "string"
+                        },
+                        "first_name": {
+                          "type": "string"
+                        },
+                        "last_name": {
+                          "type": "string"
+                        },
+                        "doc_type": {
+                          "type": "integer"
+                        },
+                        "doc_number": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        },
+                        "user": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "email": {
+                              "type": "string"
+                            },
+                            "created_at": {
+                              "type": "string"
+                            },
+                            "updated_at": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
                     }
                   }
-                },
-                "status": {
-                  "type": "number"
-                },
-                "start_date": {
-                  "type": "string"
-                },
-                "end_date": {
-                  "type": "string"
-                },
-                "service_price": {
-                  "type": "number"
                 }
               },
               "required": [
@@ -3337,7 +3791,8 @@
                 "service",
                 "status",
                 "start_date",
-                "end_date"
+                "end_date",
+                "service_price"
               ]
             }
           },
@@ -3359,7 +3814,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a space service detail",
+        "summary": "Deletes a Space Service Detail",
         "tags": [
           "Space Service Detail"
         ],
@@ -3399,7 +3854,7 @@
     },
     "/api/v1/spaces": {
       "post": {
-        "summary": "Creates a space",
+        "summary": "Creates a Space",
         "tags": [
           "Space"
         ],
@@ -3419,25 +3874,41 @@
             "schema": {
               "type": "object",
               "properties": {
+                "status": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "area": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "rent_price": {
+                  "type": "number"
+                },
+<<<<<<< Updated upstream
+                "space_type": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+=======
+>>>>>>> Stashed changes
                 "lessor": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
-                    },
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "email": {
-                          "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
-                        }
-                      }
                     },
                     "ruc": {
                       "type": "string"
@@ -3452,7 +3923,7 @@
                       "type": "string"
                     },
                     "doc_type": {
-                      "type": "number"
+                      "type": "integer"
                     },
                     "doc_number": {
                       "type": "string"
@@ -3462,23 +3933,31 @@
                     },
                     "email": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
-                },
-                "status": {
-                  "type": "integer"
-                },
-                "width": {
-                  "type": "number"
-                },
-                "height": {
-                  "type": "number"
-                },
-                "area": {
-                  "type": "number"
-                },
-                "rent_price": {
-                  "type": "number"
                 }
               },
               "required": [
@@ -3511,7 +3990,7 @@
     },
     "/api/v1/spaces/{id}": {
       "get": {
-        "summary": "Retrieves a space",
+        "summary": "Retrieves a Space",
         "tags": [
           "Space"
         ],
@@ -3545,25 +4024,44 @@
             "schema": {
               "type": "object",
               "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                },
+                "area": {
+                  "type": "number"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "rent_price": {
+                  "type": "number"
+                },
+<<<<<<< Updated upstream
+                "space_type": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+=======
+>>>>>>> Stashed changes
                 "lessor": {
                   "type": "object",
                   "properties": {
                     "id": {
                       "type": "integer"
-                    },
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "email": {
-                          "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
-                        }
-                      }
                     },
                     "ruc": {
                       "type": "string"
@@ -3578,7 +4076,7 @@
                       "type": "string"
                     },
                     "doc_type": {
-                      "type": "number"
+                      "type": "integer"
                     },
                     "doc_number": {
                       "type": "string"
@@ -3588,23 +4086,31 @@
                     },
                     "email": {
                       "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "email": {
+                          "type": "string"
+                        },
+                        "created_at": {
+                          "type": "string"
+                        },
+                        "updated_at": {
+                          "type": "string"
+                        }
+                      }
                     }
                   }
-                },
-                "status": {
-                  "type": "integer"
-                },
-                "width": {
-                  "type": "number"
-                },
-                "height": {
-                  "type": "number"
-                },
-                "area": {
-                  "type": "number"
-                },
-                "rent_price": {
-                  "type": "number"
                 }
               },
               "required": [
@@ -3623,7 +4129,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a space",
+        "summary": "Modifies a Space",
         "tags": [
           "Space"
         ],
@@ -3663,9 +4169,6 @@
                         },
                         "email": {
                           "type": "string"
-                        },
-                        "password": {
-                          "type": "string"
                         }
                       }
                     },
@@ -3682,7 +4185,7 @@
                       "type": "string"
                     },
                     "doc_type": {
-                      "type": "number"
+                      "type": "integer"
                     },
                     "doc_number": {
                       "type": "string"
@@ -3709,6 +4212,12 @@
                 },
                 "rent_price": {
                   "type": "number"
+                },
+                "space_type": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
                 }
               },
               "required": [
@@ -3717,7 +4226,8 @@
                 "width",
                 "height",
                 "area",
-                "rent_price"
+                "rent_price",
+                "space_type"
               ]
             }
           },
@@ -3739,7 +4249,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a space",
+        "summary": "Deletes a Space",
         "tags": [
           "Space"
         ],
@@ -3779,7 +4289,7 @@
     },
     "/api/v1/users": {
       "post": {
-        "summary": "Creates a user",
+        "summary": "Creates a User",
         "tags": [
           "User"
         ],
@@ -3832,7 +4342,7 @@
     },
     "/api/v1/users/{id}": {
       "get": {
-        "summary": "Retrieves a user",
+        "summary": "Retrieves a User",
         "tags": [
           "User"
         ],
@@ -3889,7 +4399,7 @@
         }
       },
       "patch": {
-        "summary": "Modifies a user",
+        "summary": "Modifies a User",
         "tags": [
           "User"
         ],
@@ -3946,7 +4456,7 @@
         }
       },
       "delete": {
-        "summary": "Deletes a user",
+        "summary": "Deletes a User",
         "tags": [
           "User"
         ],

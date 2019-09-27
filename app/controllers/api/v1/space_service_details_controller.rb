@@ -82,7 +82,7 @@ module Api
                     :start_date,
                     :end_date,
                     :service_price,
-                    space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price],
+                    space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price, :space_type, :description],
                     service: [:id, :name, :description, :created_at, :updated_at]
                 )
             end
