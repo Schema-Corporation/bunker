@@ -13,6 +13,14 @@ module Api
             render json: [],status: :not_found
       end
 
+      def lessors
+        @spaces = Lessor.find(params[:id]).spaces
+        render json: @spaces,status: :ok
+
+        rescue ActiveRecord::RecordNotFound
+            render json: [],status: :not_found
+      end
+
       # GET /spaces/1
       def show
         @space = Space.find(params[:id])
