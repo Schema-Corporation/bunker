@@ -67,6 +67,9 @@ Rails.application.routes.draw do
       post 'locations' => 'locations#create'
       patch 'locations/:id' => 'locations#update'
       delete 'locations/:id' => 'locations#destroy'
+
+      get 'locations/spaces/:id' => 'locations#spaces'
+
       resources :locations
 
       get 'photos' => 'photos#index'

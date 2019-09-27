@@ -13,6 +13,14 @@ module Api
                     render json: [],status: :not_found
             end
 
+            def spaces 
+                @location = Space.find(params[:id]).location
+                    render json: @location,status: :ok
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
+            end
+
             def show
                 @location = Location.find(params[:id])
                 if @location != nil 
