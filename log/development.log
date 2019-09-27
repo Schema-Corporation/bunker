@@ -9884,3 +9884,801 @@ Migrating to AddTitleToSpace (20190926224251)
   ↳ C:/Ruby25-x64/bin/rake:23
   [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   ↳ C:/Ruby25-x64/bin/rake:23
+Started GET "/api/v1/photos" for ::1 at 2019-09-26 23:14:49 -0500
+  [1m[35m (56.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (52.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/signup" for ::1 at 2019-09-26 23:15:02 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (25.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (11.7ms)[0m  [1m[34mSELECT GET_LOCK('5770563288286295520', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to AddTitleToSpace (20190926224251)
+  [1m[35m (826.4ms)[0m  [1m[35mALTER TABLE `spaces` ADD `title` text[0m
+  ↳ db/migrate/20190926224251_add_title_to_space.rb:3
+  [1m[35m (7.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (3.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190926224251')[0m
+  ↳ bin/rails:4
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (16.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT RELEASE_LOCK('5770563288286295520')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Started POST "/signup" for ::1 at 2019-09-26 23:18:40 -0500
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by RegistrationsController#create as */*
+  Parameters: {"user"=>{"email"=>"kevin@gmail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"kevin@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (26.9ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'kevin@gmail.com' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (36.0ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('kevin@gmail.com', '$2a$11$ybiOf/5NPQuQTxfq0mwK1.YwxIa9L0j0YYzZGOYBky1yYU5ARLDpW', '2019-09-27 04:18:41', '2019-09-27 04:18:41')[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (34.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 200 OK in 338ms (Views: 0.1ms | ActiveRecord: 101.2ms)
+
+
+Started GET "/api/v1/photos" for ::1 at 2019-09-26 23:18:53 -0500
+Processing by Api::V1::PhotosController#index as */*
+  Parameters: {"photo"=>{}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/photos" for ::1 at 2019-09-26 23:19:19 -0500
+Processing by Api::V1::PhotosController#index as */*
+  Parameters: {"photo"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (131.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 200 OK in 314ms (Views: 151.1ms | ActiveRecord: 134.9ms)
+
+
+Started GET "/api/v1/spaces" for ::1 at 2019-09-26 23:21:40 -0500
+Processing by Api::V1::SpacesController#index as */*
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/lessors" for ::1 at 2019-09-26 23:23:24 -0500
+Processing by Api::V1::LessorsController#index as */*
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/lessors" for ::1 at 2019-09-26 23:23:48 -0500
+Processing by Api::V1::LessorsController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.8ms)[0m  [1m[34mSELECT `lessors`.* FROM `lessors`[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+Completed 200 OK in 167ms (Views: 20.7ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/api/v1/photos" for ::1 at 2019-09-26 23:28:44 -0500
+Processing by Api::V1::PhotosController#create as */*
+  Parameters: {"space"=>{"id"=>1}, "photo_url"=>"https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg", "photo"=>{"photo_url"=>"https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mPhoto Create (37.0ms)[0m  [1m[32mINSERT INTO `photos` (`space_id`, `photo_url`, `created_at`, `updated_at`) VALUES (1, 'https://d500.epimg.net/cincodias/imagenes/2018/11/13/lifestyle/1542113135_776401_1542116070_noticia_normal.jpg', '2019-09-27 04:28:45', '2019-09-27 04:28:45')[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[35m (36.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+[active_model_serializers]   [1m[36mLessor Load (0.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers] Rendered PhotoSerializer with ActiveModelSerializers::Adapter::Attributes (115.39ms)
+Completed 201 Created in 1650ms (Views: 240.5ms | ActiveRecord: 82.4ms)
+
+
+Started POST "/api/v1/photos" for ::1 at 2019-09-26 23:29:28 -0500
+Processing by Api::V1::PhotosController#create as */*
+  Parameters: {"space"=>{"id"=>1}, "photo_url"=>"https://www.imagen.com.mx/assets/img/imagen_share.png", "photo"=>{"photo_url"=>"https://www.imagen.com.mx/assets/img/imagen_share.png"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mPhoto Create (1.7ms)[0m  [1m[32mINSERT INTO `photos` (`space_id`, `photo_url`, `created_at`, `updated_at`) VALUES (1, 'https://www.imagen.com.mx/assets/img/imagen_share.png', '2019-09-27 04:29:29', '2019-09-27 04:29:29')[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[35m (37.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+[active_model_serializers]   [1m[36mLessor Load (0.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers] Rendered PhotoSerializer with ActiveModelSerializers::Adapter::Attributes (7.96ms)
+Completed 201 Created in 112ms (Views: 8.4ms | ActiveRecord: 41.5ms)
+
+
+Started POST "/api/v1/photos" for ::1 at 2019-09-26 23:29:43 -0500
+Processing by Api::V1::PhotosController#create as */*
+  Parameters: {"space"=>{"id"=>1}, "photo_url"=>"https://i.blogs.es/aa1b9a/luna-100mpx/450_1000.jpg", "photo"=>{"photo_url"=>"https://i.blogs.es/aa1b9a/luna-100mpx/450_1000.jpg"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.9ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mPhoto Create (1.1ms)[0m  [1m[32mINSERT INTO `photos` (`space_id`, `photo_url`, `created_at`, `updated_at`) VALUES (1, 'https://i.blogs.es/aa1b9a/luna-100mpx/450_1000.jpg', '2019-09-27 04:29:43', '2019-09-27 04:29:43')[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[35m (1079.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+[active_model_serializers]   [1m[36mLessor Load (0.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers] Rendered PhotoSerializer with ActiveModelSerializers::Adapter::Attributes (21.76ms)
+Completed 201 Created in 1186ms (Views: 35.7ms | ActiveRecord: 1083.2ms)
+
+
+Started POST "/api/v1/photos/space/1" for ::1 at 2019-09-26 23:30:05 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/photos/space/1"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/photos/space/1" for ::1 at 2019-09-26 23:30:18 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/photos/space/1"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/photos/spaces/1" for ::1 at 2019-09-26 23:30:26 -0500
+Processing by Api::V1::PhotosController#spaces as */*
+  Parameters: {"id"=>"1", "photo"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:76
+[active_model_serializers]   [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mLessor Load (0.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (92.05ms)
+Completed 200 OK in 116ms (Views: 92.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/v1/photos" for ::1 at 2019-09-26 23:31:32 -0500
+Processing by Api::V1::PhotosController#index as */*
+  Parameters: {"photo"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mLessor Load (0.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (126.6ms)
+Completed 200 OK in 176ms (Views: 143.8ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/api/v1/photos" for ::1 at 2019-09-26 23:31:45 -0500
+Processing by Api::V1::PhotosController#create as */*
+  Parameters: {"space"=>{"id"=>2}, "photo_url"=>"https://i.blogs.es/aa1b9a/luna-100mpx/450_1000.jpg", "photo"=>{"photo_url"=>"https://i.blogs.es/aa1b9a/luna-100mpx/450_1000.jpg"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:27
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mCACHE Space Load (0.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mPhoto Create (132.7ms)[0m  [1m[32mINSERT INTO `photos` (`space_id`, `photo_url`, `created_at`, `updated_at`) VALUES (2, 'https://i.blogs.es/aa1b9a/luna-100mpx/450_1000.jpg', '2019-09-27 04:31:45', '2019-09-27 04:31:45')[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[35m (1104.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+[active_model_serializers]   [1m[36mLessor Load (0.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers] Rendered PhotoSerializer with ActiveModelSerializers::Adapter::Attributes (9.88ms)
+Completed 201 Created in 1379ms (Views: 10.6ms | ActiveRecord: 1240.7ms)
+
+
+Started POST "/api/v1/photos" for ::1 at 2019-09-26 23:32:09 -0500
+Processing by Api::V1::PhotosController#create as */*
+  Parameters: {"space"=>{"id"=>2}, "photo_url"=>"https://eloutput.com/app/uploads-eloutput.com/2019/03/sonic-real-imagen-pelicula.jpg", "photo"=>{"photo_url"=>"https://eloutput.com/app/uploads-eloutput.com/2019/03/sonic-real-imagen-pelicula.jpg"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mPhoto Create (1.7ms)[0m  [1m[32mINSERT INTO `photos` (`space_id`, `photo_url`, `created_at`, `updated_at`) VALUES (2, 'https://eloutput.com/app/uploads-eloutput.com/2019/03/sonic-real-imagen-pelicula.jpg', '2019-09-27 04:32:10', '2019-09-27 04:32:10')[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[35m (117.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+[active_model_serializers]   [1m[36mLessor Load (0.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers] Rendered PhotoSerializer with ActiveModelSerializers::Adapter::Attributes (31.85ms)
+Completed 201 Created in 196ms (Views: 32.0ms | ActiveRecord: 121.9ms)
+
+
+Started POST "/api/v1/photos" for ::1 at 2019-09-26 23:32:25 -0500
+Processing by Api::V1::PhotosController#create as */*
+  Parameters: {"space"=>{"id"=>2}, "photo_url"=>"https://image.freepik.com/foto-gratis/imagen-cerebro-humano_99433-298.jpg", "photo"=>{"photo_url"=>"https://image.freepik.com/foto-gratis/imagen-cerebro-humano_99433-298.jpg"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[36mPhoto Create (100.2ms)[0m  [1m[32mINSERT INTO `photos` (`space_id`, `photo_url`, `created_at`, `updated_at`) VALUES (2, 'https://image.freepik.com/foto-gratis/imagen-cerebro-humano_99433-298.jpg', '2019-09-27 04:32:25', '2019-09-27 04:32:25')[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+  [1m[35m (52.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:33
+[active_model_serializers]   [1m[36mLessor Load (0.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:34
+[active_model_serializers] Rendered PhotoSerializer with ActiveModelSerializers::Adapter::Attributes (32.45ms)
+Completed 201 Created in 250ms (Views: 32.7ms | ActiveRecord: 155.8ms)
+
+
+Started GET "/api/v1/photos/spaces/2" for ::1 at 2019-09-26 23:32:39 -0500
+Processing by Api::V1::PhotosController#spaces as */*
+  Parameters: {"id"=>"2", "photo"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:76
+[active_model_serializers]   [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mLessor Load (0.8ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (236.65ms)
+Completed 200 OK in 259ms (Views: 236.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/v1/photos/spaces" for ::1 at 2019-09-26 23:33:32 -0500
+Processing by Api::V1::PhotosController#show as */*
+  Parameters: {"id"=>"spaces", "photo"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:16
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.05ms)
+Completed 404 Not Found in 26ms (Views: 1.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/photos/spaces" for ::1 at 2019-09-26 23:33:39 -0500
+Processing by Api::V1::PhotosController#show as */*
+  Parameters: {"id"=>"spaces", "photo"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:16
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.05ms)
+Completed 404 Not Found in 20ms (Views: 1.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/photos/spaces/1" for ::1 at 2019-09-26 23:34:13 -0500
+Processing by Api::V1::PhotosController#spaces as */*
+  Parameters: {"id"=>"1", "photo"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:76
+[active_model_serializers]   [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mLessor Load (0.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (323.88ms)
+Completed 200 OK in 362ms (Views: 331.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/v1/photos/" for ::1 at 2019-09-26 23:35:21 -0500
+Processing by Api::V1::PhotosController#index as */*
+  Parameters: {"photo"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mLessor Load (0.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:9
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (218.32ms)
+Completed 200 OK in 241ms (Views: 219.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/v1/photos/spaces/2" for ::1 at 2019-09-26 23:35:42 -0500
+Processing by Api::V1::PhotosController#spaces as */*
+  Parameters: {"id"=>"2", "photo"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:76
+[active_model_serializers]   [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mLessor Load (0.6ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (269.45ms)
+Completed 200 OK in 336ms (Views: 288.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/v1/photos/spaces/2" for ::1 at 2019-09-26 23:36:12 -0500
+Processing by Api::V1::PhotosController#spaces as */*
+  Parameters: {"id"=>"2", "photo"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:76
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 55ms (Views: 8.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/api/v1/photos/spaces/1" for ::1 at 2019-09-26 23:36:24 -0500
+Processing by Api::V1::PhotosController#spaces as */*
+  Parameters: {"id"=>"1", "photo"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:76
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.06ms)
+Completed 200 OK in 39ms (Views: 1.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/photos/spaces/1" for ::1 at 2019-09-26 23:36:26 -0500
+Processing by Api::V1::PhotosController#spaces as */*
+  Parameters: {"id"=>"1", "photo"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:76
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.05ms)
+Completed 200 OK in 22ms (Views: 1.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/photos/spaces/1" for ::1 at 2019-09-26 23:37:19 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::PhotosController#spaces as */*
+  Parameters: {"id"=>"1", "photo"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:76
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 241ms (Views: 47.7ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/api/v1/photos/spaces/1" for ::1 at 2019-09-26 23:37:32 -0500
+Processing by Api::V1::PhotosController#spaces as */*
+  Parameters: {"id"=>"1", "photo"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:76
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mSpace Load (0.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 100ms (Views: 12.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/photos/spaces/1" for ::1 at 2019-09-26 23:40:03 -0500
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::PhotosController#spaces as */*
+  Parameters: {"id"=>"1", "photo"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'eeeebdc6-43a2-456d-b9bb-0aded8605b35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:76
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mSpace Load (0.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+  [1m[36mCACHE Space Load (0.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/photos_controller.rb:77
+[active_model_serializers]   [1m[36mLessor Load (0.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE Lessor Load (0.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:81
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (149.63ms)
+Completed 200 OK in 570ms (Views: 265.2ms | ActiveRecord: 24.2ms)
+
+
