@@ -18,11 +18,9 @@ describe 'Space  API' do
                     created_at: { type: :string},
                     updated_at: { type: :string},
                     rent_price: { type: :number},
-<<<<<<< Updated upstream
                     space_type: { type: :integer},
                     description: { type: :string},
-=======
->>>>>>> Stashed changes
+                    title: { type: :string},
                     lessor: { 
                         type: :object, 
                         properties: { 
@@ -105,11 +103,9 @@ describe 'Space  API' do
                     created_at: { type: :string},
                     updated_at: { type: :string},
                     rent_price: { type: :number},
-<<<<<<< Updated upstream
                     space_type: { type: :integer},
                     description: { type: :string},
-=======
->>>>>>> Stashed changes
+                    title: { type: :string},
                     lessor: { 
                         type: :object, 
                         properties: { 
@@ -192,7 +188,8 @@ describe 'Space  API' do
                     area: { type: :number},
                     rent_price: { type: :number},
                     space_type: { type: :integer},                
-                    description: { type: :string}
+                    description: { type: :string},
+                    title: { type: :string}
                 },
                 required: [ 'lessor', 'status', 'width','height','area', 'rent_price', 'space_type']
             }

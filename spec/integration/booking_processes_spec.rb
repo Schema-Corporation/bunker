@@ -54,6 +54,7 @@ describe 'Booking Processes API' do
                             rent_price: { type: :number, format: :double },
                             space_type: { type: :integer},
                             description: { type: :string},
+                            title: {type: :string},
                             lessor: {
                                 id: { type: :integer },
                                 ruc: { type: :string },
@@ -182,6 +183,7 @@ describe 'Booking Processes API' do
                             rent_price: { type: :number, format: :double },
                             space_type: { type: :integer},
                             description: { type: :string},
+                            title: { type: :string},
                             lessor: {
                                 id: { type: :integer },
                                 ruc: { type: :string },
@@ -291,6 +293,7 @@ describe 'Booking Processes API' do
                             rent_price: { type: :number, format: :double },
                             space_type: { type: :integer},
                             description: { type: :string},
+                            title: { type: :string},
                             lessor: {
                                 id: { type: :integer },
                                 ruc: { type: :string },
