@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_21_134748) do
+ActiveRecord::Schema.define(version: 2019_09_26_224251) do
 
   create_table "booking_processes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "lessee_id"
@@ -133,6 +133,7 @@ ActiveRecord::Schema.define(version: 2019_09_21_134748) do
     t.decimal "rent_price", precision: 10
     t.integer "space_type"
     t.text "description"
+    t.text "title"
     t.index ["lessor_id"], name: "index_spaces_on_lessor_id"
   end
 
