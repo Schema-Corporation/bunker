@@ -70,6 +70,20 @@ module Api
                     render json: [],status: :not_found
             end
 
+            def spaces
+                @allPhotos = Photo.all
+                @photos = Array.new
+                @allPhotos.each do |photo|
+                    if photo.space.id == Space.find(params[:id]).id
+                        @photos.push(photo)
+                    end
+                end
+                render json: @photos, status: :ok
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
+            end
+
             private 
             def photo_params
               params.require(:photo).permit(
