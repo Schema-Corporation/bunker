@@ -29,6 +29,7 @@ describe 'Location  API' do
                             rent_price: { type: :number },
                             space_type: { type: :integer},
                             description: { type: :string},
+                            title: { type: :string},
                             lessor: { 
                                 type: :object, 
                                 properties: { 
@@ -121,6 +122,7 @@ describe 'Location  API' do
                             rent_price: { type: :number },
                             space_type: { type: :integer},
                             description: { type: :string},
+                            title: { type: :string},
                             lessor: { 
                                 type: :object, 
                                 properties: { 
@@ -192,6 +194,7 @@ describe 'Location  API' do
                             rent_price: { type: :number },
                             space_type: { type: :integer},
                             description: { type: :string},
+                            title: { type: :string},
                             lessor: { 
                                 type: :object, 
                                 properties: { 

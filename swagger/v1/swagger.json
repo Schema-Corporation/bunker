@@ -131,6 +131,9 @@
                     "description": {
                       "type": "string"
                     },
+                    "title": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "id": {
                         "type": "integer"
@@ -380,6 +383,9 @@
                     "description": {
                       "type": "string"
                     },
+                    "title": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "id": {
                         "type": "integer"
@@ -602,6 +608,9 @@
                       "type": "integer"
                     },
                     "description": {
+                      "type": "string"
+                    },
+                    "title": {
                       "type": "string"
                     },
                     "lessor": {
@@ -2119,6 +2128,9 @@
                     "description": {
                       "type": "string"
                     },
+                    "title": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
@@ -2284,6 +2296,9 @@
                     "description": {
                       "type": "string"
                     },
+                    "title": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
@@ -2422,6 +2437,9 @@
                       "type": "integer"
                     },
                     "description": {
+                      "type": "string"
+                    },
+                    "title": {
                       "type": "string"
                     },
                     "lessor": {
@@ -2598,15 +2616,15 @@
                     "rent_price": {
                       "type": "number"
                     },
-<<<<<<< Updated upstream
                     "space_type": {
                       "type": "integer"
                     },
                     "description": {
                       "type": "string"
                     },
-=======
->>>>>>> Stashed changes
+                    "title": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
@@ -2764,15 +2782,15 @@
                     "rent_price": {
                       "type": "number"
                     },
-<<<<<<< Updated upstream
                     "space_type": {
                       "type": "integer"
                     },
                     "description": {
                       "type": "string"
                     },
-=======
->>>>>>> Stashed changes
+                    "title": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
@@ -2905,15 +2923,15 @@
                     "rent_price": {
                       "type": "number"
                     },
-<<<<<<< Updated upstream
                     "space_type": {
                       "type": "integer"
                     },
                     "description": {
                       "type": "string"
                     },
-=======
->>>>>>> Stashed changes
+                    "title": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
@@ -3340,21 +3358,21 @@
                     "rent_price": {
                       "type": "number"
                     },
-                    "created_at": {
-                      "type": "string"
-                    },
-                    "updated_at": {
-                      "type": "string"
-                    },
-<<<<<<< Updated upstream
                     "space_type": {
                       "type": "integer"
                     },
                     "description": {
                       "type": "string"
                     },
-=======
->>>>>>> Stashed changes
+                    "title": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
@@ -3545,15 +3563,15 @@
                     "updated_at": {
                       "type": "string"
                     },
-<<<<<<< Updated upstream
                     "space_type": {
                       "type": "integer"
                     },
                     "description": {
                       "type": "string"
                     },
-=======
->>>>>>> Stashed changes
+                    "title": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
@@ -3713,21 +3731,21 @@
                     "rent_price": {
                       "type": "number"
                     },
-                    "created_at": {
-                      "type": "string"
-                    },
-                    "updated_at": {
-                      "type": "string"
-                    },
-<<<<<<< Updated upstream
                     "space_type": {
                       "type": "integer"
                     },
                     "description": {
                       "type": "string"
                     },
-=======
->>>>>>> Stashed changes
+                    "title": {
+                      "type": "string"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "updated_at": {
+                      "type": "string"
+                    },
                     "lessor": {
                       "type": "object",
                       "properties": {
@@ -3895,15 +3913,15 @@
                 "rent_price": {
                   "type": "number"
                 },
-<<<<<<< Updated upstream
                 "space_type": {
                   "type": "integer"
                 },
                 "description": {
                   "type": "string"
                 },
-=======
->>>>>>> Stashed changes
+                "title": {
+                  "type": "string"
+                },
                 "lessor": {
                   "type": "object",
                   "properties": {
@@ -4048,15 +4066,15 @@
                 "rent_price": {
                   "type": "number"
                 },
-<<<<<<< Updated upstream
                 "space_type": {
                   "type": "integer"
                 },
                 "description": {
                   "type": "string"
                 },
-=======
->>>>>>> Stashed changes
+                "title": {
+                  "type": "string"
+                },
                 "lessor": {
                   "type": "object",
                   "properties": {
@@ -4217,6 +4235,9 @@
                   "type": "integer"
                 },
                 "description": {
+                  "type": "string"
+                },
+                "title": {
                   "type": "string"
                 }
               },
