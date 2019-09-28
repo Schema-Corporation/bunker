@@ -59,6 +59,7 @@ Rails.application.routes.draw do
       delete 'lessors/:id' => 'lessors#destroy'
 
       get 'lessors/spaces/:id' => 'lessors#spaces'
+      get 'lessors/username/:userId' => 'lessors#username'
 
       resources :lessors
 
@@ -99,6 +100,10 @@ Rails.application.routes.draw do
       post 'spaces' => 'spaces#create'
       patch 'spaces/:id' => 'spaces#update'
       delete 'spaces/:id' => 'spaces#destroy'
+
+      get 'spaces/lessors/:id' => 'spaces#lessors'
+      get 'spaces/first_photo/:id' => 'spaces#first_photo'
+
       resources :spaces
 
       get 'users' => 'users#index'

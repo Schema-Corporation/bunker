@@ -79,6 +79,18 @@ module Api
                     render json: [],status: :not_found
             end
 
+            def username
+                @user = User.find(params[:userId])
+
+                @lessor = Lessor.where(user_id: @user.id)
+
+                render json: @lessor, status: :ok
+
+                rescue ActiveRecord::RecordInvalid
+                    render json: [],status: :not_found
+
+            end
+
             private 
             def lessor_params
               params.require(:lessor).permit(
