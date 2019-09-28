@@ -21,6 +21,20 @@ module Api
             render json: [],status: :not_found
       end
 
+      def first_photo
+        @allPhotos = Photo.all
+        @photos = Array.new
+        @allPhotos.each do |photo|
+            if photo.space.id == Space.find(params[:id]).id
+                @photos.push(photo)
+            end
+        end
+        render json: @photos.first, status: :ok
+
+        rescue ActiveRecord::RecordNotFound
+            render json: [],status: :not_found
+      end
+
       # GET /spaces/1
       def show
         @space = Space.find(params[:id])

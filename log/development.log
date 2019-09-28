@@ -12844,3 +12844,278 @@ Processing by Api::V1::SpacesController#lessors as */*
 Completed 200 OK in 857ms (Views: 453.2ms | ActiveRecord: 21.0ms)
 
 
+Started POST "/login" for ::1 at 2019-09-27 20:04:31 -0500
+  [1m[35m (28.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (3.15ms)
+Completed 200 OK in 768ms (Views: 92.7ms | ActiveRecord: 96.2ms)
+
+
+Started GET "/api/v1/lessors/username/marcesftwr2@gmail.com" for ::1 at 2019-09-27 20:04:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/lessors/username/marcesftwr2@gmail.com"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/lessors/username/marcesftwr2@gmail.com" for ::1 at 2019-09-27 20:05:23 -0500
+Processing by Api::V1::LessorsController#username as 
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "username"=>"marcesftwr2@gmail", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (23.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.8ms)[0m  [1m[34mSELECT `lessors`.* FROM `lessors`[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:85
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:86
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:86
+Completed 404 Not Found in 353ms (ActiveRecord: 60.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'={:email=>"marcesftwr2@gmail"}):
+  
+app/controllers/api/v1/lessors_controller.rb:86:in `block in username'
+app/controllers/api/v1/lessors_controller.rb:85:in `username'
+Started GET "/api/v1/lessors/username/marcesftwr2@gmail.com" for ::1 at 2019-09-27 20:05:45 -0500
+Processing by Api::V1::LessorsController#username as 
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "username"=>"marcesftwr2@gmail", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.3ms)[0m  [1m[34mSELECT `lessors`.* FROM `lessors`[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:85
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:86
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:86
+Completed 404 Not Found in 391ms (ActiveRecord: 7.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'={:email=>"marcesftwr2@gmail"}):
+  
+app/controllers/api/v1/lessors_controller.rb:86:in `block in username'
+app/controllers/api/v1/lessors_controller.rb:85:in `username'
+Started GET "/api/v1/lessors/username/marcesftwr2@gmail.com" for ::1 at 2019-09-27 20:09:01 -0500
+Processing by Api::V1::LessorsController#username as 
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "username"=>"marcesftwr2@gmail", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail' LIMIT 11[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 13.4ms)
+
+
+  
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail' LIMIT 11[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `id' for #<ActiveRecord::Relation []>
+Did you mean?  ids):
+  
+app/controllers/api/v1/lessors_controller.rb:83:in `username'
+Started GET "/api/v1/lessors/username/marcesftwr2@gmail.com" for ::1 at 2019-09-27 20:10:00 -0500
+Processing by Api::V1::LessorsController#username as 
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "username"=>"marcesftwr2@gmail", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT `lessors`.* FROM `lessors`[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:87
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:88
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail' LIMIT 11[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 271ms (ActiveRecord: 15.6ms)
+
+
+  
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail' LIMIT 11[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `id' for #<ActiveRecord::Relation []>
+Did you mean?  ids):
+  
+app/controllers/api/v1/lessors_controller.rb:88:in `block in username'
+app/controllers/api/v1/lessors_controller.rb:87:in `username'
+Started GET "/api/v1/lessors/username/marcesftwr2@gmail.com" for ::1 at 2019-09-27 20:12:27 -0500
+  [1m[35m (2.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::LessorsController#username as 
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "username"=>"marcesftwr2@gmail", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.3ms)[0m  [1m[34mSELECT `lessors`.* FROM `lessors`[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:87
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:88
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail' LIMIT 11[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 802ms (ActiveRecord: 19.1ms)
+
+
+  
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail' LIMIT 11[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `id' for #<ActiveRecord::Relation []>
+Did you mean?  ids):
+  
+app/controllers/api/v1/lessors_controller.rb:88:in `block in username'
+app/controllers/api/v1/lessors_controller.rb:87:in `username'
+Started GET "/api/v1/lessors/username/marcesftwr2@gmail.com" for ::1 at 2019-09-27 20:13:29 -0500
+Processing by Api::V1::LessorsController#username as 
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "username"=>"marcesftwr2@gmail", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT `lessors`.* FROM `lessors`[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:87
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:88
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail' LIMIT 11[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 337ms (ActiveRecord: 16.1ms)
+
+
+  
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail' LIMIT 11[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `id' for #<ActiveRecord::Relation []>
+Did you mean?  ids):
+  
+app/controllers/api/v1/lessors_controller.rb:88:in `block in username'
+app/controllers/api/v1/lessors_controller.rb:87:in `username'
+Started GET "/api/v1/lessors/username/marcesftwr2@gmail.com" for ::1 at 2019-09-27 20:13:58 -0500
+Processing by Api::V1::LessorsController#username as 
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "username"=>"marcesftwr2@gmail", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (56.3ms)[0m  [1m[34mSELECT `lessors`.* FROM `lessors` WHERE `lessors`.`user_id` IN (SELECT `users`.`id` FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail')[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:87
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 675ms (Views: 425.0ms | ActiveRecord: 69.4ms)
+
+
+Started GET "/api/v1/lessors/username/marcesftwr2@gmail.com" for ::1 at 2019-09-27 20:14:29 -0500
+Processing by Api::V1::LessorsController#username as 
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "username"=>"marcesftwr2@gmail", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail' LIMIT 11[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 284ms (ActiveRecord: 13.6ms)
+
+
+  
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail' LIMIT 11[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `id' for #<ActiveRecord::Relation []>
+Did you mean?  ids):
+  
+app/controllers/api/v1/lessors_controller.rb:85:in `username'
+Started GET "/api/v1/photos/1" for ::1 at 2019-09-27 20:17:24 -0500
+Processing by Api::V1::PhotosController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (28.0ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/photos_controller.rb:16
+[active_model_serializers]   [1m[36mSpace Load (117.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:18
+[active_model_serializers]   [1m[36mLessor Load (1.3ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:18
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/photos_controller.rb:18
+[active_model_serializers] Rendered PhotoSerializer with ActiveModelSerializers::Adapter::Attributes (1060.84ms)
+Completed 200 OK in 1780ms (Views: 1364.0ms | ActiveRecord: 168.3ms)
+
+
+  [1m[35m (1.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('5770563288286295520', 0)[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (44.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('5770563288286295520')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Started GET "/api/v1/lessors/username/marcesftwr2@gmail.com" for ::1 at 2019-09-27 20:23:18 -0500
+  [1m[35m (1.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::LessorsController#username as 
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "username"=>"marcesftwr2@gmail", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail'[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:87
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 389ms (Views: 192.7ms | ActiveRecord: 33.4ms)
+
+
+Started GET "/api/v1/lessors/username/1" for ::1 at 2019-09-27 20:27:32 -0500
+Processing by Api::V1::LessorsController#username as */*
+  Parameters: {"lessee"=>{"id"=>"1"}, "space"=>{"id"=>"1"}, "document"=>{"id"=>"1"}, "step"=>"1", "start_date"=>"2019-05-04", "end_date"=>"2019-03-04", "monthly_fee"=>"500", "created_at"=>"2019-09-16", "updated_at"=>"2019-09-16", "userId"=>"1", "lessor"=>{"created_at"=>"2019-09-16", "updated_at"=>"2019-09-16"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '0bd8e167-711d-4b26-a618-3d0a5c187779' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/lessors_controller.rb:83
+  [1m[36mLessor Load (91.0ms)[0m  [1m[34mSELECT `lessors`.* FROM `lessors` WHERE `lessors`.`user_id` = 1[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:87
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/lessors_controller.rb:87
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (414.76ms)
+Completed 200 OK in 1113ms (Views: 743.8ms | ActiveRecord: 111.2ms)
+
+
