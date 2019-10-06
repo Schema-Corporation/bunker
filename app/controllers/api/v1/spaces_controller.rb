@@ -22,17 +22,34 @@ module Api
       end
 
       def first_photo
-        @allPhotos = Photo.all
-        @photos = Array.new
-        @allPhotos.each do |photo|
-            if photo.space.id == Space.find(params[:id]).id
-                @photos.push(photo)
-            end
-        end
-        render json: @photos.first, status: :ok
+        @space = Space.find(params[:id])
+        render json: @space.photos.first, status: :ok
 
         rescue ActiveRecord::RecordNotFound
             render json: [],status: :not_found
+      end
+
+      def info
+        @space = Space.find(params[:id])
+        @location = @space.location
+
+        @spaceInfo = SpaceInfo.new(
+          id: @space.id,
+          status: @space.status, 
+          rent_price: @space.rent_price,
+          space_type: @space.space_type, 
+          description: @space.description, 
+          title: @space.title,
+          address: @location.address,
+          first_photo: @space.photos.first.photo_url
+        )
+
+        if @spaceInfo != nil 
+            render json: @spaceInfo, status: :ok
+        end 
+
+        rescue ActiveRecord::RecordNotFound
+          render json: [],status: :not_found
       end
 
       # GET /spaces/1

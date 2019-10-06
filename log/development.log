@@ -13119,3 +13119,348 @@ Processing by Api::V1::LessorsController#username as */*
 Completed 200 OK in 1113ms (Views: 743.8ms | ActiveRecord: 111.2ms)
 
 
+Started GET "/api/v1/spaces/first_photo/1" for ::1 at 2019-10-06 15:32:55 -0500
+  [1m[35m (41.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#first_photo as */*
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 113ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-10-06 15:39:56 -0500
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (54.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (10.22ms)
+Completed 200 OK in 1228ms (Views: 128.7ms | ActiveRecord: 214.6ms)
+
+
+Started GET "/api/v1/spaces/first_photo/1" for ::1 at 2019-10-06 15:40:39 -0500
+Processing by Api::V1::SpacesController#first_photo as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (80.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (41.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'b3e7fd1d-5fd6-4f86-aca2-de69623ec49f' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mPhoto Load (56.9ms)[0m  [1m[34mSELECT `photos`.* FROM `photos`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:28
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:28
+[active_model_serializers]   [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:32
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:32
+[active_model_serializers] Rendered PhotoSerializer with ActiveModelSerializers::Adapter::Attributes (615.99ms)
+Completed 200 OK in 3175ms (Views: 1883.2ms | ActiveRecord: 479.2ms)
+
+
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 15:55:29 -0500
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'b3e7fd1d-5fd6-4f86-aca2-de69623ec49f' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+Completed 500 Internal Server Error in 854ms (ActiveRecord: 39.1ms)
+
+
+  
+NameError (undefined local variable or method `space' for #<Api::V1::SpacesController:0x0000000007ce6bf0>
+Did you mean?  @space):
+  
+app/controllers/api/v1/spaces_controller.rb:40:in `info'
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 15:55:56 -0500
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'b3e7fd1d-5fd6-4f86-aca2-de69623ec49f' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+  [1m[36mLocation Load (18.9ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:40
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (8.68ms)
+Completed 200 OK in 1620ms (Views: 55.6ms | ActiveRecord: 179.7ms)
+
+
+Started GET "/api/v1/location/1" for ::1 at 2019-10-06 15:56:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/location/1"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/locations/1" for ::1 at 2019-10-06 15:56:41 -0500
+Processing by Api::V1::LocationsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'b3e7fd1d-5fd6-4f86-aca2-de69623ec49f' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/locations_controller.rb:25
+[active_model_serializers]   [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/locations_controller.rb:27
+[active_model_serializers]   [1m[36mLessor Load (1.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/locations_controller.rb:27
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/locations_controller.rb:27
+[active_model_serializers] Rendered LocationSerializer with ActiveModelSerializers::Adapter::Attributes (671.78ms)
+Completed 200 OK in 1058ms (Views: 715.0ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 15:56:56 -0500
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'b3e7fd1d-5fd6-4f86-aca2-de69623ec49f' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:40
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (3.43ms)
+Completed 200 OK in 427ms (Views: 7.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 16:03:29 -0500
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'b3e7fd1d-5fd6-4f86-aca2-de69623ec49f' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.9ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:40
+Completed 500 Internal Server Error in 468ms (ActiveRecord: 48.7ms)
+
+
+  
+NameError (uninitialized constant Api::V1::SpacesController::SpaceInfo):
+  
+app/controllers/api/v1/spaces_controller.rb:42:in `info'
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 16:04:08 -0500
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'b3e7fd1d-5fd6-4f86-aca2-de69623ec49f' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:40
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 4.7ms)
+
+
+  
+NameError (uninitialized constant Api::V1::SpacesController::SpaceInfo):
+  
+app/controllers/api/v1/spaces_controller.rb:42:in `info'
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 16:08:18 -0500
+  [1m[35m (1.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'b3e7fd1d-5fd6-4f86-aca2-de69623ec49f' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:40
+Completed 500 Internal Server Error in 1069ms (ActiveRecord: 48.5ms)
+
+
+  
+NameError (uninitialized constant Api::V1::SpacesController::SpaceInfo):
+  
+app/controllers/api/v1/spaces_controller.rb:42:in `info'
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 16:09:08 -0500
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'b3e7fd1d-5fd6-4f86-aca2-de69623ec49f' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:40
+  [1m[36mPhoto Load (12.0ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:50
+[active_model_serializers] Rendered SpaceInfo with ActiveModelSerializers::Adapter::Attributes (13.86ms)
+Completed 500 Internal Server Error in 897ms (ActiveRecord: 42.8ms)
+
+
+  
+NoMethodError (undefined method `model_name' for SpaceInfo:Class):
+  
+app/controllers/api/v1/spaces_controller.rb:54:in `info'
+Started GET "/api/v1/spaces/info/1" for 127.0.0.1 at 2019-10-06 16:14:21 -0500
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 26ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-10-06 16:14:28 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.13ms)
+Completed 200 OK in 774ms (Views: 98.4ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 16:14:48 -0500
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '6eeb1b62-10e6-46bf-be90-acad79d28f35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:40
+  [1m[36mPhoto Load (1.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:50
+[active_model_serializers] Rendered SpaceInfo with ActiveModelSerializers::Adapter::Attributes (12.82ms)
+Completed 500 Internal Server Error in 1351ms (ActiveRecord: 47.9ms)
+
+
+  
+NoMethodError (undefined method `model_name' for SpaceInfo:Class):
+  
+app/controllers/api/v1/spaces_controller.rb:54:in `info'
+Started POST "/login" for ::1 at 2019-10-06 16:15:13 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.91ms)
+Completed 200 OK in 671ms (Views: 62.4ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 16:15:18 -0500
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '6eeb1b62-10e6-46bf-be90-acad79d28f35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:40
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:50
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with SpaceInfo (2.99ms)
+Completed 200 OK in 711ms (Views: 116.8ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 16:18:36 -0500
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '6eeb1b62-10e6-46bf-be90-acad79d28f35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:40
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:50
+Completed 500 Internal Server Error in 845ms (ActiveRecord: 26.9ms)
+
+
+  
+NoMethodError (undefined method `first_photo=' for #<SpaceInfo:0x00000000050a7698>):
+  
+app/models/space_info.rb:10:in `block in initialize'
+app/models/space_info.rb:9:in `each'
+app/models/space_info.rb:9:in `initialize'
+app/controllers/api/v1/spaces_controller.rb:42:in `new'
+app/controllers/api/v1/spaces_controller.rb:42:in `info'
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 16:19:37 -0500
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '6eeb1b62-10e6-46bf-be90-acad79d28f35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:39
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:40
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:50
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with SpaceInfo (0.41ms)
+Completed 200 OK in 641ms (Views: 108.5ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/api/v1/spaces/first_photo/1" for ::1 at 2019-10-06 16:30:18 -0500
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#first_photo as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '6eeb1b62-10e6-46bf-be90-acad79d28f35' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:25
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:26
+[active_model_serializers]   [1m[36mLessor Load (1.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:26
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:26
+[active_model_serializers] Rendered PhotoSerializer with ActiveModelSerializers::Adapter::Attributes (457.85ms)
+Completed 200 OK in 889ms (Views: 596.8ms | ActiveRecord: 58.8ms)
+
+
