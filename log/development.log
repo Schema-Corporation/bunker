@@ -13464,3 +13464,940 @@ Processing by Api::V1::SpacesController#first_photo as */*
 Completed 200 OK in 889ms (Views: 596.8ms | ActiveRecord: 58.8ms)
 
 
+Started POST "/login" for ::1 at 2019-10-06 20:10:41 -0500
+  [1m[35m (63.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (21.19ms)
+Completed 200 OK in 1135ms (Views: 134.2ms | ActiveRecord: 48.4ms)
+
+
+Started POST "/login" for ::1 at 2019-10-06 20:11:01 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.0ms)
+Completed 200 OK in 617ms (Views: 5.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:11:33 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (15.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:57
+  [1m[36mSpace Load (17.3ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+Completed 500 Internal Server Error in 1901ms (ActiveRecord: 146.3ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:62:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:60:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:12:10 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:57
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (13.7ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+  [1m[36mPhoto Load (1.7ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+Completed 500 Internal Server Error in 1399ms (ActiveRecord: 124.5ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:68:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:60:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:13:25 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:57
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+Completed 500 Internal Server Error in 882ms (ActiveRecord: 30.7ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:68:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:60:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:14:35 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:57
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+Completed 500 Internal Server Error in 821ms (ActiveRecord: 30.5ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:69:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:60:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:16:36 -0500
+  [1m[35m (2.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.3ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:57
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.7ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+Completed 500 Internal Server Error in 1541ms (ActiveRecord: 75.2ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:68:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:60:in `info_lessors'
+Started GET "/api/v1/lessors/1" for ::1 at 2019-10-06 20:17:55 -0500
+Processing by Api::V1::LessorsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/lessors_controller.rb:17
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/lessors_controller.rb:19
+[active_model_serializers] Rendered LessorSerializer with ActiveModelSerializers::Adapter::Attributes (341.5ms)
+Completed 200 OK in 1718ms (Views: 1382.9ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/api/v1/spaces/lessors/1" for ::1 at 2019-10-06 20:18:19 -0500
+Processing by Api::V1::SpacesController#lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:17
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:18
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (109.4ms)
+Completed 200 OK in 547ms (Views: 283.6ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/api/v1/spaces/lessors/1" for ::1 at 2019-10-06 20:19:51 -0500
+Processing by Api::V1::SpacesController#lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:17
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:18
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (364.86ms)
+Completed 200 OK in 1046ms (Views: 508.5ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:20:03 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:67
+  [1m[36mPhoto Load (1.9ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:67
+Completed 500 Internal Server Error in 485ms (ActiveRecord: 17.3ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:67:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:20:54 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:67
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:67
+Completed 500 Internal Server Error in 875ms (ActiveRecord: 34.0ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:67:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/1" for ::1 at 2019-10-06 20:21:05 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:82
+[active_model_serializers]   [1m[36mLessor Load (1.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers]   [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (873.62ms)
+Completed 500 Internal Server Error in 1203ms (ActiveRecord: 7.7ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+
+Started GET "/api/v1/spaces/1" for ::1 at 2019-10-06 20:21:36 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:82
+[active_model_serializers]   [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers]   [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (499.48ms)
+Completed 200 OK in 690ms (Views: 522.9ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/api/v1/locations/1" for ::1 at 2019-10-06 20:21:46 -0500
+Processing by Api::V1::LocationsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/locations_controller.rb:25
+[active_model_serializers] Rendered LocationSerializer with ActiveModelSerializers::Adapter::Attributes (2.35ms)
+Completed 200 OK in 43ms (Views: 12.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/api/v1/spaces/1" for ::1 at 2019-10-06 20:21:58 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:82
+[active_model_serializers]   [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers]   [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (41.63ms)
+Completed 200 OK in 75ms (Views: 41.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/api/v1/spaces/1" for ::1 at 2019-10-06 20:22:20 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:82
+[active_model_serializers]   [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers]   [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:84
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (674.02ms)
+Completed 200 OK in 1161ms (Views: 707.7ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:22:29 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:67
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:67
+Completed 500 Internal Server Error in 727ms (ActiveRecord: 11.6ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:67:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:24:13 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+Completed 500 Internal Server Error in 966ms (ActiveRecord: 33.7ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:68:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for 127.0.0.1 at 2019-10-06 20:25:18 -0500
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.9ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+Completed 500 Internal Server Error in 878ms (ActiveRecord: 70.1ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:68:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:27:49 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+Completed 500 Internal Server Error in 1163ms (ActiveRecord: 38.7ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:68:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  [1m[36mLocation Load (2.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:29:01 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.9ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:68
+Completed 500 Internal Server Error in 669ms (ActiveRecord: 11.3ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:68:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:32:25 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+Completed 500 Internal Server Error in 698ms (ActiveRecord: 21.6ms)
+
+
+  
+NoMethodError (undefined method `location_id' for #<Space:0x00000000072f04e8>
+Did you mean?  location
+               location=):
+  
+app/controllers/api/v1/spaces_controller.rb:61:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:32:56 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+Completed 500 Internal Server Error in 741ms (ActiveRecord: 35.3ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:69:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/info/1" for ::1 at 2019-10-06 20:33:43 -0500
+Processing by Api::V1::SpacesController#info as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:33
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:34
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:44
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with SpaceInfo (0.58ms)
+Completed 200 OK in 417ms (Views: 153.8ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:33:53 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+Completed 500 Internal Server Error in 376ms (ActiveRecord: 11.5ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:69:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:35:05 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:71
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+Completed 500 Internal Server Error in 744ms (ActiveRecord: 34.2ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:70:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:35:34 -0500
+  
+SyntaxError (C:/Users/marce/Downloads/Holinsys/marcelo/bunker/app/controllers/api/v1/spaces_controller.rb:72: syntax error, unexpected tIVAR, expecting ')'
+            @spacesInfo.push(@spaceInfo)
+            ^~~~~~~~~~~):
+  
+app/controllers/api/v1/spaces_controller.rb:72: syntax error, unexpected tIVAR, expecting ')'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:35:51 -0500
+  
+SyntaxError (C:/Users/marce/Downloads/Holinsys/marcelo/bunker/app/controllers/api/v1/spaces_controller.rb:72: syntax error, unexpected tIVAR, expecting ')'
+            @spacesInfo.push @spaceInfo
+            ^~~~~~~~~~~):
+  
+app/controllers/api/v1/spaces_controller.rb:72: syntax error, unexpected tIVAR, expecting ')'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:35:55 -0500
+  
+SyntaxError (C:/Users/marce/Downloads/Holinsys/marcelo/bunker/app/controllers/api/v1/spaces_controller.rb:72: syntax error, unexpected tIVAR, expecting ')'
+            @spacesInfo.push @spaceInfo
+            ^~~~~~~~~~~):
+  
+app/controllers/api/v1/spaces_controller.rb:72: syntax error, unexpected tIVAR, expecting ')'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:36:12 -0500
+  
+SyntaxError (C:/Users/marce/Downloads/Holinsys/marcelo/bunker/app/controllers/api/v1/spaces_controller.rb:72: syntax error, unexpected tIVAR, expecting ')'
+            @spacesInfo.push @spaceInfo)
+            ^~~~~~~~~~~
+C:/Users/marce/Downloads/Holinsys/marcelo/bunker/app/controllers/api/v1/spaces_controller.rb:72: syntax error, unexpected ')', expecting keyword_end
+...   @spacesInfo.push @spaceInfo)
+...                              ^):
+  
+app/controllers/api/v1/spaces_controller.rb:72: syntax error, unexpected tIVAR, expecting ')'
+app/controllers/api/v1/spaces_controller.rb:72: syntax error, unexpected ')', expecting keyword_end
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:36:29 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+No serializer found for resource: #<SpaceInfo:0x0000000008038ec0 @id=1, @status=0, @rent_price=nil, @space_type=nil, @description=nil, @title=nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (1.0ms)
+Completed 200 OK in 917ms (Views: 156.1ms | ActiveRecord: 32.5ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:38:34 -0500
+  
+SyntaxError (C:/Users/marce/Downloads/Holinsys/marcelo/bunker/app/controllers/api/v1/spaces_controller.rb:71: syntax error, unexpected tLABEL
+            first_photo: #@space.photos.first.photo_u...
+            ^~~~~~~~~~~~):
+  
+app/controllers/api/v1/spaces_controller.rb:71: syntax error, unexpected tLABEL
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:39:07 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.0ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+No serializer found for resource: #<SpaceInfo:0x00000000075e3150 @id=1, @status=0, @rent_price=nil, @space_type=nil, @description=nil, @title=nil, @address=nil, @first_photo=nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.83ms)
+Completed 200 OK in 500ms (Views: 100.9ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:41:00 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '087895dd-7939-481a-b772-694425af6c5b' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+No serializer found for resource: #<SpaceInfo:0x0000000007b180a8 @id=1, @status=0, @rent_price=nil, @space_type=nil, @description=nil, @title=nil, @address=nil, @first_photo=nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (1.3ms)
+Completed 200 OK in 1070ms (Views: 180.2ms | ActiveRecord: 35.9ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:41:22 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-10-06 20:41:30 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.02ms)
+Completed 200 OK in 681ms (Views: 73.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:41:43 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4a86a2d6-0ef9-470b-a99a-ace07f68cda8' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+  [1m[36mSpace Load (1.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+Completed 500 Internal Server Error in 753ms (ActiveRecord: 23.6ms)
+
+
+  
+NoMethodError (undefined method `address' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:63:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/lessors/1" for ::1 at 2019-10-06 20:42:29 -0500
+Processing by Api::V1::SpacesController#lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4a86a2d6-0ef9-470b-a99a-ace07f68cda8' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:17
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:18
+[active_model_serializers]   [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:18
+[active_model_serializers]   [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:18
+[active_model_serializers]   [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:18
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:18
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (607.5ms)
+Completed 200 OK in 991ms (Views: 948.9ms | ActiveRecord: 9.8ms)
+
+
+Started DELETE "/api/v1/spaces/2" for ::1 at 2019-10-06 20:43:43 -0500
+Processing by Api::V1::SpacesController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4a86a2d6-0ef9-470b-a99a-ace07f68cda8' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:151
+  [1m[35m (86.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:152
+  [1m[36mSpace Destroy (314.3ms)[0m  [1m[31mDELETE FROM `spaces` WHERE `spaces`.`id` = 2[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:152
+  [1m[35m (94.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:152
+[active_model_serializers]   [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:153
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:153
+[active_model_serializers]   [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:153
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (43.08ms)
+Completed 200 OK in 599ms (Views: 43.0ms | ActiveRecord: 502.3ms)
+
+
+Started DELETE "/api/v1/spaces/3" for ::1 at 2019-10-06 20:43:50 -0500
+Processing by Api::V1::SpacesController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4a86a2d6-0ef9-470b-a99a-ace07f68cda8' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:151
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:152
+  [1m[36mSpace Destroy (22.5ms)[0m  [1m[31mDELETE FROM `spaces` WHERE `spaces`.`id` = 3[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:152
+  [1m[35m (54.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:152
+[active_model_serializers]   [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:153
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:153
+[active_model_serializers]   [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:153
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (43.99ms)
+Completed 200 OK in 178ms (Views: 44.2ms | ActiveRecord: 83.9ms)
+
+
+Started GET "/api/v1/spaces/1" for ::1 at 2019-10-06 20:44:01 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4a86a2d6-0ef9-470b-a99a-ace07f68cda8' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:88
+[active_model_serializers]   [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:90
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:90
+[active_model_serializers]   [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:90
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (41.76ms)
+Completed 200 OK in 75ms (Views: 41.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:44:10 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4a86a2d6-0ef9-470b-a99a-ace07f68cda8' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.3ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:61
+No serializer found for resource: #<SpaceInfo:0x0000000008063120 @id=1, @status=0, @rent_price=nil, @space_type=nil, @description=nil, @title=nil, @address=nil, @first_photo=nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (1.32ms)
+Completed 200 OK in 240ms (Views: 157.4ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:44:57 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4a86a2d6-0ef9-470b-a99a-ace07f68cda8' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+No serializer found for resource: #<SpaceInfo:0x0000000007f87440 @id=1, @status=0, @rent_price=nil, @space_type=nil, @description=nil, @title=nil, @address="example road", @first_photo="www.google.com">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (1.26ms)
+Completed 200 OK in 966ms (Views: 178.3ms | ActiveRecord: 37.6ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-10-06 20:45:50 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4a86a2d6-0ef9-470b-a99a-ace07f68cda8' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+No serializer found for resource: #<SpaceInfo:0x0000000007facd58 @id=1, @status=0, @rent_price=nil, @space_type=nil, @description=nil, @title=nil, @address="example road", @first_photo="www.google.com">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.67ms)
+Completed 200 OK in 384ms (Views: 47.3ms | ActiveRecord: 9.3ms)
+
+

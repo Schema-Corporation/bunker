@@ -104,6 +104,7 @@ Rails.application.routes.draw do
       get 'spaces/lessors/:id' => 'spaces#lessors'
       get 'spaces/first_photo/:id' => 'spaces#first_photo'
       get 'spaces/info/:id' => 'spaces#info'
+      get 'spaces/info_lessors/:id' => 'spaces#info_lessors'
 
       resources :spaces
 
