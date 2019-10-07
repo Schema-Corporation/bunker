@@ -52,6 +52,34 @@ module Api
           render json: [],status: :not_found
       end
 
+      def info_lessors
+        @spaces = Lessor.find(params[:id]).spaces
+        @spacesInfo = Array.new
+
+        @spaces.each do |space|
+          @space = Space.find(space.id)
+
+          @spaceInfo = SpaceInfo.new(
+            id: @space.id,
+            status: @space.status, 
+            rent_price: @space.rent_price,
+            space_type: @space.space_type, 
+            description: @space.description, 
+            title: @space.title,
+            address: @space.location.address,
+            first_photo: @space.photos.first.photo_url
+          )
+          @spacesInfo.push @spaceInfo
+        end
+
+        if @spacesInfo != nil 
+            render json: @spacesInfo, status: :ok
+        end 
+
+      rescue ActiveRecord::RecordNotFound
+        render json: [],status: :not_found
+      end
+
       # GET /spaces/1
       def show
         @space = Space.find(params[:id])
