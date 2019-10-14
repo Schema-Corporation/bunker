@@ -154,6 +154,55 @@ module Api
             render json: [],status: :not_found
       end
 
+      # POST /spaces/complete
+      def create_complete
+        @lessor = Lessor.find(params[:lessor][:id])
+
+        @space = Space.new(
+          lessor_id: @lessor.id, 
+          status: 0,
+          width: params[:width], 
+          height: params[:height], 
+          area: params[:area], 
+          rent_price: params[:rent_price], 
+          space_type: params[:space_type],
+          description: params[:description],
+          title: params[:title]
+          )
+        if @space.save
+          @location = Location.new(
+            space_id: @space.id,
+            address: params[:location][:address],
+            latitude: params[:location][:latitude],
+            longitude: params[:location][:longitude]
+          )
+          if @location.save
+            @servicesFromSpace = Array.new(params[:services])
+            @servicesFromSpace.each do |serviceFromSpace|
+              @serviceSpaceDetail = SpaceServiceDetail.new(
+                space_id: @space.id,
+                service_id: serviceFromSpace[:id]
+              )
+              if @serviceSpaceDetail.save
+              end
+            end
+            @photosFromSpace = Array.new(params[:photos])
+            @photosFromSpace.each do |photoFromSpace|
+              @photo = Photo.new(
+                space_id: @space.id,
+                photo_url: photoFromSpace[:photo_url]
+              )
+              if @photo.save
+              end
+            end
+            render json: @space, adapter: :attributes, status: :created
+          end
+        end
+
+        rescue ActiveRecord::RecordInvalid
+          render json: [],status: :not_found
+      end
+
       private
       def space_params
         params.require(:space).permit(
@@ -164,6 +213,11 @@ module Api
           :rent_price,
           :space_type,
           :description,
+          :title,
+          :photos,
+          :services,
+          location: [:address, :latitude, :longitude],
+          photos: [:photo_url],
           lessor: [:id, :user_id, :ruc, :commercial_name, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at]
         )
       end

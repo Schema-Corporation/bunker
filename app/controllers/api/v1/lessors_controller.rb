@@ -84,7 +84,7 @@ module Api
 
                 @lessor = Lessor.where(user_id: @user.id)
 
-                render json: @lessor, status: :ok
+                render json: @lessor.first, status: :ok
 
                 rescue ActiveRecord::RecordInvalid
                     render json: [],status: :not_found

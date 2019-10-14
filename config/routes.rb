@@ -106,6 +106,8 @@ Rails.application.routes.draw do
       get 'spaces/info/:id' => 'spaces#info'
       get 'spaces/info_lessors/:id' => 'spaces#info_lessors'
 
+      post 'spaces/complete/' => 'spaces#create_complete'
+
       resources :spaces
 
       get 'users' => 'users#index'
