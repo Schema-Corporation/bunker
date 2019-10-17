@@ -53,7 +53,8 @@ module Api
                     step: params[:step],
                     start_date: params[:start_date],
                     end_date: params[:end_date],
-                    monthly_fee: params[:monthly_fee]
+                    monthly_fee: params[:monthly_fee],
+                    periodicity: params[periodicity]
                     )
 
                 if @booking_process.save
@@ -84,7 +85,8 @@ module Api
                     step: params[:step],
                     start_date: params[:start_date],
                     end_date: params[:end_date],
-                    monthly_fee: params[:monthly_fee]
+                    monthly_fee: params[:monthly_fee],
+                    periodicity: params[periodicity]
                 )
                     render json: @booking_process, status: :ok
                 end
@@ -116,6 +118,7 @@ module Api
                     :start_date,
                     :end_date,
                     :monthly_fee,
+                    :periodicity,
                     :height,
                     :width,
                     lessee: [:id, :user_id, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at],
