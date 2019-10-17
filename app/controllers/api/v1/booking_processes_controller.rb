@@ -4,6 +4,20 @@ module Api
 
             before_action :authenticate_user!
 
+            def price
+                @price = 0.0
+
+                @height = params[:height]
+                @width = params[:width]
+
+                @space = Space.find(params[:idSpace])
+                @price = @space.rent_price * (@height * @width) * 1.25 / (@space.height * @space.width)
+
+                render json: @price, status: :ok
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
+            end
 
             #GET /booking_processes
             def index
@@ -102,7 +116,8 @@ module Api
                     :start_date,
                     :end_date,
                     :monthly_fee,
-                    
+                    :height,
+                    :width,
                     lessee: [:id, :user_id, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at],
                     space: [:id, :lessee_id, :status, :width, :height, :area, :created_at, :updated_at, :rent_price, :space_type, :description],
                     document: [:id, :document_type_id, :url_document, :created_at, :updated_at]

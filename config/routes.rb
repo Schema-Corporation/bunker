@@ -22,6 +22,8 @@ Rails.application.routes.draw do
       post 'booking_processes' => 'booking_processes#create'
       patch 'booking_processes/:id' => 'booking_processes#update'
       delete 'booking_processes/:id' => 'booking_processes#destroy'
+
+      get 'get_price/:idSpace' => 'booking_processes#price'
       resources :booking_processes
 
       get 'devices' => 'devices#index'

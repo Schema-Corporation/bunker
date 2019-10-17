@@ -15591,3 +15591,167 @@ Processing by Api::V1::LessorsController#username as */*
 Completed 200 OK in 3792ms (Views: 2390.6ms | ActiveRecord: 732.7ms)
 
 
+Started POST "/login" for ::1 at 2019-10-16 23:27:10 -0500
+  [1m[35m (242.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (40.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.31ms)
+Completed 200 OK in 1164ms (Views: 128.9ms | ActiveRecord: 115.3ms)
+
+
+Started GET "/api/v1/spaces/1" for ::1 at 2019-10-16 23:27:38 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"lessor"=>{"id"=>1}, "width"=>10, "height"=>10, "area"=>100, "rent_price"=>400, "space_type"=>1, "description"=>"descripción", "title"=>"título", "location"=>{"address"=>"Av. Hola", "latitude"=>"-12.70", "longitude"=>"10.90"}, "services"=>[{"id"=>1}, {"id"=>2}], "photos"=>[{"photo_url"=>"www.url1.com"}, {"photo_url"=>"www.url2.com"}, {"photo_url"=>"www.url3.com"}], "id"=>"1", "space"=>{"width"=>10, "height"=>10, "area"=>100, "rent_price"=>400, "space_type"=>1, "description"=>"descripción", "title"=>"título"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (31.8ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4d77af1b-a7f6-498b-9038-776563f86166' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:85
+[active_model_serializers]   [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers]   [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers]   [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (1459.97ms)
+Completed 200 OK in 2829ms (Views: 2227.0ms | ActiveRecord: 462.0ms)
+
+
+Started GET "/api/v1/spaces/2" for ::1 at 2019-10-16 23:28:06 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"lessor"=>{"id"=>1}, "width"=>10, "height"=>10, "area"=>100, "rent_price"=>400, "space_type"=>1, "description"=>"descripción", "title"=>"título", "location"=>{"address"=>"Av. Hola", "latitude"=>"-12.70", "longitude"=>"10.90"}, "services"=>[{"id"=>1}, {"id"=>2}], "photos"=>[{"photo_url"=>"www.url1.com"}, {"photo_url"=>"www.url2.com"}, {"photo_url"=>"www.url3.com"}], "id"=>"2", "space"=>{"width"=>10, "height"=>10, "area"=>100, "rent_price"=>400, "space_type"=>1, "description"=>"descripción", "title"=>"título"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4d77af1b-a7f6-498b-9038-776563f86166' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:85
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 404 Not Found in 216ms (Views: 2.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/v1/spaces/1" for ::1 at 2019-10-16 23:28:12 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"lessor"=>{"id"=>1}, "width"=>10, "height"=>10, "area"=>100, "rent_price"=>400, "space_type"=>1, "description"=>"descripción", "title"=>"título", "location"=>{"address"=>"Av. Hola", "latitude"=>"-12.70", "longitude"=>"10.90"}, "services"=>[{"id"=>1}, {"id"=>2}], "photos"=>[{"photo_url"=>"www.url1.com"}, {"photo_url"=>"www.url2.com"}, {"photo_url"=>"www.url3.com"}], "id"=>"1", "space"=>{"width"=>10, "height"=>10, "area"=>100, "rent_price"=>400, "space_type"=>1, "description"=>"descripción", "title"=>"título"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4d77af1b-a7f6-498b-9038-776563f86166' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (2.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:85
+[active_model_serializers]   [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers]   [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (259.9ms)
+Completed 200 OK in 484ms (Views: 306.3ms | ActiveRecord: 8.7ms)
+
+
+Started PUT "/api/v1/spaces/1" for ::1 at 2019-10-16 23:28:49 -0500
+Processing by Api::V1::SpacesController#update as */*
+  Parameters: {"id"=>"1", "status"=>0, "width"=>10, "height"=>20, "area"=>200, "created_at"=>"2019-09-16T23:26:12.000Z", "updated_at"=>"2019-09-16T23:26:12.000Z", "rent_price"=>200, "space_type"=>1, "description"=>nil, "title"=>nil, "lessor"=>{"id"=>1, "ruc"=>"567890", "commercial_name"=>"123", "first_name"=>"marcelo", "last_name"=>"rios", "doc_type"=>0, "doc_number"=>nil, "phone"=>"123", "email"=>"a@gmail.com", "created_at"=>"2019-09-16T23:22:01.000Z", "updated_at"=>"2019-09-16T23:22:01.000Z", "user"=>{"id"=>1, "email"=>"marcesftwr2@gmail.com", "created_at"=>"2019-09-16T23:00:03.000Z", "updated_at"=>"2019-09-16T23:00:03.000Z"}}, "location"=>{"id"=>1, "address"=>"example road", "latitude"=>192, "longitude"=>150, "created_at"=>"2019-09-19T00:00:00.000Z", "updated_at"=>"2019-09-19T00:00:00.000Z"}, "space"=>{"id"=>"1", "status"=>0, "width"=>10, "height"=>20, "area"=>200, "created_at"=>"2019-09-16T23:26:12.000Z", "updated_at"=>"2019-09-16T23:26:12.000Z", "rent_price"=>200, "space_type"=>1, "description"=>nil, "title"=>nil}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4d77af1b-a7f6-498b-9038-776563f86166' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:124
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:125
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:126
+  [1m[36mCACHE Lessor Load (0.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/spaces_controller.rb:126
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:126
+  [1m[36mSpace Update (124.6ms)[0m  [1m[33mUPDATE `spaces` SET `rent_price` = 200, `space_type` = 1, `updated_at` = '2019-10-17 04:28:50' WHERE `spaces`.`id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:126
+  [1m[35m (509.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:126
+[active_model_serializers]   [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:136
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (123.61ms)
+Completed 200 OK in 1319ms (Views: 173.1ms | ActiveRecord: 643.5ms)
+
+
+Started GET "/api/v1/spaces/1" for ::1 at 2019-10-16 23:29:01 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"id"=>"1", "status"=>0, "width"=>10, "height"=>20, "area"=>200, "created_at"=>"2019-09-16T23:26:12.000Z", "updated_at"=>"2019-09-16T23:26:12.000Z", "rent_price"=>200, "space_type"=>1, "description"=>nil, "title"=>nil, "lessor"=>{"id"=>1, "ruc"=>"567890", "commercial_name"=>"123", "first_name"=>"marcelo", "last_name"=>"rios", "doc_type"=>0, "doc_number"=>nil, "phone"=>"123", "email"=>"a@gmail.com", "created_at"=>"2019-09-16T23:22:01.000Z", "updated_at"=>"2019-09-16T23:22:01.000Z", "user"=>{"id"=>1, "email"=>"marcesftwr2@gmail.com", "created_at"=>"2019-09-16T23:00:03.000Z", "updated_at"=>"2019-09-16T23:00:03.000Z"}}, "location"=>{"id"=>1, "address"=>"example road", "latitude"=>192, "longitude"=>150, "created_at"=>"2019-09-19T00:00:00.000Z", "updated_at"=>"2019-09-19T00:00:00.000Z"}, "space"=>{"id"=>"1", "status"=>0, "width"=>10, "height"=>20, "area"=>200, "created_at"=>"2019-09-16T23:26:12.000Z", "updated_at"=>"2019-09-16T23:26:12.000Z", "rent_price"=>200, "space_type"=>1, "description"=>nil, "title"=>nil}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4d77af1b-a7f6-498b-9038-776563f86166' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:85
+[active_model_serializers]   [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers]   [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (249.64ms)
+Completed 200 OK in 473ms (Views: 250.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/v1/get_price/1" for ::1 at 2019-10-16 23:29:20 -0500
+Processing by Api::V1::BookingProcessesController#price as */*
+  Parameters: {"height"=>5, "width"=>5, "idSpace"=>"1", "booking_process"=>{}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 125.6ms)
+
+
+Started GET "/api/v1/get_price/1" for ::1 at 2019-10-16 23:29:46 -0500
+Processing by Api::V1::BookingProcessesController#price as */*
+  Parameters: {"height"=>5, "width"=>5, "idSpace"=>"1", "booking_process"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4d77af1b-a7f6-498b-9038-776563f86166' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (2.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:13
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 4.6ms)
+
+
+  
+NoMethodError (undefined method `price' for #<Space:0x0000000006558240>):
+  
+app/controllers/api/v1/booking_processes_controller.rb:14:in `price'
+Started GET "/api/v1/spaces/1" for ::1 at 2019-10-16 23:30:14 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"id"=>"1", "status"=>0, "width"=>10, "height"=>20, "area"=>200, "created_at"=>"2019-09-16T23:26:12.000Z", "updated_at"=>"2019-09-16T23:26:12.000Z", "rent_price"=>200, "space_type"=>1, "description"=>nil, "title"=>nil, "lessor"=>{"id"=>1, "ruc"=>"567890", "commercial_name"=>"123", "first_name"=>"marcelo", "last_name"=>"rios", "doc_type"=>0, "doc_number"=>nil, "phone"=>"123", "email"=>"a@gmail.com", "created_at"=>"2019-09-16T23:22:01.000Z", "updated_at"=>"2019-09-16T23:22:01.000Z", "user"=>{"id"=>1, "email"=>"marcesftwr2@gmail.com", "created_at"=>"2019-09-16T23:00:03.000Z", "updated_at"=>"2019-09-16T23:00:03.000Z"}}, "location"=>{"id"=>1, "address"=>"example road", "latitude"=>192, "longitude"=>150, "created_at"=>"2019-09-19T00:00:00.000Z", "updated_at"=>"2019-09-19T00:00:00.000Z"}, "space"=>{"id"=>"1", "status"=>0, "width"=>10, "height"=>20, "area"=>200, "created_at"=>"2019-09-16T23:26:12.000Z", "updated_at"=>"2019-09-16T23:26:12.000Z", "rent_price"=>200, "space_type"=>1, "description"=>nil, "title"=>nil}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4d77af1b-a7f6-498b-9038-776563f86166' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:85
+[active_model_serializers]   [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers]   [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:87
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (542.63ms)
+Completed 200 OK in 869ms (Views: 582.0ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/api/v1/get_price/1" for ::1 at 2019-10-16 23:30:22 -0500
+Processing by Api::V1::BookingProcessesController#price as */*
+  Parameters: {"height"=>5, "width"=>5, "idSpace"=>"1", "booking_process"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '4d77af1b-a7f6-498b-9038-776563f86166' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:13
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Float (0.15ms)
+Completed 200 OK in 470ms (Views: 138.7ms | ActiveRecord: 5.5ms)
+
+
