@@ -39,6 +39,9 @@
                 "monthly_fee": {
                   "type": "integer"
                 },
+                "periodicity": {
+                  "type": "integer"
+                },
                 "created_at": {
                   "type": "string"
                 },
@@ -291,6 +294,9 @@
                 "monthly_fee": {
                   "type": "integer"
                 },
+                "periodicity": {
+                  "type": "integer"
+                },
                 "created_at": {
                   "type": "string"
                 },
@@ -516,6 +522,9 @@
                   "type": "string"
                 },
                 "monthly_fee": {
+                  "type": "integer"
+                },
+                "periodicity": {
                   "type": "integer"
                 },
                 "created_at": {
