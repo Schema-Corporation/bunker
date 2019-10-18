@@ -39,6 +39,66 @@ module Api
                     render json: [],status: :not_found
             end
 
+            #POST /booking_intention
+            def intention
+                @lessee = Lessee.find(params[:lessee][:id])
+                @space = Space.find(params[:space][:id])
+
+                @booking_process = BookingProcess.new(
+                    lessee_id: @lessee.id,
+                    space_id: @space.id,
+                    document_id: 1,
+                    step: 0,
+                    start_date: params[:start_date],
+                    end_date: params[:end_date],
+                    monthly_fee: params[:monthly_fee]
+                )
+
+                if @booking_process.save
+                    render json: @booking_process, adapter: :attributes, status: :created
+                end
+
+                rescue ActiveRecord::RecordInvalid
+                    render json: [],status: :unprocessable_entity
+                
+                rescue ActiveController::ParameterMissing
+                    render json: [],status: :bad_request
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
+            end
+
+            # booking_aprove
+            def aprove
+                @booking_process=BookingProcess.find(params[:id])
+                if @booking_process.update(
+                    step: 1
+                )
+                    render json: @booking_process, status: :ok
+                end
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [], status: :not_found
+                
+                rescue ActiveController::ParameterMissing
+                    render json: [], status: :bad_request
+            end
+
+            # booking_deny
+            def deny
+                @booking_process=BookingProcess.find(params[:id])
+                if @booking_process.update(
+                    step: 2
+                )
+                    render json: @booking_process, status: :ok
+                end
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [], status: :not_found
+                
+                rescue ActiveController::ParameterMissing
+                    render json: [], status: :bad_request
+            end
+
 
             #POST /booking_process
             def create

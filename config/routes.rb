@@ -24,6 +24,9 @@ Rails.application.routes.draw do
       delete 'booking_processes/:id' => 'booking_processes#destroy'
 
       get 'get_price/:idSpace' => 'booking_processes#price'
+      post 'booking_intention/' => 'booking_processes#intention'
+      patch 'booking_aprove/:id' => 'booking_processes#aprove'
+      patch 'booking_deny/:id' => 'booking_processes#deny'
       resources :booking_processes
 
       get 'devices' => 'devices#index'
