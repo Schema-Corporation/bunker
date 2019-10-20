@@ -17,6 +17,8 @@ describe 'Booking Processes API' do
                     end_date: { type: :string },
                     monthly_fee: { type: :integer },
                     periodicity: { type: :integer },
+                    width: { type: :number, format: :double },
+                    height: { type: :number, format: :double },
                     created_at: { type: :string },
                     updated_at: { type: :string },
                     lessee: { 
@@ -147,6 +149,8 @@ describe 'Booking Processes API' do
                     end_date: { type: :string },
                     monthly_fee: { type: :integer },
                     periodicity: { type: :integer },
+                    width: { type: :number, format: :double },
+                    height: { type: :number, format: :double },
                     created_at: { type: :string },
                     updated_at: { type: :string },
                     lessee: { 
@@ -258,6 +262,8 @@ describe 'Booking Processes API' do
                     end_date: { type: :string },
                     monthly_fee: { type: :integer },
                     periodicity: { type: :integer },
+                    width: { type: :number, format: :double },
+                    height: { type: :number, format: :double },
                     created_at: { type: :string },
                     updated_at: { type: :string },
                     lessee: { 
