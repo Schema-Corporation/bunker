@@ -101,6 +101,9 @@ Rails.application.routes.draw do
       resources :space_service_details
 
       get 'spaces' => 'spaces#index'
+
+      get 'spaces/info_around/' => 'spaces#info_around'
+
       get 'spaces/:id' => 'spaces#show'
       post 'spaces' => 'spaces#create'
       patch 'spaces/:id' => 'spaces#update'
@@ -110,8 +113,6 @@ Rails.application.routes.draw do
       get 'spaces/first_photo/:id' => 'spaces#first_photo'
       get 'spaces/info/:id' => 'spaces#info'
       get 'spaces/info_lessors/:id' => 'spaces#info_lessors'
-
-      get 'spaces/info_around' => 'spaces#info_around'
 
       post 'spaces/complete/' => 'spaces#create_complete'
 
