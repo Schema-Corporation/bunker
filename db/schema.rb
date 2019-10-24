@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_17_041245) do
+ActiveRecord::Schema.define(version: 2019_10_20_144814) do
 
   create_table "booking_processes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "lessee_id"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2019_10_17_041245) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "periodicity"
+    t.decimal "width", precision: 10
+    t.decimal "height", precision: 10
     t.index ["document_id"], name: "index_booking_processes_on_document_id"
     t.index ["lessee_id"], name: "index_booking_processes_on_lessee_id"
     t.index ["space_id"], name: "index_booking_processes_on_space_id"

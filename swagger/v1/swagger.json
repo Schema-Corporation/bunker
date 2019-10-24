@@ -42,6 +42,14 @@
                 "periodicity": {
                   "type": "integer"
                 },
+                "width": {
+                  "type": "number",
+                  "format": "double"
+                },
+                "height": {
+                  "type": "number",
+                  "format": "double"
+                },
                 "created_at": {
                   "type": "string"
                 },
@@ -297,6 +305,14 @@
                 "periodicity": {
                   "type": "integer"
                 },
+                "width": {
+                  "type": "number",
+                  "format": "double"
+                },
+                "height": {
+                  "type": "number",
+                  "format": "double"
+                },
                 "created_at": {
                   "type": "string"
                 },
@@ -526,6 +542,14 @@
                 },
                 "periodicity": {
                   "type": "integer"
+                },
+                "width": {
+                  "type": "number",
+                  "format": "double"
+                },
+                "height": {
+                  "type": "number",
+                  "format": "double"
                 },
                 "created_at": {
                   "type": "string"

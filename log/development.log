@@ -16021,6 +16021,7 @@ Processing by Api::V1::BookingProcessesController#deny as */*
 Completed 200 OK in 2271ms (Views: 985.2ms | ActiveRecord: 190.2ms)
 
 
+<<<<<<< HEAD
 Started POST "/login" for ::1 at 2019-10-23 22:48:32 -0500
   [1m[35m (79.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
@@ -16207,3 +16208,48 @@ Processing by Api::V1::PhotosController#index as */*
 Completed 200 OK in 3135ms (Views: 2978.1ms | ActiveRecord: 50.8ms)
 
 
+=======
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT GET_LOCK('5770563288286295520', 0)[0m
+  ↳ bin/rails:4
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+Migrating to AddPeriodicityToBookingProcess (20191017041245)
+  [1m[35m (916.3ms)[0m  [1m[35mALTER TABLE `booking_processes` ADD `periodicity` int[0m
+  ↳ db/migrate/20191017041245_add_periodicity_to_booking_process.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191017041245')[0m
+  ↳ bin/rails:4
+  [1m[35m (33.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddWidthToBookingProcess (20191020144656)
+  [1m[35m (1054.4ms)[0m  [1m[35mALTER TABLE `booking_processes` ADD `width` decimal[0m
+  ↳ db/migrate/20191020144656_add_width_to_booking_process.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191020144656')[0m
+  ↳ bin/rails:4
+  [1m[35m (87.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+Migrating to AddHeightToBookingProcess (20191020144814)
+  [1m[35m (738.4ms)[0m  [1m[35mALTER TABLE `booking_processes` ADD `height` decimal[0m
+  ↳ db/migrate/20191020144814_add_height_to_booking_process.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (23.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191020144814')[0m
+  ↳ bin/rails:4
+  [1m[35m (87.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (18.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('5770563288286295520')[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ bin/rails:4
+>>>>>>> dev
