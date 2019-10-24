@@ -22,6 +22,11 @@ Rails.application.routes.draw do
       post 'booking_processes' => 'booking_processes#create'
       patch 'booking_processes/:id' => 'booking_processes#update'
       delete 'booking_processes/:id' => 'booking_processes#destroy'
+
+      get 'get_price/:idSpace' => 'booking_processes#price'
+      post 'booking_intention/' => 'booking_processes#intention'
+      patch 'booking_aprove/:id' => 'booking_processes#aprove'
+      patch 'booking_deny/:id' => 'booking_processes#deny'
       resources :booking_processes
 
       get 'devices' => 'devices#index'
@@ -105,6 +110,8 @@ Rails.application.routes.draw do
       get 'spaces/first_photo/:id' => 'spaces#first_photo'
       get 'spaces/info/:id' => 'spaces#info'
       get 'spaces/info_lessors/:id' => 'spaces#info_lessors'
+
+      get 'spaces/info_around' => 'spaces#info_around'
 
       post 'spaces/complete/' => 'spaces#create_complete'
 
