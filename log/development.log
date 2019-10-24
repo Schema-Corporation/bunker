@@ -16253,3 +16253,174 @@ Migrating to AddHeightToBookingProcess (20191020144814)
   [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
   ↳ bin/rails:4
 >>>>>>> dev
+Started POST "/login" for ::1 at 2019-10-23 23:19:00 -0500
+  [1m[35m (1.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (1.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (58.8ms)[0m  [1m[34mSELECT GET_LOCK('5770563288286295520', 0)[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to AddWidthToBookingProcess (20191020144656)
+  [1m[35m (8977.3ms)[0m  [1m[35mALTER TABLE `booking_processes` ADD `width` decimal[0m
+  ↳ db/migrate/20191020144656_add_width_to_booking_process.rb:3
+  [1m[35m (36.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (61.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191020144656')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (285.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to AddHeightToBookingProcess (20191020144814)
+  [1m[35m (5409.4ms)[0m  [1m[35mALTER TABLE `booking_processes` ADD `height` decimal[0m
+  ↳ db/migrate/20191020144814_add_height_to_booking_process.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (56.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20191020144814')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (108.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('5770563288286295520')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Started POST "/login" for ::1 at 2019-10-23 23:21:54 -0500
+  [1m[35m (1.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"marcesftwr2@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'marcesftwr2@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.05ms)
+Completed 200 OK in 729ms (Views: 87.3ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-23 23:22:20 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"id"=>"info_around", "space"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '9b383407-9e74-4726-b5ec-c3da2776d368' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:113
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 404 Not Found in 385ms (Views: 156.5ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-23 23:26:05 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"id"=>"info_around", "space"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '9b383407-9e74-4726-b5ec-c3da2776d368' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:85
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 404 Not Found in 183ms (Views: 3.2ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/api/v1/spaces/info_around/" for ::1 at 2019-10-23 23:26:52 -0500
+Processing by Api::V1::SpacesController#show as */*
+  Parameters: {"id"=>"info_around", "space"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '9b383407-9e74-4726-b5ec-c3da2776d368' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 0 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:85
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 404 Not Found in 197ms (Views: 46.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/v1/spaces/info_around/" for ::1 at 2019-10-23 23:27:44 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"space"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '9b383407-9e74-4726-b5ec-c3da2776d368' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 12.9ms)
+
+
+  
+NameError (uninitialized constant Api::V1::SpacesController::Spaces):
+  
+app/controllers/api/v1/spaces_controller.rb:207:in `info_around'
+Started GET "/api/v1/spaces/info_around/" for ::1 at 2019-10-23 23:28:05 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"space"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '9b383407-9e74-4726-b5ec-c3da2776d368' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.8ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:210
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:211
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:220
+  [1m[36mPhoto Load (1.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:221
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:211
+  [1m[36mLocation Load (2.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:220
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:221
+Completed 500 Internal Server Error in 1120ms (ActiveRecord: 40.2ms)
+
+
+  
+NoMethodError (undefined method `photo_url' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:221:in `block in info_around'
+app/controllers/api/v1/spaces_controller.rb:210:in `info_around'
