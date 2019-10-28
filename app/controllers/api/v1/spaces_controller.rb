@@ -203,24 +203,55 @@ module Api
           render json: [],status: :not_found
       end
 
+      def isAround(myLongitude, myLatitude, spaceLongitude, spaceLatitude)
+        
+        rad_per_deg = Math::PI/180 # PI / 180
+        rkm = 6371 # Radio de la tierra en kilómetros
+
+        dlat_rad = (spaceLatitude - myLatitude) * rad_per_deg
+        dlon_rad = (spaceLongitude - myLongitude) * rad_per_deg
+
+        myLoc = [myLatitude, myLongitude]
+        spaceLoc = [spaceLatitude, spaceLongitude]
+
+        lat1_rad = myLoc.map {|i| i * rad_per_deg}.first
+        lat2_rad = spaceLoc.map {|i| i * rad_per_deg}.first
+
+        a = Math.sin(dlat_rad/2)**2 + Math.cos(lat1_rad) * Math.cos(lat2_rad) * Math.sin(dlon_rad/2)**2
+        c = 2 * Math::atan2(Math::sqrt(a), Math::sqrt(1-a))
+
+        distance = rkm * c
+
+        if (distance < 10)
+          return true
+        end
+
+        return false
+      end
+
       def info_around
         @spaces = Space.all
         @spacesInfo = Array.new
 
+        @longitudeLessee = params[:longitude]
+        @latitudeLessee = params[:latitude]
+
         @spaces.each do |space|
           @space = Space.find(space.id)
 
-          @spaceInfo = SpaceInfo.new(
-            id: @space.id,
-            status: @space.status, 
-            rent_price: @space.rent_price,
-            space_type: @space.space_type, 
-            description: @space.description, 
-            title: @space.title,
-            address: @space.location.address,
-            first_photo: @space.photos.first.photo_url
-          )
-          @spacesInfo.push @spaceInfo
+          if isAround(@longitudeLessee, @latitudeLessee, @space.location.longitude, @space.location.latitude)
+            @spaceInfo = SpaceInfo.new(
+              id: @space.id,
+              status: @space.status, 
+              rent_price: @space.rent_price,
+              space_type: @space.space_type, 
+              description: @space.description, 
+              title: @space.title,
+              address: @space.location.address,
+              first_photo: @space.photos.first.photo_url
+            )
+            @spacesInfo.push @spaceInfo
+          end
         end
 
         if @spacesInfo != nil 
@@ -244,6 +275,10 @@ module Api
           :title,
           :photos,
           :services,
+
+          :longitude,
+          :latitude,
+
           location: [:address, :latitude, :longitude],
           photos: [:photo_url],
           lessor: [:id, :user_id, :ruc, :commercial_name, :first_name, :last_name, :doc_type, :doc_number, :phone, :email, :created_at, :updated_at]
