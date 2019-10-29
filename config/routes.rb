@@ -23,7 +23,7 @@ Rails.application.routes.draw do
       patch 'booking_processes/:id' => 'booking_processes#update'
       delete 'booking_processes/:id' => 'booking_processes#destroy'
 
-      get 'get_price/:idSpace' => 'booking_processes#price'
+      post 'get_price/:idSpace' => 'booking_processes#price'
       post 'booking_intention/' => 'booking_processes#intention'
       patch 'booking_aprove/:id' => 'booking_processes#aprove'
       patch 'booking_deny/:id' => 'booking_processes#deny'
@@ -102,7 +102,7 @@ Rails.application.routes.draw do
 
       get 'spaces' => 'spaces#index'
 
-      get 'spaces/info_around/' => 'spaces#info_around'
+      post 'spaces/info_around/' => 'spaces#info_around'
 
       get 'spaces/:id' => 'spaces#show'
       post 'spaces' => 'spaces#create'
