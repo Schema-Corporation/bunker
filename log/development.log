@@ -16424,3 +16424,660 @@ NoMethodError (undefined method `photo_url' for nil:NilClass):
   
 app/controllers/api/v1/spaces_controller.rb:221:in `block in info_around'
 app/controllers/api/v1/spaces_controller.rb:210:in `info_around'
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 18:32:26 -0500
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"latitude"=>-12.07646, "longitude"=>-77.04511, "space"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'bc93692b-bc5f-4212-a7ac-9d0997174e12' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.8ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.19ms)
+Completed 200 OK in 151ms (Views: 58.9ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:21:32 -0500
+  [1m[35m (5.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "space"=>{}}
+Completed 401 Unauthorized in 15ms (ActiveRecord: 4.7ms)
+
+
+Started POST "/login" for ::1 at 2019-10-28 19:24:06 -0500
+  [1m[35m (1.0ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'toconasalvaro@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.34ms)
+Completed 200 OK in 359ms (Views: 39.5ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:24:30 -0500
+  
+SyntaxError (C:/Users/Alvaro Toconas/Documents/VSProjects/Ruby/bunker/app/controllers/api/v1/spaces_controller.rb:292: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/api/v1/spaces_controller.rb:292: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:25:50 -0500
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "space"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'e9f802c6-b2f7-4db9-9fc8-7ed36bf9126c' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 161ms (Views: 64.0ms | ActiveRecord: 28.4ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:26:11 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "space"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'e9f802c6-b2f7-4db9-9fc8-7ed36bf9126c' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.7ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 57ms (Views: 2.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:55:16 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "space"=>{}}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 1.8ms)
+
+
+Started POST "/login" for ::1 at 2019-10-28 19:55:24 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'toconasalvaro@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (1.09ms)
+Completed 200 OK in 165ms (Views: 18.6ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:55:46 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "space"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'ab1045fd-8318-46e0-898a-d56ee6fabaff' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.8ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 28.2ms)
+
+
+  
+TypeError (nil can't be coerced into BigDecimal):
+  
+app/controllers/api/v1/spaces_controller.rb:211:in `-'
+app/controllers/api/v1/spaces_controller.rb:211:in `isAround'
+app/controllers/api/v1/spaces_controller.rb:242:in `block in info_around'
+app/controllers/api/v1/spaces_controller.rb:239:in `info_around'
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:56:06 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"latitude"=>0.0, "longitude"=>0.0, "space"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'ab1045fd-8318-46e0-898a-d56ee6fabaff' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 11 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.08ms)
+Completed 200 OK in 135ms (Views: 29.5ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:56:28 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"latitude"=>-12.7, "longitude"=>0.0, "space"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'ab1045fd-8318-46e0-898a-d56ee6fabaff' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 11 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.04ms)
+Completed 200 OK in 108ms (Views: 0.7ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:56:55 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"latitude"=>-12.07646, "longitude"=>-77.04511, "space"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'ab1045fd-8318-46e0-898a-d56ee6fabaff' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.7ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (2.0ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.8ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 5 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 6 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 7 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 9 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 11 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+No serializer found for resource: #<SpaceInfo:0x000000000669c548 @id=1, @status=0, @rent_price=0.2e3, @space_type=3, @description="Almacén libre para depósito de mercadería, cuenta con seguridad y doble reja de entrada.", @title="Almacén Industrial", @address="Bayobar 126, Cercado de Lima 15022", @first_photo="https://firebasestorage.googleapis.com/v0/b/bunker-253200.appspot.com/o/demo%2Fmini-almacen1.jpg?alt=media&token=4a090e2d-c19d-4bc9-bcd5-5cd6aae75084">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.57ms)
+Completed 200 OK in 238ms (Views: 20.0ms | ActiveRecord: 25.1ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:59:30 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"space"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'ab1045fd-8318-46e0-898a-d56ee6fabaff' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 30.3ms)
+
+
+  
+TypeError (nil can't be coerced into BigDecimal):
+  
+app/controllers/api/v1/spaces_controller.rb:211:in `-'
+app/controllers/api/v1/spaces_controller.rb:211:in `isAround'
+app/controllers/api/v1/spaces_controller.rb:242:in `block in info_around'
+app/controllers/api/v1/spaces_controller.rb:239:in `info_around'
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 19:59:38 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+l
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at 'l'):
+  
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.0.7) lib/rack/builder.rb:153:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware.rb:23:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 20:00:29 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+l
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at 'l'):
+  
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.0.7) lib/rack/builder.rb:153:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware.rb:23:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 20:00:59 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"pollo_frito"=>"10kg", "space"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'ab1045fd-8318-46e0-898a-d56ee6fabaff' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 39.1ms)
+
+
+  
+TypeError (nil can't be coerced into BigDecimal):
+  
+app/controllers/api/v1/spaces_controller.rb:211:in `-'
+app/controllers/api/v1/spaces_controller.rb:211:in `isAround'
+app/controllers/api/v1/spaces_controller.rb:242:in `block in info_around'
+app/controllers/api/v1/spaces_controller.rb:239:in `info_around'
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 20:01:18 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"pollo_frito"=>"10", "space"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'ab1045fd-8318-46e0-898a-d56ee6fabaff' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.3ms)
+
+
+  
+TypeError (nil can't be coerced into BigDecimal):
+  
+app/controllers/api/v1/spaces_controller.rb:211:in `-'
+app/controllers/api/v1/spaces_controller.rb:211:in `isAround'
+app/controllers/api/v1/spaces_controller.rb:242:in `block in info_around'
+app/controllers/api/v1/spaces_controller.rb:239:in `info_around'
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 20:01:51 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"latitude"=>"10", "longitude"=>"10", "space"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'ab1045fd-8318-46e0-898a-d56ee6fabaff' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.6ms)
+
+
+  
+TypeError (String can't be coerced into BigDecimal):
+  
+app/controllers/api/v1/spaces_controller.rb:211:in `-'
+app/controllers/api/v1/spaces_controller.rb:211:in `isAround'
+app/controllers/api/v1/spaces_controller.rb:242:in `block in info_around'
+app/controllers/api/v1/spaces_controller.rb:239:in `info_around'
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 20:02:03 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"latitude"=>10, "longitude"=>10, "space"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'ab1045fd-8318-46e0-898a-d56ee6fabaff' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 11 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 11 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.04ms)
+Completed 200 OK in 43ms (Views: 0.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 20:08:10 -0500
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Error occurred while parsing request parameters.
+Contents:
+
+l
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at 'l'):
+  
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch'
+rack (2.0.7) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.3) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.3) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.0.7) lib/rack/builder.rb:153:in `call'
+warden-jwt_auth (0.3.6) lib/warden/jwt_auth/middleware.rb:23:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/spaces/info_around" for ::1 at 2019-10-28 20:08:22 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"hi"=>"hi", "space"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'ab1045fd-8318-46e0-898a-d56ee6fabaff' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces`[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 33.1ms)
+
+
+  
+TypeError (nil can't be coerced into BigDecimal):
+  
+app/controllers/api/v1/spaces_controller.rb:211:in `-'
+app/controllers/api/v1/spaces_controller.rb:211:in `isAround'
+app/controllers/api/v1/spaces_controller.rb:242:in `block in info_around'
+app/controllers/api/v1/spaces_controller.rb:239:in `info_around'
