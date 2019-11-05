@@ -6,4 +6,4 @@ env_variables:
   SECRET_KEY_BASE: 0eabfa55b33cdcf6d6889483559dfa17b2d5331272314e386cb5fcc78e4e7722006a247003ac5caff0e7faa45051033f299a9745bc7d908eef6a5f1325a1d5d9
 
 beta_settings:
-  cloud_sql_instances: bunker-253200:us-central1:bunkerdb
+  cloud_sql_instances: bunker-258012:us-east1:bunkerdb
