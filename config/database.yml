@@ -52,6 +52,6 @@ production:
   pool: 5
   timeout: 20000
   username: "root"
-  password: "cJaKPIqzpoI3EuL0"
+  password: "Bh3doMBcizP0amcy"
   database: "bunker_production"
-  socket:   "/cloudsql/bunker-253200:us-central1:bunkerdb"
+  socket:   "/cloudsql/bunker-258012:us-east1:bunkerdb"
