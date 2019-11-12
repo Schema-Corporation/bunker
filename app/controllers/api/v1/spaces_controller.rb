@@ -261,6 +261,12 @@ module Api
             render json: @spacesInfo, status: :ok
         end 
 
+      rescue ActiveRecord::RecordInvalid
+        render json: [],status: :unprocessable_entity
+
+     rescue ActionController::ParameterMissing
+        render json: [],status: :bad_request
+    
       rescue ActiveRecord::RecordNotFound
         render json: [],status: :not_found
       end
