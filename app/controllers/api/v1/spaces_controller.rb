@@ -251,6 +251,7 @@ module Api
               first_photo: @space.photos.first.photo_url,
               height: @space.height,
               width: @space.width,
+              area: @space.area,
               services: @space.services
             )
             @spacesInfo.push @spaceInfo
