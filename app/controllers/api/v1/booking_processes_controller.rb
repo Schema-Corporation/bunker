@@ -11,7 +11,11 @@ module Api
                 @width = params[:width]
 
                 @space = Space.find(params[:idSpace])
-                @price = @space.rent_price * (@height * @width) * 1.25 / (@space.height * @space.width)
+                if @height == @space.height and @width == @space.width
+                    @price = @space.rent_price
+                else 
+                    @price = @space.rent_price * (@height * @width) * 1.25 / (@space.height * @space.width)
+                end
 
                 render json: @price, status: :ok
 
