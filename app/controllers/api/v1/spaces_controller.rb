@@ -240,7 +240,7 @@ module Api
           @space = Space.find(space.id)
 
           if isAround(@longitudeLessee, @latitudeLessee, @space.location.longitude, @space.location.latitude)
-            @spaceInfo = SpaceInfo.new(
+            @spaceInfo = SpaceInfoAround.new(
               id: @space.id,
               status: @space.status, 
               rent_price: @space.rent_price,
@@ -248,7 +248,10 @@ module Api
               description: @space.description, 
               title: @space.title,
               address: @space.location.address,
-              first_photo: @space.photos.first.photo_url
+              first_photo: @space.photos.first.photo_url,
+              height: @space.height,
+              width: @space.width,
+              services: @space.services
             )
             @spacesInfo.push @spaceInfo
           end
