@@ -53,7 +53,7 @@ module Api
       end
 
       def info_lessors
-        @spaces = Lessor.find(params[:id]).spaces
+        @spaces = Lessor.find(params[:id]).spaces.order(id: :desc)
         @spacesInfo = Array.new
 
         @spaces.each do |space|
@@ -72,7 +72,7 @@ module Api
           @spacesInfo.push @spaceInfo
         end
 
-        if @spacesInfo != nil 
+        if @spacesInfo != nil
             render json: @spacesInfo, status: :ok
         end 
 
@@ -230,7 +230,7 @@ module Api
       end
 
       def info_around
-        @spaces = Space.all
+        @spaces = Space.all.order(id: :desc)
         @spacesInfo = Array.new
 
         @longitudeLessee = params[:longitude]
