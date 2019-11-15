@@ -230,7 +230,7 @@ module Api
       end
 
       def info_around
-        @spaces = Space.all.order(id: :desc)
+        @spaces = Space.all.order(id: :desc).where(status: 0)
         @spacesInfo = Array.new
 
         @longitudeLessee = params[:longitude]
