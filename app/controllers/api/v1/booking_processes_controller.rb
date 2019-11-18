@@ -32,6 +32,15 @@ module Api
                     render json: [],status: :not_found
             end
 
+            #GET /booking_processes/lessees/1
+            def lessees
+                @booking_processes = BookingProcess.all.order(id: :desc).where(step: 0).where(lessee_id: params[:lesseeId])
+                render json: @booking_processes, status: :ok
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
+            end
+
             #GET /booking_processes/1
             def show
                 @booking_process = BookingProcess.find(params[:id]) 
@@ -55,7 +64,10 @@ module Api
                     step: 0,
                     start_date: params[:start_date],
                     end_date: params[:end_date],
-                    monthly_fee: params[:monthly_fee]
+                    monthly_fee: params[:monthly_fee],
+                    periodicity: params[:periodicity],
+                    width: params[:width],
+                    height: params[:height]
                 )
 
                 if @booking_process.save

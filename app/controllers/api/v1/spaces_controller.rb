@@ -21,6 +21,38 @@ module Api
             render json: [],status: :not_found
       end
 
+      # PATCH /spaces/block/1
+      def block
+        @space = Space.find(params[:id])
+        if @space.update(
+          status: 1
+          )
+            render json: @space, status: :ok
+        end
+
+        rescue ActiveRecord::RecordNotFound
+            render json: [], status: :not_found
+
+        rescue ActionController::ParameterMissing
+            render json: [], status: :bad_request
+      end
+
+      # PATCH /spaces/unblock/1
+      def unblock
+        @space = Space.find(params[:id])
+        if @space.update(
+          status: 0
+          )
+            render json: @space, status: :ok
+        end
+
+        rescue ActiveRecord::RecordNotFound
+            render json: [], status: :not_found
+
+        rescue ActionController::ParameterMissing
+            render json: [], status: :bad_request
+      end
+
       def first_photo
         @space = Space.find(params[:id])
         render json: @space.photos.first, status: :ok
