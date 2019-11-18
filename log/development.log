@@ -17662,6 +17662,7 @@ app/controllers/api/v1/spaces_controller.rb:211:in `isAround'
 app/controllers/api/v1/spaces_controller.rb:242:in `block in info_around'
 app/controllers/api/v1/spaces_controller.rb:239:in `info_around'
 >>>>>>> origin/master
+<<<<<<< Updated upstream
 Started POST "/login" for ::1 at 2019-11-15 15:36:30 -0500
   [1m[35m (18.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
   ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
@@ -18494,5 +18495,172 @@ No serializer found for resource: #<SpaceInfoAround:0x000000000a383470 @id=8, @s
 [active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:262
 [active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (17.1ms)
 Completed 200 OK in 1061ms (Views: 604.3ms | ActiveRecord: 95.8ms)
+=======
+Started POST "/login" for ::1 at 2019-11-17 20:42:10 -0500
+  [1m[35m (148.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (31.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'toconasalvaro@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (3.05ms)
+Completed 200 OK in 1092ms (Views: 139.6ms | ActiveRecord: 54.3ms)
+
+
+Started GET "/api/v1/booking_processes/lessees/1" for ::1 at 2019-11-17 20:42:50 -0500
+Processing by Api::V1::BookingProcessesController#lessees as */*
+  Parameters: {"latitude"=>-12.07646, "longitude"=>-77.04511, "lesseeId"=>"1", "booking_process"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (64.6ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'f16bf7ba-268a-4cdf-ba75-c616f62a2ce6' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mBookingProcess Load (41.0ms)[0m  [1m[34mSELECT `booking_processes`.* FROM `booking_processes` WHERE `booking_processes`.`step` = 0 AND `booking_processes`.`lessee_id` = 1 ORDER BY `booking_processes`.`id` DESC[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 644ms (Views: 506.6ms | ActiveRecord: 123.1ms)
+
+
+Started GET "/api/v1/booking_processes/lessees/1" for ::1 at 2019-11-17 20:42:58 -0500
+Processing by Api::V1::BookingProcessesController#lessees as */*
+  Parameters: {"lesseeId"=>"1", "booking_process"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'f16bf7ba-268a-4cdf-ba75-c616f62a2ce6' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mBookingProcess Load (1.6ms)[0m  [1m[34mSELECT `booking_processes`.* FROM `booking_processes` WHERE `booking_processes`.`step` = 0 AND `booking_processes`.`lessee_id` = 1 ORDER BY `booking_processes`.`id` DESC[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 36ms (Views: 12.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/v1/booking_processes/lessees/1" for ::1 at 2019-11-17 20:44:17 -0500
+Processing by Api::V1::BookingProcessesController#lessees as */*
+  Parameters: {"lesseeId"=>"1", "booking_process"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'f16bf7ba-268a-4cdf-ba75-c616f62a2ce6' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mBookingProcess Load (1.4ms)[0m  [1m[34mSELECT `booking_processes`.* FROM `booking_processes` WHERE `booking_processes`.`step` = 0 AND `booking_processes`.`lessee_id` = 1 ORDER BY `booking_processes`.`id` DESC[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLessee Load (0.9ms)[0m  [1m[34mSELECT  `lessees`.* FROM `lessees` WHERE `lessees`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mDocument Load (69.0ms)[0m  [1m[34mSELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLessor Load (1.8ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mDocumentType Load (17.0ms)[0m  [1m[34mSELECT  `document_types`.* FROM `document_types` WHERE `document_types`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2784.39ms)
+Completed 200 OK in 3405ms (Views: 3150.8ms | ActiveRecord: 180.4ms)
+
+
+Started GET "/api/v1/booking_processes/lessees/1" for ::1 at 2019-11-17 20:49:18 -0500
+Processing by Api::V1::BookingProcessesController#lessees as */*
+  Parameters: {"lesseeId"=>"1", "booking_process"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'f16bf7ba-268a-4cdf-ba75-c616f62a2ce6' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mBookingProcess Load (1.2ms)[0m  [1m[34mSELECT `booking_processes`.* FROM `booking_processes` WHERE `booking_processes`.`step` = 0 AND `booking_processes`.`lessee_id` = 1 ORDER BY `booking_processes`.`id` DESC[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLessee Load (1.0ms)[0m  [1m[34mSELECT  `lessees`.* FROM `lessees` WHERE `lessees`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mDocument Load (1.0ms)[0m  [1m[34mSELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mDocumentType Load (1.0ms)[0m  [1m[34mSELECT  `document_types`.* FROM `document_types` WHERE `document_types`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (109.45ms)
+Completed 200 OK in 148ms (Views: 114.6ms | ActiveRecord: 12.2ms)
+
+
+Started POST "/login" for ::1 at 2019-11-17 21:15:08 -0500
+  [1m[35m (39.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'toconasalvaro@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.09ms)
+Completed 200 OK in 967ms (Views: 69.1ms | ActiveRecord: 54.5ms)
+
+
+Started POST "/login" for ::1 at 2019-11-17 21:16:02 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'toconasalvaro@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.13ms)
+Completed 200 OK in 649ms (Views: 5.4ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/api/v1/spaces/block/13" for ::1 at 2019-11-17 21:16:45 -0500
+Processing by Api::V1::SpacesController#block as */*
+  Parameters: {"id"=>"13", "space"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '3193dbf0-eae9-498c-b5db-07f33e579503' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:26
+  [1m[35m (17.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+  [1m[36mLessor Load (21.7ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+  [1m[36mSpace Update (48.7ms)[0m  [1m[33mUPDATE `spaces` SET `status` = 1, `updated_at` = '2019-11-18 02:16:46' WHERE `spaces`.`id` = 13[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+[active_model_serializers]   [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 13 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:30
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (456.98ms)
+Completed 200 OK in 1377ms (Views: 486.6ms | ActiveRecord: 175.1ms)
+
+
+Started PATCH "/api/v1/spaces/unblock/13" for ::1 at 2019-11-17 21:19:03 -0500
+Processing by Api::V1::SpacesController#unblock as */*
+  Parameters: {"id"=>"13", "space"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '3193dbf0-eae9-498c-b5db-07f33e579503' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:42
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:43
+  [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:43
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:43
+  [1m[36mSpace Update (167.5ms)[0m  [1m[33mUPDATE `spaces` SET `status` = 0, `updated_at` = '2019-11-18 02:19:05' WHERE `spaces`.`id` = 13[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:43
+  [1m[35m (437.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:43
+[active_model_serializers]   [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 13 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:46
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (486.29ms)
+Completed 200 OK in 2093ms (Views: 529.7ms | ActiveRecord: 636.6ms)
+>>>>>>> Stashed changes
 
 
