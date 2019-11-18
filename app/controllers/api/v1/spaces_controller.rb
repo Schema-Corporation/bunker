@@ -21,6 +21,38 @@ module Api
             render json: [],status: :not_found
       end
 
+      # PATCH /spaces/block/1
+      def block
+        @space = Space.find(params[:id])
+        if @space.update(
+          status: 1
+          )
+            render json: @space, status: :ok
+        end
+
+        rescue ActiveRecord::RecordNotFound
+            render json: [], status: :not_found
+
+        rescue ActionController::ParameterMissing
+            render json: [], status: :bad_request
+      end
+
+      # PATCH /spaces/unblock/1
+      def unblock
+        @space = Space.find(params[:id])
+        if @space.update(
+          status: 0
+          )
+            render json: @space, status: :ok
+        end
+
+        rescue ActiveRecord::RecordNotFound
+            render json: [], status: :not_found
+
+        rescue ActionController::ParameterMissing
+            render json: [], status: :bad_request
+      end
+
       def first_photo
         @space = Space.find(params[:id])
         render json: @space.photos.first, status: :ok
@@ -53,7 +85,7 @@ module Api
       end
 
       def info_lessors
-        @spaces = Lessor.find(params[:id]).spaces
+        @spaces = Lessor.find(params[:id]).spaces.order(id: :desc)
         @spacesInfo = Array.new
 
         @spaces.each do |space|
@@ -72,7 +104,7 @@ module Api
           @spacesInfo.push @spaceInfo
         end
 
-        if @spacesInfo != nil 
+        if @spacesInfo != nil
             render json: @spacesInfo, status: :ok
         end 
 
@@ -230,7 +262,7 @@ module Api
       end
 
       def info_around
-        @spaces = Space.all
+        @spaces = Space.all.order(id: :desc).where(status: 0)
         @spacesInfo = Array.new
 
         @longitudeLessee = params[:longitude]

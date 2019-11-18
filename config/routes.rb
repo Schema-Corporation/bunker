@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     namespace 'v1' do
 
       get 'booking_processes' => 'booking_processes#index'
+      get 'booking_processes/lessees/:lesseeId' => 'booking_processes#lessees'
       get 'booking_processes/:id' => 'booking_processes#show'
       post 'booking_processes' => 'booking_processes#create'
       patch 'booking_processes/:id' => 'booking_processes#update'
@@ -104,6 +105,8 @@ Rails.application.routes.draw do
 
       post 'spaces/info_around/' => 'spaces#info_around'
 
+      patch 'spaces/block/:id' => 'spaces#block'
+      patch 'spaces/unblock/:id' => 'spaces#unblock'
       get 'spaces/:id' => 'spaces#show'
       post 'spaces' => 'spaces#create'
       patch 'spaces/:id' => 'spaces#update'

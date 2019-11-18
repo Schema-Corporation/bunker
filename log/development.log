@@ -17662,3 +17662,1005 @@ app/controllers/api/v1/spaces_controller.rb:211:in `isAround'
 app/controllers/api/v1/spaces_controller.rb:242:in `block in info_around'
 app/controllers/api/v1/spaces_controller.rb:239:in `info_around'
 >>>>>>> origin/master
+<<<<<<< Updated upstream
+Started POST "/login" for ::1 at 2019-11-15 15:36:30 -0500
+  [1m[35m (18.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (33.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"victorbaldeon@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"victorbaldeon@gmail.com", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-11-15 15:36:39 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"victorbaldeon@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"victorbaldeon@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (13.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'victorbaldeon@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 104ms (ActiveRecord: 29.8ms)
+
+
+Started POST "/login" for ::1 at 2019-11-15 15:37:53 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"victorbaldeon@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"victorbaldeon@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'victorbaldeon@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.9ms)
+Completed 200 OK in 544ms (Views: 20.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/8" for ::1 at 2019-11-15 15:39:06 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (37.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.13ms)
+Completed 404 Not Found in 237ms (Views: 79.1ms | ActiveRecord: 68.6ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-11-15 15:39:13 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (14.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 5 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 6 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 7 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.6ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 9 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 10 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+Completed 500 Internal Server Error in 495ms (ActiveRecord: 44.2ms)
+
+
+  
+NoMethodError (undefined method `photo_url' for nil:NilClass):
+  
+app/controllers/api/v1/spaces_controller.rb:70:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:59:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-11-15 15:40:41 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.8ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 5 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 6 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 7 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 9 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 10 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 26.8ms)
+
+
+  
+NoMethodError (undefined method `[]' for #<SpaceInfo:0x00000000075803c0>):
+  
+app/controllers/api/v1/spaces_controller.rb:76:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:76:in `each'
+app/controllers/api/v1/spaces_controller.rb:76:in `sort_by'
+app/controllers/api/v1/spaces_controller.rb:76:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-11-15 15:42:27 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 5 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.7ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 6 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.9ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 7 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 9 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 10 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+Completed 500 Internal Server Error in 386ms (ActiveRecord: 28.7ms)
+
+
+  
+NoMethodError (undefined method `[]' for #<SpaceInfo:0x0000000006fdd580>):
+  
+app/controllers/api/v1/spaces_controller.rb:76:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:76:in `each'
+app/controllers/api/v1/spaces_controller.rb:76:in `sort_by'
+app/controllers/api/v1/spaces_controller.rb:76:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-11-15 15:42:49 -0500
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.6ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 5 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.1ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 6 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 7 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 9 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 10 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+Completed 500 Internal Server Error in 494ms (ActiveRecord: 37.3ms)
+
+
+  
+NoMethodError (undefined method `[]' for #<SpaceInfo:0x0000000006b9f4a0>):
+  
+app/controllers/api/v1/spaces_controller.rb:76:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:76:in `each'
+app/controllers/api/v1/spaces_controller.rb:76:in `sort_by'
+app/controllers/api/v1/spaces_controller.rb:76:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-11-15 15:44:34 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.8ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 5 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 6 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 7 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 9 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 10 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+Completed 500 Internal Server Error in 357ms (ActiveRecord: 26.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for #<SpaceInfo:0x00000000062d9578>):
+  
+app/controllers/api/v1/spaces_controller.rb:76:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:76:in `each'
+app/controllers/api/v1/spaces_controller.rb:76:in `sort_by'
+app/controllers/api/v1/spaces_controller.rb:76:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-11-15 15:45:49 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.9ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 5 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.1ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 6 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 7 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.8ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.2ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 9 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 10 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+Completed 500 Internal Server Error in 354ms (ActiveRecord: 29.8ms)
+
+
+  
+NoMethodError (undefined method `[]' for #<SpaceInfo:0x0000000007609418>):
+  
+app/controllers/api/v1/spaces_controller.rb:76:in `block in info_lessors'
+app/controllers/api/v1/spaces_controller.rb:76:in `each'
+app/controllers/api/v1/spaces_controller.rb:76:in `sort_by'
+app/controllers/api/v1/spaces_controller.rb:76:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-11-15 15:47:20 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.5ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.8ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.9ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.7ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 5 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 6 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 7 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 9 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 10 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+Completed 500 Internal Server Error in 399ms (ActiveRecord: 33.6ms)
+
+
+  
+NoMethodError (undefined method `order' for #<Array:0x00000000072b0910>):
+  
+app/controllers/api/v1/spaces_controller.rb:76:in `info_lessors'
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-11-15 15:48:34 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.6ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1 ORDER BY `spaces`.`created_at` DESC[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 10 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 9 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.9ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 7 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.2ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 6 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 5 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.1ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (1.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+No serializer found for resource: #<SpaceInfo:0x00000000062f3ec8 @id=10, @status=0, @rent_price=0.1e4, @space_type=0, @description="El precio incluye servicios de electricidad y agua.", @title="Almacen lejano", @address="Tarapoto, Peru", @first_photo="https://firebasestorage.googleapis.com/v0/b/bunker-253200.appspot.com/o/spaces%2Ftest%2FAlan%20almancenes%2Fphoto1.jpeg?alt=media&token=83db63fd-7d5d-41b9-a5b8-614375362d9e">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (2.93ms)
+Completed 200 OK in 440ms (Views: 51.3ms | ActiveRecord: 35.2ms)
+
+
+Started GET "/api/v1/spaces/info_lessors/1" for ::1 at 2019-11-15 15:49:17 -0500
+Processing by Api::V1::SpacesController#info_lessors as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mLessor Load (0.4ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:56
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` WHERE `spaces`.`lessor_id` = 1 ORDER BY `spaces`.`id` DESC[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:59
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 10 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 9 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.3ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 7 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 6 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 5 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:60
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:69
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:70
+No serializer found for resource: #<SpaceInfo:0x00000000075af580 @id=10, @status=0, @rent_price=0.1e4, @space_type=0, @description="El precio incluye servicios de electricidad y agua.", @title="Almacen lejano", @address="Tarapoto, Peru", @first_photo="https://firebasestorage.googleapis.com/v0/b/bunker-253200.appspot.com/o/spaces%2Ftest%2FAlan%20almancenes%2Fphoto1.jpeg?alt=media&token=83db63fd-7d5d-41b9-a5b8-614375362d9e">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (0.74ms)
+Completed 200 OK in 190ms (Views: 25.1ms | ActiveRecord: 20.6ms)
+
+
+Started POST "/api/v1/spaces/info_around/" for ::1 at 2019-11-15 15:52:44 -0500
+Processing by Api::V1::SpacesController#info_around as */*
+  Parameters: {"latitude"=>-12.046374, "longitude"=>-77.042793, "space"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'd256b10c-6db4-49bf-a893-f8d1495bae69' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT `spaces`.* FROM `spaces` ORDER BY `spaces`.`id` DESC[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:239
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 10 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 9 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 8 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.6ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 7 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 6 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 5 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.6ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 4 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 4 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.5ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 3 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 3 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 2 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 2 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mSpace Load (0.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:240
+  [1m[36mLocation Load (0.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:242
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  `photos`.* FROM `photos` WHERE `photos`.`space_id` = 1 ORDER BY `photos`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:251
+  [1m[36mService Load (71.3ms)[0m  [1m[34mSELECT  `services`.* FROM `services` INNER JOIN `space_service_details` ON `services`.`id` = `space_service_details`.`service_id` WHERE `space_service_details`.`space_id` = 8 LIMIT 11[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:262
+No serializer found for resource: #<SpaceInfoAround:0x000000000a383470 @id=8, @status=0, @rent_price=0.25e4, @space_type=0, @description="Universidad", @title="UPC", @address="Av. Gral. Salaverry 2255, San Isidro 15076, Peru", @first_photo="https://firebasestorage.googleapis.com/v0/b/bunker-253200.appspot.com/o/spaces%2Ftest%2FUPC%2Fphoto1.jpeg?alt=media&token=5fe2a486-73c4-40d0-89dc-2d9755c2cdea", @height=0.1e2, @width=0.1e2, @area=0.1e3, @services=#<ActiveRecord::Associations::CollectionProxy [#<Service id: 1, name: "Internet", description: "Servicios de internet incluidos en el precio", created_at: "2019-10-06 00:00:00", updated_at: "2019-10-06 00:00:00">, #<Service id: 2, name: "Electricidad", description: "Servicios de electricidad incluidos en el precio", created_at: "2019-10-06 00:00:00", updated_at: "2019-10-06 00:00:00">, #<Service id: 3, name: "Teléfono", description: "Servicios telefónicos incluidos en el precio", created_at: "2019-10-06 00:00:00", updated_at: "2019-10-06 00:00:00">, #<Service id: 4, name: "Impresión", description: "Servicios de impresión incluidos en el precio", created_at: "2019-10-06 00:00:00", updated_at: "2019-10-06 00:00:00">, #<Service id: 5, name: "Cocina", description: "Servicios de cocina incluidos en el precio", created_at: "2019-10-06 00:00:00", updated_at: "2019-10-06 00:00:00">, #<Service id: 6, name: "Agua", description: "Servicios de agua potable incluidos en el precio", created_at: "2019-10-06 00:00:00", updated_at: "2019-10-06 00:00:00">]>>
+[active_model_serializers]   [1m[36mService Load (0.5ms)[0m  [1m[34mSELECT `services`.* FROM `services` INNER JOIN `space_service_details` ON `services`.`id` = `space_service_details`.`service_id` WHERE `space_service_details`.`space_id` = 8[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:262
+[active_model_serializers]   [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT `services`.* FROM `services` INNER JOIN `space_service_details` ON `services`.`id` = `space_service_details`.`service_id` WHERE `space_service_details`.`space_id` = 4[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:262
+[active_model_serializers]   [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT `services`.* FROM `services` INNER JOIN `space_service_details` ON `services`.`id` = `space_service_details`.`service_id` WHERE `space_service_details`.`space_id` = 3[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:262
+[active_model_serializers]   [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT `services`.* FROM `services` INNER JOIN `space_service_details` ON `services`.`id` = `space_service_details`.`service_id` WHERE `space_service_details`.`space_id` = 2[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:262
+[active_model_serializers]   [1m[36mService Load (0.4ms)[0m  [1m[34mSELECT `services`.* FROM `services` INNER JOIN `space_service_details` ON `services`.`id` = `space_service_details`.`service_id` WHERE `space_service_details`.`space_id` = 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:262
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Array (17.1ms)
+Completed 200 OK in 1061ms (Views: 604.3ms | ActiveRecord: 95.8ms)
+=======
+Started POST "/login" for ::1 at 2019-11-17 20:42:10 -0500
+  [1m[35m (148.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (31.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'toconasalvaro@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (3.05ms)
+Completed 200 OK in 1092ms (Views: 139.6ms | ActiveRecord: 54.3ms)
+
+
+Started GET "/api/v1/booking_processes/lessees/1" for ::1 at 2019-11-17 20:42:50 -0500
+Processing by Api::V1::BookingProcessesController#lessees as */*
+  Parameters: {"latitude"=>-12.07646, "longitude"=>-77.04511, "lesseeId"=>"1", "booking_process"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (64.6ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'f16bf7ba-268a-4cdf-ba75-c616f62a2ce6' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mBookingProcess Load (41.0ms)[0m  [1m[34mSELECT `booking_processes`.* FROM `booking_processes` WHERE `booking_processes`.`step` = 0 AND `booking_processes`.`lessee_id` = 1 ORDER BY `booking_processes`.`id` DESC[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 644ms (Views: 506.6ms | ActiveRecord: 123.1ms)
+
+
+Started GET "/api/v1/booking_processes/lessees/1" for ::1 at 2019-11-17 20:42:58 -0500
+Processing by Api::V1::BookingProcessesController#lessees as */*
+  Parameters: {"lesseeId"=>"1", "booking_process"=>{}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'f16bf7ba-268a-4cdf-ba75-c616f62a2ce6' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mBookingProcess Load (1.6ms)[0m  [1m[34mSELECT `booking_processes`.* FROM `booking_processes` WHERE `booking_processes`.`step` = 0 AND `booking_processes`.`lessee_id` = 1 ORDER BY `booking_processes`.`id` DESC[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 36ms (Views: 12.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/v1/booking_processes/lessees/1" for ::1 at 2019-11-17 20:44:17 -0500
+Processing by Api::V1::BookingProcessesController#lessees as */*
+  Parameters: {"lesseeId"=>"1", "booking_process"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'f16bf7ba-268a-4cdf-ba75-c616f62a2ce6' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mBookingProcess Load (1.4ms)[0m  [1m[34mSELECT `booking_processes`.* FROM `booking_processes` WHERE `booking_processes`.`step` = 0 AND `booking_processes`.`lessee_id` = 1 ORDER BY `booking_processes`.`id` DESC[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLessee Load (0.9ms)[0m  [1m[34mSELECT  `lessees`.* FROM `lessees` WHERE `lessees`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mSpace Load (1.0ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mDocument Load (69.0ms)[0m  [1m[34mSELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLessor Load (1.8ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLocation Load (1.2ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mDocumentType Load (17.0ms)[0m  [1m[34mSELECT  `document_types`.* FROM `document_types` WHERE `document_types`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2784.39ms)
+Completed 200 OK in 3405ms (Views: 3150.8ms | ActiveRecord: 180.4ms)
+
+
+Started GET "/api/v1/booking_processes/lessees/1" for ::1 at 2019-11-17 20:49:18 -0500
+Processing by Api::V1::BookingProcessesController#lessees as */*
+  Parameters: {"lesseeId"=>"1", "booking_process"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = 'f16bf7ba-268a-4cdf-ba75-c616f62a2ce6' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mBookingProcess Load (1.2ms)[0m  [1m[34mSELECT `booking_processes`.* FROM `booking_processes` WHERE `booking_processes`.`step` = 0 AND `booking_processes`.`lessee_id` = 1 ORDER BY `booking_processes`.`id` DESC[0m
+  ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLessee Load (1.0ms)[0m  [1m[34mSELECT  `lessees`.* FROM `lessees` WHERE `lessees`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mDocument Load (1.0ms)[0m  [1m[34mSELECT  `documents`.* FROM `documents` WHERE `documents`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLessor Load (1.1ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mLocation Load (1.0ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers]   [1m[36mDocumentType Load (1.0ms)[0m  [1m[34mSELECT  `document_types`.* FROM `document_types` WHERE `document_types`.`id` = 1 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/booking_processes_controller.rb:38
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (109.45ms)
+Completed 200 OK in 148ms (Views: 114.6ms | ActiveRecord: 12.2ms)
+
+
+Started POST "/login" for ::1 at 2019-11-17 21:15:08 -0500
+  [1m[35m (39.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'toconasalvaro@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.09ms)
+Completed 200 OK in 967ms (Views: 69.1ms | ActiveRecord: 54.5ms)
+
+
+Started POST "/login" for ::1 at 2019-11-17 21:16:02 -0500
+Processing by SessionsController#create as */*
+  Parameters: {"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"toconasalvaro@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'toconasalvaro@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (2.13ms)
+Completed 200 OK in 649ms (Views: 5.4ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/api/v1/spaces/block/13" for ::1 at 2019-11-17 21:16:45 -0500
+Processing by Api::V1::SpacesController#block as */*
+  Parameters: {"id"=>"13", "space"=>{}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '3193dbf0-eae9-498c-b5db-07f33e579503' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.3ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:26
+  [1m[35m (17.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+  [1m[36mLessor Load (21.7ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+  [1m[36mSpace Update (48.7ms)[0m  [1m[33mUPDATE `spaces` SET `status` = 1, `updated_at` = '2019-11-18 02:16:46' WHERE `spaces`.`id` = 13[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:27
+[active_model_serializers]   [1m[36mLocation Load (1.5ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 13 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:30
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (456.98ms)
+Completed 200 OK in 1377ms (Views: 486.6ms | ActiveRecord: 175.1ms)
+
+
+Started PATCH "/api/v1/spaces/unblock/13" for ::1 at 2019-11-17 21:19:03 -0500
+Processing by Api::V1::SpacesController#unblock as */*
+  Parameters: {"id"=>"13", "space"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mJwtBlacklist Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM `jwt_blacklists` WHERE `jwt_blacklists`.`jti` = '3193dbf0-eae9-498c-b5db-07f33e579503' LIMIT 1[0m
+  ↳ C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mSpace Load (1.4ms)[0m  [1m[34mSELECT  `spaces`.* FROM `spaces` WHERE `spaces`.`id` = 13 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:42
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:43
+  [1m[36mLessor Load (1.2ms)[0m  [1m[34mSELECT  `lessors`.* FROM `lessors` WHERE `lessors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:43
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:43
+  [1m[36mSpace Update (167.5ms)[0m  [1m[33mUPDATE `spaces` SET `status` = 0, `updated_at` = '2019-11-18 02:19:05' WHERE `spaces`.`id` = 13[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:43
+  [1m[35m (437.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/spaces_controller.rb:43
+[active_model_serializers]   [1m[36mLocation Load (1.4ms)[0m  [1m[34mSELECT  `locations`.* FROM `locations` WHERE `locations`.`space_id` = 13 LIMIT 1[0m
+[active_model_serializers]   ↳ app/controllers/api/v1/spaces_controller.rb:46
+[active_model_serializers] Rendered SpaceSerializer with ActiveModelSerializers::Adapter::Attributes (486.29ms)
+Completed 200 OK in 2093ms (Views: 529.7ms | ActiveRecord: 636.6ms)
+>>>>>>> Stashed changes
+
+
