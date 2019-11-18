@@ -41,6 +41,23 @@ module Api
                     render json: [],status: :not_found
             end
 
+            #GET /booking_processes/lessors/1
+            def lessors
+                @bookingProcesses = Array.new
+                @spacesFromLessor = Lessor.find(params[:lessorId]).spaces
+                @spacesFromLessor.each do |space|
+                    @bookingProcessesFromSpace = space.booking_processes
+                    @bookingProcessesFromSpace.each do |bookingProcess|
+                        @bookingProcesses.push bookingProcess
+                    end
+                end
+               
+                render json: @bookingProcesses, status: :ok
+
+                rescue ActiveRecord::RecordNotFound
+                    render json: [],status: :not_found
+            end
+
             #GET /booking_processes/1
             def show
                 @booking_process = BookingProcess.find(params[:id]) 

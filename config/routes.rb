@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
       get 'booking_processes' => 'booking_processes#index'
       get 'booking_processes/lessees/:lesseeId' => 'booking_processes#lessees'
+      get 'booking_processes/lessors/:lessorId' => 'booking_processes#lessors'
       get 'booking_processes/:id' => 'booking_processes#show'
       post 'booking_processes' => 'booking_processes#create'
       patch 'booking_processes/:id' => 'booking_processes#update'
